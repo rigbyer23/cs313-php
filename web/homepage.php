@@ -20,7 +20,7 @@
                              It's also home to hundreds of animal species, including bears, wolves, bison, elk and antelope.</p>
                 </div>
                 <div class="col-lg-8">
-                <img src="C:\Users\Erika Hunter\Documents\web-eng\cs313-php\images\YNP_hero1_v2.gif" alt="Italian Trulli">
+                <img src="./images/YNP_hero1_v2.gif" alt="Man by Waterfall">
                 </div>
         </div>
         
