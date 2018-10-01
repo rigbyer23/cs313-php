@@ -28,7 +28,7 @@
                              It's also home to hundreds of animal species, including bears, wolves, bison, elk and antelope.</p>
                 </div>
                 <div class="col-lg-8">
-                <img src="yellowstone_pool.jpg" class="img-responsive" alt="Man by Waterfall">
+                <img src="yellowstone-rainpool.jpg" class="img-responsive" alt="Man by Waterfall">
                 </div>
             </div>
 
