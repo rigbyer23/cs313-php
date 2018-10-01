@@ -6,12 +6,15 @@ image {
     background-color:seagreen;
 }
 
-h2{
+h1{
     padding-top: 50px;
+    text-align: center;
 }
 
 h3 {
-    font-size:50px;
+    padding-top:53px;
+    font-size:38px;
+    margin-left:33px;
 }
 
 h3, h2 {
@@ -21,4 +24,5 @@ h3, h2 {
 
 p {
     padding-top: 50px;
+    margin-left: 35px;
 }
