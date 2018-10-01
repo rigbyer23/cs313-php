@@ -16,7 +16,7 @@
                 <?php
                  echo "<h1>National Parks</h1>";
                  ?>
-                <button>Home Page</button>
+                <a href="./homepage.php" class="btn btn-warning" role="button">Homepage</a>
                 </div>
          </div>
          <div class="row">
