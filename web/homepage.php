@@ -34,7 +34,7 @@
 
             <div class="row">
             <div class="col-lg-8">
-                <img src="yellowstone_pool.jpg" alt="Man by Waterfall">
+                <img src="./glacier-national-park.jpg" alt="Man by Waterfall">
                 </div>
                 <div class="col-lg-4">
                     <h3>Glacier Natational Park</h3>
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="col-lg-8">
-                <img src="yellowstone_pool.jpg" alt="Man by Waterfall">
+                <img src="./google_nz_hq-7_1200x1200.jpg" alt="Man by Waterfall">
           
                 </div>
             </div>
