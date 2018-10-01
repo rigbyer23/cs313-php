@@ -16,6 +16,7 @@
         <?php
         echo "<h1>National Parks</h1>";
         ?>
+         <a href="./Assignments.php" class="btn btn-warning" role="button">Assignments</a>
         </div>
     </div>
             <div class="row">
@@ -36,7 +37,7 @@
             <div class="col-lg-8">
                 <img src="./glacier-national-park.jpg" class="img-responsive" alt="Man by Waterfall">
                 </div>
-                <div class="col-lg-4">
+                <div class="right-text col-lg-4">
                     <h3>Glacier Natational Park</h3>
                         <p>Glacier National Park is a 1,583-sq.-mi. wilderness area in Montana's Rocky Mountains,
                              with glacier-carved peaks and valleys running to the Canadian border.

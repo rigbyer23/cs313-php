@@ -23,6 +23,9 @@ h3, h1 {
     font-family: 'Amatic SC', cursive;
 }
 
+.right-text{
+    margin-left: -41px;
+}
 
 p {
     padding-top: 50px;
