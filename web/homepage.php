@@ -9,10 +9,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <?php
-        echo "<h2>National Parks</h2>";
-        ?>
         <div class ='containter'>
+            <div class="row">
+                <div class ="mh-100 col-lg-12">
+                <?php
+                    echo "<div class="mainHead"><h2>National Parks</h2></div>";
+                    ?>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-4">
                     <h3>Yellowstone National Park</h3>
