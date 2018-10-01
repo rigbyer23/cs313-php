@@ -14,7 +14,7 @@
     <div class="row">
         <div class ="header col-lg-12">
         <?php
-        echo "<h2>National Parks</h2>";
+        echo "<h1>National Parks</h1>";
         ?>
         </div>
     </div>
