@@ -10,6 +10,7 @@ h1{
     padding-top: 9px;
     text-align: center;
     color: white;
+    font-size:109px;
 }
 
 h3 {
@@ -26,4 +27,5 @@ h3, h1 {
 p {
     padding-top: 50px;
     margin-left: 35px;
+    font-size:18px;
 }
