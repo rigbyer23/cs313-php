@@ -11,7 +11,7 @@
     <body>
     <div class ='containter'>
     <div class="row">
-        <div class ="mh-100 col-lg-12">
+        <div class ="col-lg-12">
         <?php
         echo "<h2>National Parks</h2>";
         ?>
@@ -38,21 +38,21 @@
                 </div>
                 <div class="col-lg-4">
                     <h3>Glacier Natational Park</h3>
-                        <p>Yellowstone National Park is a nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot. 
-                            Mostly in Wyoming, the park spreads into parts of Montana and Idaho too. 
-                            Yellowstone features dramatic canyons, alpine rivers, lush forests,
-                             hot springs and gushing geysers, including its most famous, Old Faithful. 
-                             It's also home to hundreds of animal species, including bears, wolves, bison, elk and antelope.</p>
+                        <p>Glacier National Park is a 1,583-sq.-mi. wilderness area in Montana's Rocky Mountains,
+                             with glacier-carved peaks and valleys running to the Canadian border.
+                              It's crossed by the mountainous Going-to-the-Sun Road.
+                               Among more than 700 miles of hiking trails, it has a route to photogenic Hidden Lake. 
+                               Other activities include backpacking, cycling and camping.
+                             Diverse wildlife ranges from mountain goats to grizzly bears.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4">
                     <h3>Zion's National Park</h3>
-                        <p>Yellowstone National Park is a nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot. 
-                            Mostly in Wyoming, the park spreads into parts of Montana and Idaho too. 
-                            Yellowstone features dramatic canyons, alpine rivers, lush forests,
-                             hot springs and gushing geysers, including its most famous, Old Faithful. 
-                             It's also home to hundreds of animal species, including bears, wolves, bison, elk and antelope.</p>
+                        <p>Zion National Park is a southwest Utah nature preserve distinguished by Zion Canyon’s steep red cliffs.
+                             Zion Canyon Scenic Drive cuts through its main section, leading to forest trails along the Virgin River.
+                              The river flows to the Emerald Pools, which have waterfalls and a hanging garden.
+                             Also along the river, partly through deep chasms, is Zion Narrows wading hike.</p>
                 </div>
 
                 <div class="col-lg-8">
