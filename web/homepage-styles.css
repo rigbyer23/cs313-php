@@ -2,6 +2,9 @@ image {
     object-fit: fill;
 }
 
+.h2 .h3 {
+    font-family: 'Amatic SC', cursive;
+}
 p {
     padding-top: 50px;
 }
