@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="col-lg-8">
-                <img src="yellowstone_pool.jpg" alt="Man by Waterfall">
+                <img src="./yellowstone_pool.jpg" alt="Man by Waterfall">
                 </div>
             </div>
 
