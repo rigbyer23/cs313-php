@@ -38,7 +38,7 @@
                 <img src="./glacier-national-park.jpg" class="img-responsive" alt="Man by Waterfall">
                 </div>
                 <div class="right-text col-lg-4">
-                    <h3>Glacier Natational Park</h3>
+                    <h3>Glacier National Park</h3>
                         <p>Glacier National Park is a 1,583-sq.-mi. wilderness area in Montana's Rocky Mountains,
                              with glacier-carved peaks and valleys running to the Canadian border.
                               It's crossed by the mountainous Going-to-the-Sun Road.
