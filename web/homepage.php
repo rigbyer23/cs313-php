@@ -12,7 +12,7 @@
     <body>
     <div class ='containter'>
     <div class="row">
-        <div class ="col-lg-12">
+        <div class ="header col-lg-12">
         <?php
         echo "<h2>National Parks</h2>";
         ?>

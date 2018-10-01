@@ -2,9 +2,19 @@ image {
     object-fit: fill;
 }
 
-.h2 .h3 {
+.header{
+    background-color:seagreen;
+}
+
+h2{
+    padding-top: 50px;
+}
+
+h3, h2 {
     font-family: 'Amatic SC', cursive;
 }
+
+
 p {
     padding-top: 50px;
 }
