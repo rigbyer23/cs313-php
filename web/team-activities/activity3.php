@@ -7,6 +7,13 @@
      
     </head>
 <body>
+
+    <?php 
+
+    $majors = array("CS", "CIT", "WDD", "CE");
+
+    ?>
+
    <form action="results.php" method="post">
       Name: <input type="text" name="firstName"><br>
       Email: <input type="email" name="email"><br>
@@ -25,6 +32,14 @@
        Africa: <input type="checkbox" name="continent[]" value="Africa">
        Antarctica: <input type="checkbox" name="continent[]" value="Antarctica">
        
+        <br /><br />
+        <?php
+            for ($x = 0; $x <= sizeof($majors); $x++) {
+                echo $majors[x] . " <input type='radio' name ='major' value='" . $majors[x] . "'>"
+            }
+        ?>
+
+
        <input type="submit">
 
    </form>
