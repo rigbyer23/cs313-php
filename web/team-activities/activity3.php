@@ -31,7 +31,7 @@
         <br /><br />
         <?php
             for ($x = 0; $x <= sizeof($majors); $x++) {
-                echo $majors[x] . " <input type='radio' name ='major' value='" . $majors[x] . "'>"
+                echo $majors[x] . " <input type='radio' name ='major' value='" . $majors[x] . "'>";
             }
         ?>
 
