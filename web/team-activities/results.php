@@ -6,9 +6,9 @@
             <p>Your major is: <?php echo $_POST["major"]; ?></p>
             <p>Your comments were: <?php echo $_POST["comment"]; ?></p>
 
-            <?php if(isset($_POST['continent1']))
+            <?php if(isset($_POST['continent']))
             {
-                echo "You chose North America! Great job!"
+                print_r($_POST['continent']);
             } ?>
 
 
