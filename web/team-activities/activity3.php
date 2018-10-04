@@ -1,15 +1,10 @@
 <html lang="en">
     <head>
-      
+      <title>Take a Hike</title>
     </head>
 <body>
 
-    <?php 
-
-    $majors = array("CS", "CIT", "WDD", "CE");
-
-    ?>
-
+    <h1>Take a Hike</h1>
    <form action="results.php" method="post">
       Name: <input type="text" name="firstName"><br>
       Email: <input type="email" name="email"><br>
@@ -30,6 +25,9 @@
        
         <br /><br />
         <?php
+
+            $majors = array("CS", "CIT", "WDD", "CE");
+
             for ($x = 0; $x <= sizeof($majors); $x++) {
                 echo $majors[x] . " <input type='radio' name ='major' value='" . $majors[x] . "'>";
             }
