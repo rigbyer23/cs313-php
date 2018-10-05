@@ -11,7 +11,6 @@
     </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-  <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,13 +27,36 @@
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
+    <h1 class="navbar-brand">Take a Hike</h1>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
+<div class="container">
+<?php
+session_start();
+foreach($POST_["gear"] as $item){
+   $_SESSION["gear"][$item] =$item;
+   echo session $item;
+}
+$gear = [
+    (object) [
+               "Hammock" => "$50.00",
+               "Sleeping Bag" => "$35.00",
+               "Tarp" => "15.00",
+    ],
+];
 
+?>
+<form action="cart.php" method="post">
+     
+       Hammock <input type="checkbox" name="gear[]" value="Hammock">
+       Sleeping Bag <input type="checkbox" name="gear[]" value="Sleeping Bag">
+       Tarp <input type="checkbox" name="gear[]" value="Tarp">
+       Chacos <input type="checkbox" name="gear[]" value="Chacos">
+</div>
 <!-- <div class ='containter'>
     <div class="row">
         <div class ="header col-lg-12">
