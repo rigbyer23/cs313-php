@@ -54,7 +54,7 @@ $gear = [
        Sleeping Bag <input type="checkbox" name="gear[]" value="Sleeping Bag">
        Tarp <input type="checkbox" name="gear[]" value="Tarp">
        Chacos <input type="checkbox" name="gear[]" value="Chacos">
-       <input type="submit">
+       <button type="submit">Checkout</button>
 </div>
 <!-- <div class ='containter'>
     <div class="row">

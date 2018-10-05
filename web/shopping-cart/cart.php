@@ -1,6 +1,10 @@
 <html>
 <?php
     session_start();
+    foreach($_POST["gear"] as $item){
+        $_SESSION["gear"][$item] = $item;
+        echo $item;
+    }
     ?>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
@@ -36,14 +40,7 @@
     </form>
   </div>
 </nav>
-<?php
-foreach($_POST["gear"] as $item){
-    if (isset($_SESSION["gear"])){
-        $gearArray = $_SESSION["gear"];
-        echo $gearArray;
-    }
-  }
-?>
+
             <h1>Your Cart</h1>
             <ul>
                 <?php
