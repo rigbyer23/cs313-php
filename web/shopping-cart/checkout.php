@@ -37,14 +37,15 @@
 </nav>
             <h1>Purchase Summery</h1>
             <?php
-foreach($_POST["gear"] as $item){
-    if (isset($_SESSION["gear"])){
-        $gearArray = $_SESSION["gear"];
-        echo $item;
-    }
-  }
+            session_start();
+            foreach($_POST["gear"] as $item){
+                $_SESSION["gear"][$item] = $item;
+                echo $item;
+            }
+
 ?> 
 
+ 
 
 
         </body>

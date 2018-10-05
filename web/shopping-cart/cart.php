@@ -1,10 +1,11 @@
 <html>
 <?php
-    session_start();
-    foreach($_POST["gear"] as $item){
-        $_SESSION["gear"][$item] = $item;
+   foreach($_POST["gear"] as $item){
+    if (isset($_SESSION["gear"])){
+        $gearArray = $_SESSION["gear"];
         echo $item;
     }
+  }
     ?>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
