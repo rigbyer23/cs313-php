@@ -14,9 +14,9 @@
 <div class ='containter'>
     <div class="row">
         <div class ="header col-lg-12">
-        <?php
-        echo "<h1>Take a Hike</h1>";
-        ?>
+        
+        <h1>Take a Hike</h1>";
+        
         <a href="./browse.php">Home</a>
         |
         <a href="./cart.php">My Cart</a>
