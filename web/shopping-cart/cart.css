@@ -1,13 +1,13 @@
 .header {
     background-color: navy;
+    color: white;
 }
- h1 {
-     color: white;
+ .header h1 {
      font-family: 'Amatic SC', cursive;
      text-align: center;
  }
 
- a {
+ .header a {
      color:white;
      font-size:16px;
  }
