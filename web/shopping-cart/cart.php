@@ -33,6 +33,14 @@
     </form>
   </div>
 </nav>
+<?php
+foreach($_POST["gear"] as $item){
+    if (isset($_SESSION["gear"])){
+        $gearArray = $_SESSION;
+        echo $gearArray;
+    }
+  }
+?>
             <h1>Your Cart</h1>
             <ul>
                 <?php
