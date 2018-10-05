@@ -36,7 +36,7 @@
 <?php
 foreach($_POST["gear"] as $item){
     if (isset($_SESSION["gear"])){
-        $gearArray = $_SESSION;
+        $gearArray = $_SESSION["gear"];
         echo $gearArray;
     }
   }
