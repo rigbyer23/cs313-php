@@ -1,4 +1,7 @@
 <html lang="en">
+    <?php
+    session_start();
+    ?>
     <head>
       <title>Take a Hike</title>
       <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +39,6 @@
 </nav>
 <div class="container">
 <?php
-session_start();
 foreach($_POST["gear"] as $item){
   if isset($_SESSION["gear"]){
       $gearArray = $_SESSION;
