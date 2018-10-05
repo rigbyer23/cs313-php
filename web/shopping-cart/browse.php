@@ -39,7 +39,6 @@
 session_start();
 foreach($POST_["gear"] as $item){
    $_SESSION["gear"][$item] =$item;
-   echo session $item;
 }
 $gear = [
     (object) [
