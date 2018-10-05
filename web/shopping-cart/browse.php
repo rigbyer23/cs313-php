@@ -18,13 +18,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="./browse.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="./cart.php">Your Cart</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link disabled" href="./checkout.php">Checkout</a>
       </li>
     </ul>
     <h1 class="navbar-brand">Take a Hike</h1>
@@ -37,14 +37,16 @@
 <div class="container">
 <?php
 session_start();
-foreach($POST_["gear"] as $item){
-   $_SESSION["gear"][$item] =$item;
+foreach($_POST["gear"] as $item){
+  if isset($_SESSION["gear"]){
+      $gearArray = $_SESSION;
+  }
 }
 $gear = [
     (object) [
-               "Hammock" => "$50.00",
-               "Sleeping Bag" => "$35.00",
-               "Tarp" => "15.00",
+               "Name" => "Hammock",
+               "Price" => 35.00,
+               "Image" => "../glacier-national-park.jpg",
     ],
 ];
 
