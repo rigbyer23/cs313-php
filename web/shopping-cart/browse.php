@@ -40,7 +40,7 @@
 <div class="container">
 <?php
 foreach($_POST["gear"] as $item){
-  if isset($_SESSION["gear"]){
+  if (isset($_SESSION["gear"])){
       $gearArray = $_SESSION;
   }
 }
