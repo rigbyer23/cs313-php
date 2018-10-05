@@ -1,4 +1,7 @@
 <html>
+<?php
+    session_start();
+    ?>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">

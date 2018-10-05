@@ -1,4 +1,7 @@
 <html>
+<?php
+    session_start();
+    ?>
     <head>
     <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel = "stylesheet" type="text/css" href="cart.css">
