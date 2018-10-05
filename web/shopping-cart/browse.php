@@ -17,8 +17,10 @@
         <?php
         echo "<h1>Take a Hike</h1>";
         ?>
-        <a href="./cart.php">My Cart</a>
         <a href="./browse.php">Home</a>
+        |
+        <a href="./cart.php">My Cart</a>
+        
         </div>
     </div>
    
