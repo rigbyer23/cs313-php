@@ -4,7 +4,6 @@
             <h1>Your Cart</h1>
             <ul>
             <li><?php echo $_POST["gear"]; ?></li>
-            <li><a href="mailto:<?php echo $_POST["gear"]; ?>"><?php echo $_POST["gear"]; ?></a></li>
             <li><?php echo $_POST["gear"]; ?></li>
             <li><?php echo $_POST["gear"]; ?></li>
         </ul>
