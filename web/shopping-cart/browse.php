@@ -49,6 +49,28 @@ $gear = [
 
 ?>
 <form action="cart.php" method="post">
+
+        <div class="card">
+  <div class="card-body">
+    <p class="card-text">Hammock</p>
+    <input type="checkbox" name="gear[]" value="Hammock">
+  </div>
+  <img src="/images/pathToYourImage.png" alt="Card image">
+  <div class="card-body">
+    <p class="card-text">$50.00</p>
+  </div>
+</div>
+
+        <div class="card">
+  <div class="card-body">
+    <p class="card-text">Sleeping Bag</p>
+    <input type="checkbox" name="gear[]" value="Sleeping Bag">
+  </div>
+  <img src="/images/pathToYourImage.png" alt="Card image">
+  <div class="card-body">
+    <p class="card-text">$50.00</p>
+  </div>
+</div>
      
        Hammock <input type="checkbox" name="gear[]" value="Hammock">
        Sleeping Bag <input type="checkbox" name="gear[]" value="Sleeping Bag">
