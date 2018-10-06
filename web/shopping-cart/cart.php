@@ -5,6 +5,19 @@
     echo $item;
     }
     ?>
+    <form action="cart.php" method="post">
+    <?php
+    foreach($_SESSION["gear"] as $item{
+        echo "<button type='submit' name='delete' value='".$item"'>Remove</button><br>"
+    })
+    ?>
+    <?php
+    foreach($_SESSION["gear"] as $item{
+        $delete = $_POST["delete"];
+        unset($_SESSION["gear"][$item]);
+    }
+    ?>
+    </form>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -49,6 +62,7 @@
                 ?>
     
         </ul>
+        
 
             <?php if(isset($_POST['gear']))
             {
