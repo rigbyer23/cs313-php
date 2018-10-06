@@ -41,6 +41,10 @@
             foreach($_POST["gear"] as $item){
                 $_SESSION["gear"][$item] = $item;
                 echo $item;
+
+                if (isset($_SESSION["gear"])){
+                    $gearArray = $_SESSION["gear"];
+                    echo "session $item";
             }
 
 ?> 

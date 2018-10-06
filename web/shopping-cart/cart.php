@@ -1,9 +1,8 @@
 <html>
 <?php
    foreach($_POST["gear"] as $item){
-    if (isset($_SESSION["gear"])){
-        $gearArray = $_SESSION["gear"];
-        echo "session $item";
+    $_SESSION["gear"][$item] = $item;
+    echo $item
     }
   }
     ?>
