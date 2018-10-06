@@ -7,10 +7,10 @@
     ?>
     <form action="cart.php" method="post">
     <?php
-    foreach($_SESSION["gear"] as $item{
+    foreach($_SESSION["gear"] as $item){
         echo $item." ";
         echo "<button type='submit' name='delete' value='".$item"'>Remove</button><br>";
-    })
+    }
     ?>
     <?php
     foreach($_SESSION["gear"] as $item{
