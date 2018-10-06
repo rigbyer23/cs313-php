@@ -51,7 +51,7 @@ $gear = [
 
 <form action="cart.php" method="post">
 <div class="row">
-    <div class="col-lg-4"
+    <div class="col-lg-4">
         <div class="card">
   <div class="card-body">
     <p class="card-text">Hammock</p>
@@ -64,6 +64,9 @@ $gear = [
 </div>
 </div>
 </div>
+
+<div class="row">
+    <div class="col-lg-4">
         <div class="card">
   <div class="card-body">
     <p class="card-text">Sleeping Bag</p>
@@ -74,7 +77,11 @@ $gear = [
     <p class="card-text">$50.00</p>
   </div>
 </div>
+</div>
+</div>
 
+<div class="row">
+    <div class="col-lg-4">
   <div class="card">
   <div class="card-body">
     <p class="card-text">Tarp</p>
@@ -85,7 +92,11 @@ $gear = [
     <p class="card-text">$50.00</p>
   </div>
 </div>
+</div>
+</div>
 
+<div class="row">
+    <div class="col-lg-4">
  <div class="card">
   <div class="card-body">
     <p class="card-text">Chacos</p>
@@ -95,6 +106,8 @@ $gear = [
   <div class="card-body">
     <p class="card-text">$50.00</p>
   </div>
+</div>
+</div>
 </div>
      
        Hammock <input type="checkbox" name="gear[]" value="Hammock">
