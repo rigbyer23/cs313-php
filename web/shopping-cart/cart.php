@@ -2,7 +2,7 @@
 <?php
    foreach($_POST["gear"] as $item){
     $_SESSION["gear"][$item] = $item;
-    echo $item
+    echo $item;
     }
   }
     ?>
