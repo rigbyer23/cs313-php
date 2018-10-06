@@ -8,7 +8,8 @@
     <form action="cart.php" method="post">
     <?php
     foreach($_SESSION["gear"] as $item{
-        echo "<button type='submit' name='delete' value='".$item"'>Remove</button><br>"
+        echo $item." ";
+        echo "<button type='submit' name='delete' value='".$item"'>Remove</button><br>";
     })
     ?>
     <?php
