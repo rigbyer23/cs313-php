@@ -13,8 +13,8 @@
     }
     ?>
     <?php
-    foreach($_SESSION["gear"] as $item{
-        $delete = $_POST["delete"]
+    foreach($_SESSION["gear"] as $item) {
+        $delete = $_POST["delete"];
         unset($_SESSION["gear"][$item]);
     }
     ?>
