@@ -29,8 +29,8 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="./checkout.php">Checkout</a>
       </li>
-      <li><h1 class="navbar-brand">Take a Hike</h1></li>
     </ul>
+    <h1 class="navbar-brand">Take a Hike</h1>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -104,27 +104,9 @@ $gear = [
   </div>
 </div>
 </div>
-</div>
-     
-       Hammock <input type="checkbox" name="gear[]" value="Hammock">
-       Sleeping Bag <input type="checkbox" name="gear[]" value="Sleeping Bag">
-       Tarp <input type="checkbox" name="gear[]" value="Tarp">
-       Chacos <input type="checkbox" name="gear[]" value="Chacos">
        <button type="submit">Checkout</button>
 </div>
-<!-- <div class ='containter'>
-    <div class="row">
-        <div class ="header col-lg-12">
-        
-        <h1>Take a Hike</h1>";
-        
-        <a href="./browse.php">Home</a>
-        |
-        <a href="./cart.php">My Cart</a>
-        
-        </div>
-    </div>
-</div> -->
+
 </body>
 </html>
 
