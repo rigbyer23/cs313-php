@@ -105,7 +105,9 @@ $gear = [
 </div>
 </div>    
 
-<div class="col-lg-8">
+<div class="col-lg-4">
+<div>
+<div class="col-lg-4">
 <button type="submit" class="btn btn-primary">Checkout</button>
 </div>
 </div>

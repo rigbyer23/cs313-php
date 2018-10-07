@@ -2,11 +2,13 @@
  h1 {
      font-family: 'Amatic SC', cursive;
      text-align: center;
-     font-size:100px;
+     font-size: 70px !important;
+     color: white !important;
+     margin-right: 358px !important;
    
  }
 
  a {
-     color:white;
+     color: white !important;
      font-size:16px;
  }
