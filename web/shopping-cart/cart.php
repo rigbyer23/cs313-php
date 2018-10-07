@@ -1,5 +1,6 @@
 <html>
 <?php
+  session_start();
    foreach($_POST["gear"] as $item){
     $_SESSION["gear"][$item] = $item;
     }
@@ -43,7 +44,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
-            <h1>Your Cart</h1>
+            <h2>Your Cart</h2>
             <?php
                 foreach($_SESSION["gear"] as $item){
                     echo $item." ";
