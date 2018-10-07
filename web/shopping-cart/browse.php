@@ -102,7 +102,7 @@ $gear = [
     <p class="card-text">Chacos</p>
     <input type="checkbox" name="gear[]" value="Chacos">
   </div>
-  <img src="./chacos.jpg.jpg" alt="Card image">
+  <img src="./chacos.jpg" alt="Card image">
   <div class="card-body">
     <p class="card-text">$50.00</p>
   </div>
