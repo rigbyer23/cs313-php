@@ -36,16 +36,30 @@
   </div>
 </nav>
             <h1>Purchase Summery</h1>
+            <form action="checkout.php" method="post">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Name</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Email</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+            </div>
+            <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+              <button type="submit" class="btn btn-primary">Checkout</button>
+            </div>
+            </form>
             <?php
-            session_start();
-            foreach($_POST["gear"] as $item){
-                $_SESSION["gear"][$item] = $item;
-                echo $item;
+            // session_start();
+            // foreach($_POST["gear"] as $item){
+            //     $_SESSION["gear"][$item] = $item;
+            //     echo $item;
 
-                if (isset($_SESSION["gear"])){
-                    $gearArray = $_SESSION["gear"];
-                    echo "session $item";
-            }
+            //     if (isset($_SESSION["gear"])){
+            //         $gearArray = $_SESSION["gear"];
+            //         echo "session $item";
+            // }
 
 ?> 
 

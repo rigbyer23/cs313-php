@@ -106,7 +106,7 @@ $gear = [
 </div>    
 
 <div class="col-lg-8">
-<button type="submit" class="btn btn-primary">Checkout</button>
+<button type="submit" class="btn btn-primary">Add to Cart</button>
 </div>
 </div>
 </body>
