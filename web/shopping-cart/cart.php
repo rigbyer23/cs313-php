@@ -40,7 +40,9 @@
     </form>
   </div>
 </nav>
-
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
             <h1>Your Cart</h1>
             <?php
                 foreach($_SESSION["gear"] as $item){
@@ -54,12 +56,14 @@
                     unset($_SESSION["gear"][$item]);
                 }
                  ?>
-                 
+
             <?php if(isset($_POST['gear']))
             {
                 print_r($_POST['gear']);
             } ?>
 
-
+              </div>
+            </div>
+        </div>
         </body>
 </html>
