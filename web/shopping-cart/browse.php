@@ -72,7 +72,7 @@ $gear = [
     <p class="card-text">Sleeping Bag</p>
     <input type="checkbox" name="gear[]" value="Sleeping Bag">
   </div>
-  <img src="./sleeping-bag.jpg" alt="Card image">
+  <img src="./sleepingbag.jpg" alt="Card image">
   <div class="card-body">
     <p class="card-text">$50.00</p>
   </div>
@@ -102,7 +102,7 @@ $gear = [
     <p class="card-text">Chacos</p>
     <input type="checkbox" name="gear[]" value="Chacos">
   </div>
-  <img src="./chaco-11.jpg" alt="Card image">
+  <img src="./chacos.jpg.jpg" alt="Card image">
   <div class="card-body">
     <p class="card-text">$50.00</p>
   </div>

@@ -2,7 +2,6 @@
 <?php
    foreach($_POST["gear"] as $item){
     $_SESSION["gear"][$item] = $item;
-    echo $item;
     }
     ?>
     <form action="cart.php" method="post">
