@@ -5,18 +5,6 @@
     }
     ?>
     <form action="cart.php" method="post">
-    <?php
-    foreach($_SESSION["gear"] as $item){
-        echo $item." ";
-        echo "<button type='submit' name='delete' value='.$item'>Remove</button><br>";
-    }
-    ?>
-    <?php
-    foreach($_SESSION["gear"] as $item) {
-        $delete = $_POST["delete"];
-        unset($_SESSION["gear"][$item]);
-    }
-    ?>
     </form>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
@@ -54,16 +42,19 @@
 </nav>
 
             <h1>Your Cart</h1>
-            <ul>
-                <?php
-                foreach($_POST['gear'] as $item) {
-                    echo "<li>$item</li>";
+            <?php
+                foreach($_SESSION["gear"] as $item){
+                    echo $item." ";
+                    echo "<button type='submit' name='delete' value='.$item'>Remove</button><br>";
                 }
                 ?>
-    
-        </ul>
-        
-
+                <?php
+                foreach($_SESSION["gear"] as $item) {
+                    $delete = $_POST["delete"];
+                    unset($_SESSION["gear"][$item]);
+                }
+                 ?>
+                 
             <?php if(isset($_POST['gear']))
             {
                 print_r($_POST['gear']);
