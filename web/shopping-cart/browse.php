@@ -29,8 +29,8 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="./checkout.php">Checkout</a>
       </li>
+      <li><h1 class="navbar-brand">Take a Hike</h1></li>
     </ul>
-    <h1 class="navbar-brand">Take a Hike</h1>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -65,7 +65,7 @@ $gear = [
 </div>
 </div>
 
-<div class="row">
+
     <div class="col-lg-4">
         <div class="card">
   <div class="card-body">
@@ -78,9 +78,7 @@ $gear = [
   </div>
 </div>
 </div>
-</div>
 
-<div class="row">
     <div class="col-lg-4">
   <div class="card">
   <div class="card-body">
@@ -93,7 +91,7 @@ $gear = [
   </div>
 </div>
 </div>
-</div>
+
 
 <div class="row">
     <div class="col-lg-4">
