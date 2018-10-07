@@ -103,10 +103,12 @@ $gear = [
     <p class="card-text">$50.00</p>
   </div>
 </div>
-</div>
-       <button type="submit">Checkout</button>
-</div>
+</div>    
 
+<div class="col-lg-8">
+<button type="submit" class="btn btn-primary">Checkout</button>
+</div>
+</div>
 </body>
 </html>
 
