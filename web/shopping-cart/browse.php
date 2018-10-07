@@ -90,14 +90,13 @@ $gear = [
 </div>
 </div>
 </div>
-</div>
 
 <div class="row">
    <div class="col-lg-4">
   <div class="card">
   <div class="card-body">
     <p class="card-text">Chacos</p>
-    <input type="checkbox" name="gear[]" value="Tarp">
+    <input type="checkbox" name="gear[]" value="Chacos">
   </div>
   <img src="./chacos.jpg" alt="Card image">
   <div class="card-body">
