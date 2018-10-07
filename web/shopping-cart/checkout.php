@@ -47,7 +47,7 @@
               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
             </div>
             <div class="form-group row">
-            <div class="col-sm-10 offset-sm-2">
+            <div class="col-sm-10">
               <button type="submit" class="btn btn-primary">Checkout</button>
             </div>
             </form>
