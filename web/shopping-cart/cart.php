@@ -14,7 +14,7 @@
     ?>
     <?php
     foreach($_SESSION["gear"] as $item{
-        $delete = $_POST["delete"];
+        $delete = $_POST["delete"]
         unset($_SESSION["gear"][$item]);
     }
     ?>
