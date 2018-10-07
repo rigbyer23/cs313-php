@@ -62,7 +62,7 @@
             {
                 print_r($_POST['gear']);
             } ?>
-
+            <a href="./checkout.php.php" class="btn btn-success" role="button">Purchase Items</a>
               </div>
             </div>
         </div>
