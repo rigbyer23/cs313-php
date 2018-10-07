@@ -35,6 +35,7 @@
     </form>
   </div>
 </nav>
+        <div class="container">
             <h1>Purchase Summery</h1>
             <form action="checkout.php" method="post">
             <div class="form-group">
@@ -50,6 +51,7 @@
               <button type="submit" class="btn btn-primary">Checkout</button>
             </div>
             </form>
+        </div>
             <?php
             // session_start();
             // foreach($_POST["gear"] as $item){
