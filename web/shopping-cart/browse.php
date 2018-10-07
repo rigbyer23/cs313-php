@@ -59,7 +59,7 @@ $gear = [
   </div>
   <img src="./hammock.jpg" alt="Card image">
   <div class="card-body">
-    <p class="card-text">$50.00</p>
+    <p class="card-text">$35.00</p>
   </div>
 </div>
 </div>
@@ -72,7 +72,7 @@ $gear = [
   </div>
   <img src="./sleepingbag.jpg" alt="Card image">
   <div class="card-body">
-    <p class="card-text">$50.00</p>
+    <p class="card-text">$45.00</p>
   </div>
 </div>
 </div>
@@ -85,29 +85,27 @@ $gear = [
   </div>
   <img src="./tarp.jpg" alt="Card image">
   <div class="card-body">
-    <p class="card-text">$50.00</p>
+    <p class="card-text">$25.00</p>
   </div>
 </div>
 </div>
+</div>
 
-
-<div class="row">
-    <div class="col-lg-4">
- <div class="card">
+    <div class="row">
+   <div class="col-lg-4">
+  <div class="card">
   <div class="card-body">
     <p class="card-text">Chacos</p>
-    <input type="checkbox" name="gear[]" value="Chacos">
+    <input type="checkbox" name="gear[]" value="Tarp">
   </div>
   <img src="./chacos.jpg" alt="Card image">
   <div class="card-body">
-    <p class="card-text">$50.00</p>
+    <p class="card-text">$90.00</p>
   </div>
 </div>
 </div>    
 
-<div class="col-lg-4">
-<div>
-<div class="col-lg-4">
+<div class="col-lg-8">
 <button type="submit" class="btn btn-primary">Checkout</button>
 </div>
 </div>
