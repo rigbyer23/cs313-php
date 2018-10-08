@@ -62,6 +62,7 @@
                 print_r($_POST['gear']);
             } ?>
             <a href="./checkout.php" class="btn btn-success" role="button">Purchase Items</a>
+            <a href="./browse.php" class="btn btn-primary" role="button">Back to Browsing</a>
               </div>
             </div>
         </div>

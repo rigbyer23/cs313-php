@@ -1,6 +1,8 @@
 <html>
 <?php
     session_start();
+    $name = $_POST['yourName'];
+    $_SESSION["yourName"][$name] = $name;
     ?>
     <head>
     <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -36,10 +38,10 @@
   </div>
 </nav>
       <?php
-      $name = $_POST['yourName'];
+      
      
        if(isset($_POST["display"])){
-        echo "Thank you for your purchase.$name.!";
+        echo "<p>Thank you for your purchase.$name.!</p>";
             }
         ?> 
        
