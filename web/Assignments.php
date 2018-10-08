@@ -22,6 +22,8 @@
          <div class="row">
              <div class="col-lg-12">
                  <h3>Content Coming Soon</h3>
+                 <a href="./shopping-cart/browse.php">Shopping Cart</a>
+
             </div>  
         </div>
     </div>
