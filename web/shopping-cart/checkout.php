@@ -50,8 +50,8 @@
               <input type="text" class="form-control" id="yourName" placeholder="Example input">
             </div>
             <div class="form-group">
-              <label for="formGroupExampleInput2">Email</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+              <label for="formGroupExampleInput2">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="Another input">
             </div>
             <div class="form-group row">
             <div class="col-sm-10">
