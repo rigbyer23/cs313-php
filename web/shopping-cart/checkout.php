@@ -42,8 +42,8 @@
         echo "Thank you for your purchase.$name.!";
             }
         ?> 
+        <h2 style='font-family:Amatic SC, cursive;font-size:58px;'>Shipping Information</h2>
         <div class="container">
-            <h1>Purchase Summery</h1>
             <form action="confirmation.php" method="post">
             <div class="form-group">
               <label for="formGroupExampleInput">Name</label>
