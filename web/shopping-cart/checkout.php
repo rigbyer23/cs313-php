@@ -47,7 +47,7 @@
             <form action="confirmation.php" method="post">
             <div class="form-group">
               <label for="formGroupExampleInput">Name</label>
-              <input type="text" class="form-control" id="yourName" placeholder="Example input">
+              <input type="text" class="form-control" id="name" placeholder="Example input">
             </div>
             <div class="form-group">
               <label for="formGroupExampleInput2">Address</label>

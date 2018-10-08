@@ -36,14 +36,16 @@
   </div>
 </nav>
       <div class="container">
+      <h2>Purchase Summary</h2>
       <?php
-      echo $_POST["yourName"];
-      echo $_POST["address"];
+      $name = $_POST['name'];
+      $address =$_POST['address'];
+      echo $name;
+      echo $address;
        if(isset($_SESSION["gear"])){
          foreach($_SESSION["gear"] as $item){
-          echo $item;
+          echo $item."<br>";
          }}
-         
         ?> 
         </div>
        
