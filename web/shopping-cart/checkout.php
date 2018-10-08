@@ -56,7 +56,7 @@
             </form>
         </div>
             <?php if(isset("display")){
-               echo "Thank you for your purchase.$name.!"
+               echo "Thank you for your purchase.$name.!";
             }
             ?> 
 
