@@ -37,7 +37,11 @@
 </nav>
       <?php
       $name = $_POST['yourName'];
-      ?>
+     
+       if(isset($_POST["display"])){
+        echo "Thank you for your purchase.$name.!";
+            }
+        ?> 
         <div class="container">
             <h1>Purchase Summery</h1>
             <form action="checkout.php" method="post">
@@ -55,11 +59,7 @@
             </div>
             </form>
         </div>
-        <?php
-             if(isset($_POST["display"])){
-               echo "Thank you for your purchase.$name.!";
-            }
-            ?> 
+      
 
  
 
