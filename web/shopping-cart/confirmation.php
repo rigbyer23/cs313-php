@@ -1,7 +1,7 @@
 <html>
 <?php
     session_start();
-    $name = $_POST['yourName'];
+    $_POST['yourName'] as $name;
     $_SESSION["yourName"][$name] = $name;
     ?>
     <head>
@@ -37,13 +37,15 @@
     </form>
   </div>
 </nav>
+      <div class="container">
       <?php
       
      
        if(isset($_POST["display"])){
-        echo "<p>Thank you for your purchase.$name.!</p>";
+        echo "<p>Thank you for your purchase" .$_SESSION["yourName"]. "!</p>";
             }
         ?> 
+        </div>
        
         </body>
 </html>
