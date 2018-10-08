@@ -34,8 +34,8 @@
     <form class="form-inline my-2 my-lg-0">
     <?php
     function searchGear($gear){
-      if(isset($_POST['searching'] as $gearItem)){
-        if($gearItem == $gear){
+      if(isset($_POST['searching'])){
+        if($_POST['searching'] == $gear){
         return($gearItem);
       }}
     }
