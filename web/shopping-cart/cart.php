@@ -51,8 +51,8 @@
             <h2>Your Cart</h2>
             <?php
                 foreach($_SESSION["gear"] as $item){
-                    echo "<div class'col-lg-5'".$item."</div>";
-                    echo "<div class'col-lg-1'><button type='submit' name='delete' value='$item'>Remove</button></div><br>";
+                    echo $item." ";
+                    echo "<button type='submit' name='delete' value='$item'>Remove</button><br>";
                 }
                 ?>
                 
