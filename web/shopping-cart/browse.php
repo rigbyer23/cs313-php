@@ -33,7 +33,7 @@
     <h1 class="navbar-brand">Take a Hike</h1>
     <form class="form-inline my-2 my-lg-0">
     <?php
-    searchGear($gear){
+    function searchGear($gear){
       if(isset($_POST['searching'] as $gearItem)){
         if($gearItem == $gear){
         return($gearItem);
