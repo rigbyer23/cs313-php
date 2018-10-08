@@ -55,7 +55,11 @@
             </div>
             </form>
         </div>
-            <?php if(isset("display")){
+        <?php if(isset($_POST['gear']))
+            {
+                print_r($_POST['gear']);
+            } ?>
+            <?php if(isset($_POST["display"])){
                echo "Thank you for your purchase.$name.!";
             }
             ?> 
