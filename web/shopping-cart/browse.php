@@ -32,22 +32,21 @@
     </ul>
     <h1 class="navbar-brand">Take a Hike</h1>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+    <?php
+    searchGear($gear){
+      if(isset($_POST['searching'] as $gearItem)){
+        if($gearItem == $gear){
+        return($gearItem);
+      }}
+    }
+    array_filter($gear,searchGear());
+    ?>
+      <input class="form-control mr-sm-2" name="searching" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
 <div class="container">
-<?php
-$gear = [
-    (object) [
-               "Name" => "Hammock",
-               "Price" => 35.00,
-               "Image" => "../glacier-national-park.jpg",
-    ],
-];
-
-?>
 
 <form action="cart.php" method="post">
 <div class="row">
