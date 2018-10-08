@@ -6,7 +6,7 @@
     }
      
    if(isset($_POST["delete"])){
-     unset($_SESSION["gear"][$_POST["delete"]] )
+     unset($_SESSION["gear"][$_POST["delete"]]);  
    }
                 
     ?>
