@@ -44,7 +44,7 @@
         ?> 
         <div class="container">
             <h1>Purchase Summery</h1>
-            <form action="checkout.php" method="post">
+            <form action="confirmation.php" method="post">
             <div class="form-group">
               <label for="formGroupExampleInput">Name</label>
               <input type="text" class="form-control" id="yourName" placeholder="Example input">
