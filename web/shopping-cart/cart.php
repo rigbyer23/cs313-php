@@ -51,7 +51,7 @@
             <h2>Your Cart</h2>
             <?php
                 foreach($_SESSION["gear"] as $item){
-                    echo $item." ";
+                    echo $item." <br>";
                     echo "<button type='submit' name='delete' value='$item'>Remove</button><br>";
                 }
                 ?>
