@@ -36,7 +36,7 @@
     function searchGear($gear){
       if(isset($_POST['searching'])){
         if($_POST['searching'] == $gear){
-        return($gearItem);
+        return($gear);
       }}
     }
     echo(array_filter($gear,"searchGear"));
