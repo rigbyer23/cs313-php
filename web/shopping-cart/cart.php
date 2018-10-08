@@ -4,9 +4,14 @@
    foreach($_POST["gear"] as $item){
     $_SESSION["gear"][$item] = $item;
     }
+     
+   if(isset($_POST["delete"])){
+     unset($_SESSION["gear"][$_POST["delete"]] )
+   }
+                
     ?>
     <form action="cart.php" method="post">
-    </form>
+    
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -51,12 +56,7 @@
                     echo "<button type='submit' name='delete' value='.$item'>Remove</button><br>";
                 }
                 ?>
-                <?php
-                foreach($_SESSION["gear"] as $item) {
-                    $delete = $_POST["delete"];
-                    unset($_SESSION["gear"][$item]);
-                }
-                 ?>
+                
 
             <?php if(isset($_POST['gear']))
             {
@@ -66,5 +66,6 @@
               </div>
             </div>
         </div>
+        </form>
         </body>
 </html>
