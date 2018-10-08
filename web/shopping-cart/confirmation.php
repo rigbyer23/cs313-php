@@ -40,12 +40,12 @@
       <?php
       $name = $_POST['name'];
       $address =$_POST['address'];
-      echo $name;
-      echo $address;
-      var_dump($_POST);
+      echo $name."<br>";
+      echo $address."<br>";
+     
        if(isset($_SESSION["gear"])){
          foreach($_SESSION["gear"] as $item){
-          echo $item."<br>";
+          echo $item."<br><hr>";
          }}
         ?> 
         </div>
