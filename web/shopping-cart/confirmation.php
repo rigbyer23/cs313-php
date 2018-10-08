@@ -39,8 +39,8 @@
       <?php
       echo $_POST["yourName"];
       echo $_POST["address"];
-       if(isset($_SESSION["gear"] as $item)){
-         foreach($_SESSION["gear"]){
+       if(isset($_SESSION["gear"])){
+         foreach($_SESSION["gear"] as $item){
           echo $item;
          }}
          
