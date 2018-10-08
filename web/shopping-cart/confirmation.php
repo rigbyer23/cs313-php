@@ -36,12 +36,13 @@
   </div>
 </nav>
       <div class="container">
-      <h2>Purchase Summary</h2>
+      <h2 style='font-family:Amatic SC, cursive;font-size:58px;'>Purchase Summary</h2>
       <?php
       $name = $_POST['name'];
       $address =$_POST['address'];
       echo $name;
       echo $address;
+      var_dump($_POST);
        if(isset($_SESSION["gear"])){
          foreach($_SESSION["gear"] as $item){
           echo $item."<br>";
