@@ -52,7 +52,7 @@
             <?php
                 foreach($_SESSION["gear"] as $item){
                     echo $item." ";
-                    echo "<button type='submit' name='delete' value='$item'>Remove</button><br><hr>";
+                    echo "<button type='submit' name='delete' value='$item' style='justify-content:flex-end;'>Remove</button><br><hr>";
                 }
                 ?>
                 
