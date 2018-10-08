@@ -42,7 +42,7 @@
         echo "Thank you for your purchase.$name.!";
             }
         ?> 
-        <h2 style='font-family:Amatic SC, cursive;font-size:58px;'>Shipping Information</h2>
+        <h2 style='font-family:Amatic SC, cursive; font-size:58px; margin-left:179px;'>Shipping Information</h2>
         <div class="container">
             <form action="confirmation.php" method="post">
             <div class="form-group">
