@@ -52,15 +52,9 @@
             <?php
                 foreach($_SESSION["gear"] as $item){
                     echo $item." ";
-                    echo "<button type='submit' name='delete' value='$item'>Remove</button><br><hr>";
+                    echo "<button type='submit' class='btn btn-outline-danger btn-sm' name='delete' value='$item'>Remove</button><br><hr>";
                 }
                 ?>
-                
-
-            <?php if(isset($_POST['gear']))
-            {
-                print_r($_POST['gear']);
-            } ?>
             <a href="./checkout.php" class="btn btn-success" role="button">Purchase Items</a>
             <a href="./browse.php" class="btn btn-primary" role="button">Back to Browsing</a>
               </div>

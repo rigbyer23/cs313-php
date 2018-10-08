@@ -41,7 +41,7 @@
       $name = $_POST['name'];
       $address =$_POST['address'];
       echo $name."<br>";
-      echo $address."<br>";
+      echo $address."<br><hr>";
      
        if(isset($_SESSION["gear"])){
          foreach($_SESSION["gear"] as $item){
