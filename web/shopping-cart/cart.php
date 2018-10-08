@@ -49,18 +49,14 @@
           <div class="row">
             <div class="col-lg-6">
             <h2>Your Cart</h2>
-            <table class="table">
-            <tbody>
-            <tr>
-            <td>
             <?php
                 foreach($_SESSION["gear"] as $item){
-                    echo $item." </td>";
-                    echo "<td>button type='submit' name='delete' value='$item'>Remove</button></td><br><tr>";
+                    echo $item." ";
+                    echo "<button type='submit' name='delete' value='$item'>Remove</button><br><hr>";
                 }
                 ?>
-                </tr>
-                </table>
+                
+
             <?php if(isset($_POST['gear']))
             {
                 print_r($_POST['gear']);
