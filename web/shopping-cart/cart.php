@@ -48,7 +48,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
-            <h2 style='font-family:Amatic SC, cursive;'>Your Cart</h2>
+            <h2 style='font-family:Amatic SC, cursive;font-size:58px;'>Your Cart</h2>
             <?php
                 foreach($_SESSION["gear"] as $item){
                     echo $item." ";

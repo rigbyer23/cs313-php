@@ -35,12 +35,15 @@
     </form>
   </div>
 </nav>
+      <?php
+      $name = $_POST['yourName'];
+      ?>
         <div class="container">
             <h1>Purchase Summery</h1>
             <form action="checkout.php" method="post">
             <div class="form-group">
               <label for="formGroupExampleInput">Name</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+              <input type="text" class="form-control" id="yourName" placeholder="Example input">
             </div>
             <div class="form-group">
               <label for="formGroupExampleInput2">Email</label>
@@ -48,22 +51,14 @@
             </div>
             <div class="form-group row">
             <div class="col-sm-10">
-              <button type="submit" class="btn btn-primary">Checkout</button>
+              <button type="submit" id="display" class="btn btn-primary">Checkout</button>
             </div>
             </form>
         </div>
-            <?php
-            // session_start();
-            // foreach($_POST["gear"] as $item){
-            //     $_SESSION["gear"][$item] = $item;
-            //     echo $item;
-
-            //     if (isset($_SESSION["gear"])){
-            //         $gearArray = $_SESSION["gear"];
-            //         echo "session $item";
-            // }
-
-?> 
+            <?php if(isset("display")){
+               echo "Thank you for your purchase.$name.!"
+            }
+            ?> 
 
  
 
