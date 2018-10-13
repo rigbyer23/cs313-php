@@ -38,10 +38,10 @@
       <div class="container">
       <h2 style='font-family:Amatic SC, cursive;font-size:58px;'>Purchase Summary</h2>
       <?php
-      $name = $_POST['name'];
-      $address =$_POST['address'];
+      $name = htmlspecialchars($_POST['name']);
+      $address = htmlspecialchars($_POST['address']);
       echo $name."<br>";
-      echo $address."<br><hr>";
+      echo $address."<br>";
      
        if(isset($_SESSION["gear"])){
          foreach($_SESSION["gear"] as $item){

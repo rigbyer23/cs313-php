@@ -1,0 +1,22 @@
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY
+    ,user_name VARCHAR(50) UNIQUE NOT NULL
+    ,password VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE speaker(
+    id SERIAL PRIMARY KEY
+    , name VARCHAR(100) UNIQUE NOT NULL
+)
+
+CREATE TABLE sessions
+(
+    id SERIAL PRIMARY KEY
+    , month SMALLINT NOT NULL
+    , year SMALLINT NOT NULL
+);
+
+CREATE TABLE notes
+(
+    user_id NOT NULL REFERENCES users(id)
+)
