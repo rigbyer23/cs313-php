@@ -19,6 +19,7 @@ if(isset($_POST['book'])) {
         } else {
             $query = 'SELECT book, chapter, verse, content FROM scriptures';
         }
+
         foreach ($db->query($query) as $row)
         {
           echo '<b>'.$row['book'] ;
@@ -28,7 +29,7 @@ if(isset($_POST['book'])) {
         }
         ?>
 
-        <form action="scriptureQuery.php" method="GET">
+        <form action="scriptureQuery.php" method="POST">
             Book: <input type="text" name="book"><br/>
             <input type="submit">
         </form>
