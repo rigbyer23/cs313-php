@@ -13,29 +13,25 @@ if(isset($_POST['book'])) {
 
     <body>
     <h1>Scripture Resources</h1>
-        <?php
-        if(!isset($book)) {
-            $query = 'SELECT book, chapter, verse, content FROM scriptures WHERE book = $book';
-        } else {
-            $query = 'SELECT book, chapter, verse, content FROM scriptures';
-        };
-
-        foreach ($db->query($query) as $row)
-        {
-          echo '<b>'.$row['book'] ;
-          echo ' '.$row['chapter'].':';
-          echo $row['verse'].'</b>';
-          echo ' -"'.$row['content'].'"<br>';
-        };
-        ?>
-
         <form action="scriptureQuery.php" method="POST">
             Book: <input type="text" name="book"><br/>
             <input type="submit">
         </form>
 
         <?php
+            if(!isset($book)) {
+                $query = 'SELECT book, chapter, verse, content FROM scriptures WHERE book = $book';
+            } else {
+                $query = 'SELECT book, chapter, verse, content FROM scriptures';
+            };
 
+            foreach ($db->query($query) as $row)
+            {
+            echo '<b>'.$row['book'] ;
+            echo ' '.$row['chapter'].':';
+            echo $row['verse'].'</b>';
+            echo ' -"'.$row['content'].'"<br>';
+            };
         ?>
     </body>
 
