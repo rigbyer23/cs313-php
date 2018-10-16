@@ -1,5 +1,5 @@
 <?php
-require("dbconnect.php")
+require("dbconnect.php");
 if(isset($_POST['book'])) {
     $book = $_POST['book'];
 };
@@ -18,7 +18,7 @@ if(isset($_POST['book'])) {
             $query = 'SELECT book, chapter, verse, content FROM scriptures WHERE book = $book';
         } else {
             $query = 'SELECT book, chapter, verse, content FROM scriptures';
-        }
+        };
 
         foreach ($db->query($query) as $row)
         {
@@ -26,7 +26,7 @@ if(isset($_POST['book'])) {
           echo ' '.$row['chapter'].':';
           echo $row['verse'].'</b>';
           echo ' -"'.$row['content'].'"<br>';
-        }
+        };
         ?>
 
         <form action="scriptureQuery.php" method="POST">
