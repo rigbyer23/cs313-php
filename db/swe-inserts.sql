@@ -1,8 +1,9 @@
 INSERT INTO member (first_name, last_name, email, phone, major)
-VALUES ('Jane', 'Doe', 'ilovetarzan@gmail.com','964 555-1985', 'CIT');
+VALUES ('Jane', 'Doe', 'ilovetarzan@gmail.com','964 555-1985', 'CIT')
+        ,('Janae', 'Christianson', 'j.dream@gmail.com','964 555-1595', 'Software Engineer')
+        ,('Janae', 'Christianson', 'j.dream@gmail.com','964 555-1595', 'WDD');
 
-INSERT INTO member (first_name, last_name, email, phone, major)
-VALUES ('Janae', 'Christianson', 'j.dream@gmail.com','964 555-1595', 'CIT');
+
 
 SELECT * 
 FROM member;

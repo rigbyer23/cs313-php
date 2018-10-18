@@ -8,13 +8,13 @@ if(isset($_GET['book'])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <title>Scripture Study</title>
+    <title>BYU-I SWE Official App</title>
     </head>
 
     <body>
-    <h1>Scripture Resources</h1>
-        <form action="scriptureQuery.php" method="GET">
-            Book: <input type="text" name="book"><br/>
+    <h1>Members</h1>
+        <form action="swe-main.php" method="GET">
+            Member <input type="text" name="book"><br/>
             <input type="submit">
         </form>
 
