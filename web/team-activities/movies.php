@@ -4,7 +4,7 @@ require("dbconnect.php");
 $db = get_db();
 $stmt = $db->prepare('SELECT id, title, year FROM movie');
 $stmt->execute();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 };
 //query for all the movies
 
@@ -25,16 +25,9 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($movies as $movie){
                     $title =$movie['title'];
                     $year = $movie['year'];
-                    echo "<li><p><a href ='movieDetails.php?movie_id=$id'>$title($year)</p></li>"
+                    echo "<li><p>$title ($year)></p></li>"
                 }
             ?>
-
-            
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
             </ul>
 
 
