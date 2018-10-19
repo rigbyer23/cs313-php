@@ -25,7 +25,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($movies as $movie){
                     $title =$movie['title'];
                     $year = $movie['year'];
-                    echo "<li><p>$title($year)</p></li>"
+                    echo "<li><p><a href ='movieDetails.php?movie_id=$id'>$title($year)</p></li>"
                 }
             ?>
 
