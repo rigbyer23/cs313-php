@@ -5,7 +5,7 @@ $db = get_db();
 $stmt = $db->prepare('SELECT id, title, year FROM movie');
 $stmt->execute();
 $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
-};
+
 //query for all the movies
 
 //
