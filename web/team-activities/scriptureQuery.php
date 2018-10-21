@@ -1,8 +1,6 @@
 <?php
 require("dbconnect.php");
-if(isset($_GET['book'])) {
-    $book = $_GET['book'];
-};
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +17,10 @@ if(isset($_GET['book'])) {
         </form>
 
         <?php
-            if(!isset($book)) {
+            if(isset($_POST['book'])) {
+                $book = $_POST['book'];
+            };
+               
                 $query = 'SELECT book, chapter, verse, content FROM scriptures WHERE book = $book';
             } else {
                 $query = 'SELECT book, chapter, verse, content FROM scriptures';

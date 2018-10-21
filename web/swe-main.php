@@ -17,6 +17,12 @@ $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 Members <input type="text" name="member"><br/>
                  <ul>
                     <?php
+                    if(isset($member)) {
+                         $query = 'SELECT book, chapter, verse, content FROM scriptures WHERE book = $book';
+                         } else {
+                         $query = 'SELECT book, chapter, verse, content FROM scriptures';
+                        };
+
                         foreach ($members as $member){
                             $first_name =$member['first_name'];
                             $last_name = $member['last_name'];
