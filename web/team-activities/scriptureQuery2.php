@@ -14,11 +14,8 @@
     <head>
         <meta charset="utf-8">
         <title>Scriptures</title>
-        <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.3/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="teamStyle.css">
     </head>
     <body>
-        <?php include 'teamHeader.php';?>
         <main role="main">
             <h1>Scripture Resources</h1>
             <?php
@@ -31,7 +28,7 @@
                     echo '<br/>';
                 }
             ?>
-            <form action="scriptures.php" method="POST">
+            <form action="scriptureQuery2.php" method="POST">
                 Book: <input type="text" name="book">
                 <input type="submit" value="Query">
             </form>
