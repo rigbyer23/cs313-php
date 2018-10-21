@@ -15,10 +15,9 @@ $db = get_db();
                  <ul>
                     <?php
                     if(isset($member)) {
-                        $stmt = $db->prepare('SELECT first_name, last_name, email FROM member');
+                        $stmt = $db->prepare('SELECT first_name, last_name, email FROM member WHERE last_name = $last_name');
                         $stmt->execute();
                         $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                       
                          } else {
                          
                         };
@@ -27,7 +26,7 @@ $db = get_db();
                             $first_name =$member['first_name'];
                             $last_name = $member['last_name'];
                             $email = $member['email'];
-                            echo "<li><p>$first_name></p></li><li>$last_name</li><li>$email</li>";
+                            echo "<li><p>$first_name $last_name $email</p></li>";
                         }
                     ?>
                 </ul>
