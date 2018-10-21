@@ -2,7 +2,8 @@
 //connect to db
 require("./team-activities/dbconnect.php");
 $db = get_db();
- if(isset($_POST($member)) {
+ if(isset($_POST['member']) {
+    $member = $_POST['member'];
     $stmt = $db->prepare('SELECT first_name, last_name, email FROM member WHERE last_name = $last_name');
     $stmt->execute();
     } else {
