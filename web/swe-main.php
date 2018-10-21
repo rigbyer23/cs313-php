@@ -2,9 +2,6 @@
 //connect to db
 require("./team-activities/dbconnect.php");
 $db = get_db();
-$stmt = $db->prepare('SELECT first_name, last_name, email FROM member');
-$stmt->execute();
-$members = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <html>
@@ -18,9 +15,12 @@ $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
                  <ul>
                     <?php
                     if(isset($member)) {
-                         $query = 'SELECT book, chapter, verse, content FROM scriptures WHERE book = $book';
+                        $stmt = $db->prepare('SELECT first_name, last_name, email FROM member');
+                        $stmt->execute();
+                        $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                       
                          } else {
-                         $query = 'SELECT book, chapter, verse, content FROM scriptures';
+                         
                         };
 
                         foreach ($members as $member){
