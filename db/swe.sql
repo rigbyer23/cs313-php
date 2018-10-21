@@ -2,6 +2,7 @@ DROP TABLE calendar_event;
 DROP TABLE task;
 DROP TABLE ab_member;
 DROP TABLE member;
+DROP TABLE member;
 DROP TABLE document;
 DROP TABLE speaker;
 
@@ -18,17 +19,17 @@ CREATE TABLE member(
 
 CREATE TABLE major(
     id SERIAL PRIMARY KEY NOT NULL
-    , name VARCHAR(30) NOT NULL
-    , abbr VARCHAR(10)
+    , name TEXT NOT NULL
+    , abbr VARCHAR(50)
 );
 
 CREATE TABLE ab_member(
     id SERIAL PRIMARY KEY 
-    , username VARCHAR(50) NOT NULL UNIQUE 
-    , password VARCHAR(50) NOT NULL 
+    , username VARCHAR(100) NOT NULL UNIQUE 
+    , password VARCHAR(100) NOT NULL 
     , member_id int REFERENCES member(id) NOT NULL
-    , position VARCHAR(20)
-    , exp_date DATE 
+    , position VARCHAR(50)
+    , exp_date SMALLINT 
 );
 
 CREATE TABLE document(
@@ -68,3 +69,21 @@ CREATE TABLE task(
     , complete_by DATE NOT NULL
     , event_id int REFERENCES calendar_event(id) NOT NULL
 );
+
+INSERT INTO major(name, abbr)
+VALUES ('Computer Information Technology', 'CIT')
+        ,('Web Design and Development','WDD')
+        ,('Software Engineering', 'SE')
+        ,('Computer Science', 'CS');
+
+
+INSERT INTO member (first_name, last_name, email, phone, major_id)
+VALUES ('Jane', 'Doe', 'ilovetarzan@gmail.com','964 555-1985', 1)
+        ,('Emma', 'Watson', 'book.nerd@gmail.com','964 555-1991', 3)
+        ,('Malala', 'Yousafzai', 'magicisreal@gmail.com','964 555-1996', 2)
+        ,('Harriet', 'Tubman', 'freedomismine@gmail.com','964 555-1836', 2)
+        ,('Marie', 'Curie', 'sciencesaveslives@gmail.com','964 555-1965', 4)
+        ,('Ameila', 'Earheart', 'flygirl@gmail.com','964 555-1960', 3);
+        ,('Dororthy', 'Vaughn', 'idomath@gmail.com', '946-555-1953', 4)
+        ,('Mary', 'Jackson', 'firstcoder@gmail.com', '946-555-1946', 1)
+        ,('Katherine', 'Johnson', 'womenengineer@gmail.com', '946-555-1943', 3);

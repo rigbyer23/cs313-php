@@ -1,39 +1,47 @@
 <?php
-require("dbconnect.php");
-if(isset($_GET['book'])) {
-    $book = $_GET['book'];
-};
+//connect to db
+require("./team-activities/dbconnect.php");
+$db = get_db();
+$stmt = $db->prepare('SELECT first_name, last_name, email FROM member');
+$stmt->execute();
+$members = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-    <title>BYU-I SWE Official App</title>
+    <title>SWE</title>
     </head>
+         <body>
+            <h1>Society of Women Engineers</h1>
+                <form action="swe-main.php" method="GET">
+                Members <input type="text" name="member"><br/>
+                 <ul>
+                    <?php
+                        foreach ($members as $member){
+                            $first_name =$member['first_name'];
+                            $last_name = $member['last_name'];
+                            $email = $member['email'];
+                            echo "<li><p>$first_name></p></li><li>$last_name</li><li>$email</li>";
+                        }
+                    ?>
+                </ul>
+                <input type="submit">
+                </form>
 
-    <body>
-    <h1>Members</h1>
-        <form action="swe-main.php" method="GET">
-            Member <input type="text" name="book"><br/>
-            <input type="submit">
-        </form>
+                <form action="swe-main.php" method="GET">
+                Advisory Board Members <input type="text" name="book"><br/>
+                <input type="submit">
+                </form>
 
-        <?php
-            if(!isset($book)) {
-                $query = 'SELECT book, chapter, verse, content FROM scriptures WHERE book = $book';
-            } else {
-                $query = 'SELECT book, chapter, verse, content FROM scriptures';
-            };
-
-            foreach ($db->query($query) as $row)
-            {
-            echo '<b>'.$row['book'] ;
-            echo ' '.$row['chapter'].':';
-            echo $row['verse'].'</b>';
-            echo ' -"'.$row['content'].'"<br>';
-            };
-        ?>
-    </body>
+                <form action="swe-main.php" method="GET">
+                    Upcoming Speakers<input type="text" name="book"><br/>
+                    <input type="submit">
+                </form>
+                
+           
 
 
-    </html>
+
+</html>
+
+    
