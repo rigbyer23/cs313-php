@@ -2,6 +2,13 @@
 //connect to db
 require("./team-activities/dbconnect.php");
 $db = get_db();
+ if(isset($_POST($member)) {
+    $stmt = $db->prepare('SELECT first_name, last_name, email FROM member WHERE last_name = $last_name');
+    $stmt->execute();
+    } else {
+        $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+    };
 ?>
 
 <html>
@@ -14,15 +21,7 @@ $db = get_db();
                 Members <input type="text" name="member"><br/>
                  <ul>
                     <?php
-                    if(isset($member)) {
-                        $stmt = $db->prepare('SELECT first_name, last_name, email FROM member WHERE last_name = $last_name');
-                        $stmt->execute();
-                        $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                         } else {
-                         
-                        };
-
-                        foreach ($members as $member){
+                        foreach ($db->stmt($stmt) as $member){
                             $first_name =$member['first_name'];
                             $last_name = $member['last_name'];
                             $email = $member['email'];
@@ -30,7 +29,7 @@ $db = get_db();
                         }
                     ?>
                 </ul>
-                <input type="submit">
+                <input type="submit" value="Search">
                 </form>
 
                 <form action="swe-main.php" method="GET">
