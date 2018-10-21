@@ -8,6 +8,7 @@ $db = get_db();
     $stmt = $db->prepare('SELECT first_name, last_name, email FROM member WHERE last_name = $last_name');
     $stmt->execute();
     } else {
+        $stmt->execute();
         $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
     };
