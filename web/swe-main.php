@@ -10,11 +10,11 @@ $db = get_db();
     $stmt->execute();
     $member = $stmt->fetchAll();
     }
-    else if(isset($_GET['see_all']))
+    else if(isset($_GET['see_all'] == 1))
     {
     $stmt = $db->prepare('SELECT * FROM member');
     $stmt->execute();
-    $all = $stmt->fetchAll();
+    $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
     };
 
      if(isset($_GET['abm_last_name']))
@@ -46,7 +46,7 @@ $db = get_db();
                 <form action="swe-main.php" method="GET">
                 Members (Enter last name) <input type="text" name="last_name"><br/>
                 <input type="submit" value="Search">
-                <input type="submit" name="see_all" value="See All">
+                <input type="submit" name="see_all" value= '1'>
                 </form>
 
                 <ul>
