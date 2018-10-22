@@ -29,9 +29,8 @@ $db = get_db();
     $speaker = $stmt->fetchAll();
     };
 
-           if(isset($_GET['see_all']))
+           if(isset('see_all'))
  {
-    $all = $_GET['see_all'];
     $stmt = $db->prepare('SELECT * FROM member');
     $stmt->execute();
     $all = $stmt->fetchAll();
