@@ -19,6 +19,15 @@ $db = get_db();
     $stmt->execute();
     $ab_member = $stmt->fetchAll();
     };
+
+        if(isset($_GET['speaker']))
+ {
+    $full_name = $_GET['speaker'];
+    $stmt = $db->prepare('SELECT full_name, title, email, phone FROM speaker WHERE full_name = :speaker');
+    $stmt->bindValue(':speaker', $full_name, PDO::PARAM_STR);
+    $stmt->execute();
+    $speaker = $stmt->fetchAll();
+    };
 ?>
 
 <html>
@@ -40,10 +49,6 @@ $db = get_db();
                             echo $row['first_name'].' '.$row['last_name'].' '.$row['email']. ' '.$row['abbr'];
                         }
 
-                        foreach ($ab_member as $row){
-                           
-                            echo $row['position']. ' '. $row['first_name'].' '.$row['last_name'].' '.$row['username']. ' '.$row['exp_date'];
-                        }
                     ?>
                 </ul>
 
@@ -51,11 +56,27 @@ $db = get_db();
                 Advisory Board Members <input type="text" name="abm_last_name"><br/>
                 <input type="submit" value="Search">
                 </form>
+                
+                <?php 
+                    
+                        foreach ($ab_member as $row){
+                           
+                            echo $row['position']. ' '. $row['first_name'].' '.$row['last_name'].' '.$row['username']. ' '.$row['exp_date'] ;
+                        }
+                ?>
 
                 <form action="swe-main.php" method="GET">
-                    Upcoming Speakers<input type="text" name="book"><br/>
-                    <input type="submit">
+                    Upcoming Speakers<input type="text" name="speaker"><br/>
+                    <input type="submit" value="Search">
                 </form>
+
+                  <?php 
+                    
+                        foreach ($speaker as $row){
+                           
+                            echo $row['full_name']. ' '. $row['title'].' '.$row['email'].' '.$row['phone'];
+                        }
+                ?>
                 
            
 
