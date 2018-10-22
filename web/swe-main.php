@@ -5,7 +5,7 @@ $db = get_db();
  if(isset($_GET['last_name']) && $_GET['last_name']!== '')
  {
     $last_name = $_GET['last_name'];
-    $stmt = $db->prepare('SELECT first_name, last_name, email, name FROM member m JOIN major ma ON m.major_id = ma.id WHERE last_name = :last_name');
+    $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id WHERE last_name = :last_name');
     $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
     $stmt->execute();
     $member = $stmt->fetchAll();
