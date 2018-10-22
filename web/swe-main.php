@@ -28,7 +28,7 @@ else if(isset($_GET['see_all']))
 
     else if(isset($_GET['see_all_abm']))
 {
-    $stmt = $db->prepare('SELECT position, first_name, last_name, username, exp_date FROM member m');
+    $stmt = $db->prepare('SELECT position, first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
     $stmt->execute();
     $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
