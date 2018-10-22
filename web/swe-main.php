@@ -10,7 +10,7 @@ $db = get_db();
     $stmt->execute();
     $member = $stmt->fetchAll();
     }
-    else if(isset($_GET['see_all'] == 1))
+    else if(isset($_GET['see_all']))
     {
     $stmt = $db->prepare('SELECT * FROM member');
     $stmt->execute();
@@ -46,7 +46,7 @@ $db = get_db();
                 <form action="swe-main.php" method="GET">
                 Members (Enter last name) <input type="text" name="last_name"><br/>
                 <input type="submit" value="Search">
-                <input type="submit" name="see_all" value= '1'>
+                <input type="submit" name="see_all">
                 </form>
 
                 <ul>
@@ -67,7 +67,7 @@ $db = get_db();
                 <form action="swe-main.php" method="GET">
                 Advisory Board Members <input type="text" name="abm_last_name"><br/>
                 <input type="submit" value="Search">
-                <input type="submit" name="see_all_abm" value="See All">
+                <input type="submit" name="see_all_abm">
                 </form>
                 <ul>
                 <?php 
