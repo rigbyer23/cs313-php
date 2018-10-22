@@ -28,6 +28,15 @@ $db = get_db();
     $stmt->execute();
     $speaker = $stmt->fetchAll();
     };
+
+           if(isset($_GET['see_all']))
+ {
+    $all = $_GET['see_all'];
+    $stmt = $db->prepare('SELECT * FROM member');
+    $stmt->execute();
+    $all = $stmt->fetchAll();
+    };
+
 ?>
 
 <html>
@@ -39,6 +48,7 @@ $db = get_db();
                 <form action="swe-main.php" method="GET">
                 Members (Enter last name) <input type="text" name="last_name"><br/>
                 <input type="submit" value="Search">
+                <input type="submit" name="see_all" value="See All">
                 </form>
 
                 <ul>
@@ -46,7 +56,7 @@ $db = get_db();
 
                         foreach ($member as $row){
                            
-                            echo $row['first_name'].'<br>'.$row['last_name'].'<br>'.$row['email']. '<br>'.$row['abbr'];
+                            echo $row['first_name'].' '.$row['last_name'].'<br>'.$row['email']. '<br>'.$row['abbr'];
                         }
 
                     ?>
@@ -55,13 +65,14 @@ $db = get_db();
                 <form action="swe-main.php" method="GET">
                 Advisory Board Members <input type="text" name="abm_last_name"><br/>
                 <input type="submit" value="Search">
+                <input type="submit" name="see_all_abm" value="See All">
                 </form>
                 <ul>
                 <?php 
                     
                         foreach ($ab_member as $row){
                            
-                            echo $row['position']. '<br>'. $row['first_name'].'<br>'.$row['last_name'].'<br>'.$row['username']. '<br>'.$row['exp_date'] ;
+                            echo $row['position']. '<br>'. $row['first_name'].' '.$row['last_name'].'<br>'.$row['username']. '<br>'.$row['exp_date'] ;
                         }
                 ?>
                 </ul>
@@ -69,6 +80,7 @@ $db = get_db();
                 <form action="swe-main.php" method="GET">
                     Upcoming Speakers<input type="text" name="speaker"><br/>
                     <input type="submit" value="Search">
+                    <input type="submit" name="see_all_speakers" value="See All">
                 </form>
                 <ul>
                   <?php 
