@@ -37,7 +37,7 @@ $db = get_db();
 
                         foreach ($member as $row){
                            
-                            echo $row['first_name'].' '$row['last_name'].' '$row['email']. ' '$row['abbr'];
+                            echo $row['first_name'].' '.$row['last_name'].' '.$row['email']. ' '.$row['abbr'];
                         }
 
                         foreach ($ab_member as $row){
