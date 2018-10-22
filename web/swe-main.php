@@ -8,6 +8,7 @@ $db = get_db();
     $stmt = $db->prepare('SELECT first_name, last_name, email FROM member WHERE last_name = :last_name');
     $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
     $stmt->execute();
+    $member = $stmt->fetchAll();
     };
 ?>
 
@@ -24,7 +25,8 @@ $db = get_db();
 
                 <ul>
                 <?php
-                        foreach ($stmt->fetchAll() as $row){
+
+                        foreach ($member as $row){
                            
                             echo $row['first_name']. $row['last_name']. $row['email'];
                         }
