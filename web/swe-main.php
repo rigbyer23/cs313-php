@@ -17,22 +17,36 @@ else if(isset($_GET['see_all']))
     $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-     if(isset($_GET['abm_last_name']))
+     if(isset($_GET['abm_last_name'])&& $_GET['abm_last_name']!== '')
  {
     $last_name = $_GET['abm_last_name'];
     $stmt = $db->prepare('SELECT position, first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id WHERE last_name = :abm_last_name');
     $stmt->bindValue(':abm_last_name', $last_name, PDO::PARAM_STR);
     $stmt->execute();
     $ab_member = $stmt->fetchAll();
+  }
+
+    else if(isset($_GET['see_all_abm']))
+{
+    $stmt = $db->prepare('SELECT * FROM ab_member');
+    $stmt->execute();
+    $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+     if(isset($_GET['speaker'])&& $_GET['speaker']!== '')
+    {
+        $full_name = $_GET['speaker'];
+        $stmt = $db->prepare('SELECT full_name, title, email, phone FROM speaker WHERE full_name = :speaker');
+        $stmt->bindValue(':speaker', $full_name, PDO::PARAM_STR);
+        $stmt->execute();
+        $speaker = $stmt->fetchAll();
     }
 
-        if(isset($_GET['speaker']))
- {
-    $full_name = $_GET['speaker'];
-    $stmt = $db->prepare('SELECT full_name, title, email, phone FROM speaker WHERE full_name = :speaker');
-    $stmt->bindValue(':speaker', $full_name, PDO::PARAM_STR);
-    $stmt->execute();
-    $speaker = $stmt->fetchAll();
+    else if(isset($_GET['see_all_speakers']))
+    {
+        $stmt = $db->prepare('SELECT * FROM speaker');
+        $stmt->execute();
+        $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 ?>
@@ -76,6 +90,11 @@ else if(isset($_GET['see_all']))
                            
                             echo $row['position']. '<br>'. $row['first_name'].' '.$row['last_name'].'<br>'.$row['username']. '<br>'.$row['exp_date'] ;
                         }
+
+                         foreach ($all as $row){
+                           
+                            echo $row['position']. '<br>'. $row['first_name'].' '.$row['last_name'].'<br>'.$row['username']. '<br>'.$row['exp_date'] .'<hr><br>';
+                        }
                 ?>
                 </ul>
 
@@ -90,6 +109,10 @@ else if(isset($_GET['see_all']))
                         foreach ($speaker as $row){
                            
                             echo $row['full_name']. '<br>'. $row['title'].'<br>'.$row['email'].'<br>'.$row['phone'];
+                        }
+                         foreach ($all as $row){
+                           
+                            echo  $row['full_name']. '<br>'. $row['title'].'<br>'.$row['email'].'<br>'.$row['phone'].'<hr><br>';
                         }
                 ?>
                 </ul>
