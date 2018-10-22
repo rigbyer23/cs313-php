@@ -46,7 +46,7 @@ $db = get_db();
 
                         foreach ($member as $row){
                            
-                            echo $row['first_name'].' '.$row['last_name'].' '.$row['email']. ' '.$row['abbr'];
+                            echo $row['first_name'].'<br>'.$row['last_name'].'<br>'.$row['email']. '<br>'.$row['abbr'];
                         }
 
                     ?>
@@ -56,27 +56,29 @@ $db = get_db();
                 Advisory Board Members <input type="text" name="abm_last_name"><br/>
                 <input type="submit" value="Search">
                 </form>
-                
+                <ul>
                 <?php 
                     
                         foreach ($ab_member as $row){
                            
-                            echo $row['position']. ' '. $row['first_name'].' '.$row['last_name'].' '.$row['username']. ' '.$row['exp_date'] ;
+                            echo $row['position']. '<br>'. $row['first_name'].'<br>'.$row['last_name'].'<br>'.$row['username']. '<br>'.$row['exp_date'] ;
                         }
                 ?>
+                </ul>
 
                 <form action="swe-main.php" method="GET">
                     Upcoming Speakers<input type="text" name="speaker"><br/>
                     <input type="submit" value="Search">
                 </form>
-
+                <ul>
                   <?php 
                     
                         foreach ($speaker as $row){
                            
-                            echo $row['full_name']. ' '. $row['title'].' '.$row['email'].' '.$row['phone'];
+                            echo $row['full_name']. '<br>'. $row['title'].'<br>'.$row['email'].'<br>'.$row['phone'];
                         }
                 ?>
+                </ul>
                 
            
 
