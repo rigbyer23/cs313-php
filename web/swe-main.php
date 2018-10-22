@@ -2,20 +2,20 @@
 //connect to db
 require("./team-activities/dbconnect.php");
 $db = get_db();
- if(isset($_GET['last_name']))
+ if(isset($_GET['last_name']) && $_GET['last_name']!== '')
  {
     $last_name = $_GET['last_name'];
     $stmt = $db->prepare('SELECT first_name, last_name, email, abbr FROM member m JOIN major ma ON m.major_id = ma.id WHERE last_name = :last_name');
     $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
     $stmt->execute();
     $member = $stmt->fetchAll();
-    }
-    else if(isset($_GET['see_all']))
-    {
+}
+else if(isset($_GET['see_all']))
+{
     $stmt = $db->prepare('SELECT * FROM member');
     $stmt->execute();
     $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    };
+}
 
      if(isset($_GET['abm_last_name']))
  {
@@ -24,7 +24,7 @@ $db = get_db();
     $stmt->bindValue(':abm_last_name', $last_name, PDO::PARAM_STR);
     $stmt->execute();
     $ab_member = $stmt->fetchAll();
-    };
+    }
 
         if(isset($_GET['speaker']))
  {
@@ -33,7 +33,7 @@ $db = get_db();
     $stmt->bindValue(':speaker', $full_name, PDO::PARAM_STR);
     $stmt->execute();
     $speaker = $stmt->fetchAll();
-    };
+    }
 
 ?>
 
@@ -67,7 +67,7 @@ $db = get_db();
                 <form action="swe-main.php" method="GET">
                 Advisory Board Members <input type="text" name="abm_last_name"><br/>
                 <input type="submit" value="Search">
-                <input type="submit" name="see_all_abm">
+                <input type="submit" name="see_all_abm" value="See All">
                 </form>
                 <ul>
                 <?php 
