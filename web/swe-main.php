@@ -12,7 +12,7 @@ $db = get_db();
 }
 else if(isset($_GET['see_all']))
 {
-    $stmt = $db->prepare('SELECT first_name, last_name, email, name FROM member m JOIN major ma ON m.major_id = ma.id');
+    $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id');
     $stmt->execute();
     $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -68,7 +68,7 @@ else if(isset($_GET['see_all']))
 
                         foreach ($member as $row){
                            
-                            echo $row['first_name'].' '.$row['last_name'].'<br>'.$row['email']. '<br>'.$row['name'];
+                            echo $row['first_name'].' '.$row['last_name'].'<br>'.$row['email']. '<br>' .$row['phone'].'<br>'.$row['name'];
                         }
 
                          foreach ($all as $row){
