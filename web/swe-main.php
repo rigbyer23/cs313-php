@@ -29,7 +29,7 @@ $db = get_db();
     $speaker = $stmt->fetchAll();
     };
 
-           if(isset('see_all'))
+           if(isset($_POST['see_all']))
  {
     $stmt = $db->prepare('SELECT * FROM member');
     $stmt->execute();
@@ -58,6 +58,10 @@ $db = get_db();
                             echo $row['first_name'].' '.$row['last_name'].'<br>'.$row['email']. '<br>'.$row['abbr'];
                         }
 
+                         foreach ($all as $row){
+                           
+                            echo $row['first_name'].' '.$row['last_name'].' '.$row['email']. ' '.$row['phone']. ' '. $row['major_id'].'<hr><br>';
+                        }
                     ?>
                 </ul>
 
