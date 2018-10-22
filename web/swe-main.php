@@ -79,7 +79,7 @@ else if(isset($_GET['see_all']))
                 </ul>
 
                 <form action="swe-main.php" method="GET">
-                Advisory Board Members <input type="text" name="abm_last_name"><br/>
+                Advisory Board Members (Enter last name) <input type="text" name="abm_last_name"><br/>
                 <input type="submit" value="Search">
                 <input type="submit" name="see_all_abm" value="See All">
                 </form>
@@ -99,7 +99,7 @@ else if(isset($_GET['see_all']))
                 </ul>
 
                 <form action="swe-main.php" method="GET">
-                    Upcoming Speakers<input type="text" name="speaker"><br/>
+                    Upcoming Speakers (Enter full name)<input type="text" name="speaker"><br/>
                     <input type="submit" value="Search">
                     <input type="submit" name="see_all_speakers" value="See All">
                 </form>
