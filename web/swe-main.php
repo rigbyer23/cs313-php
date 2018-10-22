@@ -30,7 +30,7 @@ else if(isset($_GET['see_all']))
 {
     $stmt = $db->prepare('SELECT * FROM ab_member');
     $stmt->execute();
-    $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
      if(isset($_GET['speaker'])&& $_GET['speaker']!== '')
@@ -46,7 +46,7 @@ else if(isset($_GET['see_all']))
     {
         $stmt = $db->prepare('SELECT * FROM speaker');
         $stmt->execute();
-        $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $all_speakers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 ?>
@@ -91,7 +91,7 @@ else if(isset($_GET['see_all']))
                             echo $row['position']. '<br>'. $row['first_name'].' '.$row['last_name'].'<br>'.$row['username']. '<br>'.$row['exp_date'] ;
                         }
 
-                         foreach ($all as $row){
+                         foreach ($all_ab as $row){
                            
                             echo $row['position']. '<br>'. $row['first_name'].' '.$row['last_name'].'<br>'.$row['username']. '<br>'.$row['exp_date'] .'<hr><br>';
                         }
@@ -110,7 +110,7 @@ else if(isset($_GET['see_all']))
                            
                             echo $row['full_name']. '<br>'. $row['title'].'<br>'.$row['email'].'<br>'.$row['phone'];
                         }
-                         foreach ($all as $row){
+                         foreach ($all_speakers as $row){
                            
                             echo  $row['full_name']. '<br>'. $row['title'].'<br>'.$row['email'].'<br>'.$row['phone'].'<hr><br>';
                         }
