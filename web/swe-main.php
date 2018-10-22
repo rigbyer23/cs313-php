@@ -5,14 +5,14 @@ $db = get_db();
  if(isset($_GET['last_name']) && $_GET['last_name']!== '')
  {
     $last_name = $_GET['last_name'];
-    $stmt = $db->prepare('SELECT first_name, last_name, email, abbr FROM member m JOIN major ma ON m.major_id = ma.id WHERE last_name = :last_name');
+    $stmt = $db->prepare('SELECT first_name, last_name, email, name FROM member m JOIN major ma ON m.major_id = ma.id WHERE last_name = :last_name');
     $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
     $stmt->execute();
     $member = $stmt->fetchAll();
 }
 else if(isset($_GET['see_all']))
 {
-    $stmt = $db->prepare('SELECT * FROM member');
+    $stmt = $db->prepare('SELECT first_name, last_name, email, name FROM member m JOIN major ma ON m.major_id = ma.id');
     $stmt->execute();
     $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -28,7 +28,7 @@ else if(isset($_GET['see_all']))
 
     else if(isset($_GET['see_all_abm']))
 {
-    $stmt = $db->prepare('SELECT * FROM ab_member');
+    $stmt = $db->prepare('SELECT position, first_name, last_name, username, exp_date FROM member m');
     $stmt->execute();
     $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -68,12 +68,12 @@ else if(isset($_GET['see_all']))
 
                         foreach ($member as $row){
                            
-                            echo $row['first_name'].' '.$row['last_name'].'<br>'.$row['email']. '<br>'.$row['abbr'];
+                            echo $row['first_name'].' '.$row['last_name'].'<br>'.$row['email']. '<br>'.$row['name'];
                         }
 
                          foreach ($all as $row){
                            
-                            echo $row['first_name'].' '.$row['last_name'].' '.$row['email']. ' '.$row['phone']. ' '. $row['major_id'].'<hr><br>';
+                            echo $row['first_name'].' '.$row['last_name'].'<br> '.$row['email']. '<br> '.$row['phone']. '<br>'. $row['name'].'<hr><br>';
                         }
                     ?>
                 </ul>
