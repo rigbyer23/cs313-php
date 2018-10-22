@@ -9,6 +9,12 @@ $db = get_db();
     $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
     $stmt->execute();
     $member = $stmt->fetchAll();
+    }
+    else if(isset($_GET['see_all']))
+    {
+    $stmt = $db->prepare('SELECT * FROM member');
+    $stmt->execute();
+    $all = $stmt->fetchAll();
     };
 
      if(isset($_GET['abm_last_name']))
@@ -27,13 +33,6 @@ $db = get_db();
     $stmt->bindValue(':speaker', $full_name, PDO::PARAM_STR);
     $stmt->execute();
     $speaker = $stmt->fetchAll();
-    };
-
-           if(isset($_POST['see_all']))
- {
-    $stmt = $db->prepare('SELECT * FROM member');
-    $stmt->execute();
-    $all = $stmt->fetchAll();
     };
 
 ?>
