@@ -46,7 +46,7 @@ $db = get_db();
                 <form action="swe-main.php" method="GET">
                 Members (Enter last name) <input type="text" name="last_name"><br/>
                 <input type="submit" value="Search">
-                <input type="submit" name="see_all">
+                <input type="submit" name="see_all" value="See All">
                 </form>
 
                 <ul>
