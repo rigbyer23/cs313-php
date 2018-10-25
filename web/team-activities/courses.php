@@ -26,14 +26,11 @@ $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     $name = $course['name'];
                     $code = $course['code'];
 
-                    echo "<li><p>$code - $name</p></li>\n";
+                    echo "<li><p><a href='notes.php? id=$id'>$code - $name</p></li>\n";
                 }
             
             ?>
-                <li><p> CS 313 - Web II</p></li>
-                <li><p> CS 313 - Web II</p></li>
-                <li><p> CS 313 - Web II</p></li>
-                <li><p> CS 313 - Web II</p></li>
+                
             </ul>
 
 
