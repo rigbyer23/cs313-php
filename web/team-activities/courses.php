@@ -1,5 +1,5 @@
 <?php
- require("./team-activities/dbconnect.php");
+ require("dbconnect.php");
 $db = get_db();
  
 $query ='SELECT id, code, name FROM course';
