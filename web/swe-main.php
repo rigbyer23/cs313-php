@@ -64,13 +64,11 @@ else if(isset($_GET['see_all']))
          <body>
          <div class="container">
             <div class="row">
-                <div class="col-lg-4" style="background-color: rgb(131, 90, 141) height:60px;">
-                    <h1 style="font-family: 'Pacifico', cursive; color: white;">BYUI<br>SWE</h1>
-                     </div>
-                <div class="col-lg-8">
-                     <img src="./engineer-girl.jpg" class="image-fluid float-right" alt ="Girl engineer">
+             
+                <div class="col-lg-12" style="background-color: rgb(131, 90, 141);">
+                    <h1 style="font-family: 'Pacifico', cursive; color: white;">BYUI-SWE</h1>
                 </div>
-            
+            </div>
 
             <div class="row">
             <div class="col-lg-4">
