@@ -12,7 +12,7 @@ $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <html>
     <head>
-    <title>Movies</title>
+    <title>Courses</title>
     </head>
 
         <body>
