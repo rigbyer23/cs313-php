@@ -232,7 +232,7 @@ else if(isset($_GET['see_all']))
                
                 <div class="row">
                     <div class ="col-lg-4">
-                        <form action="swe-main.php" method="GET">
+                        <form action="swe-main2.php" method="GET">
                             Upcoming Speakers (Enter full name)<input type="text" name="speaker"><br/>
                             <input type="submit" value="Search">
                             <input type="submit" name="see_all_speakers" value="See All">
