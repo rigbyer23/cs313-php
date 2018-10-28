@@ -67,7 +67,7 @@ else if(isset($_GET['see_all']))
              
                 <div class="col-lg-12" style="background-color: rgb(90, 82, 119);">
                     <h1 style="font-family: 'Pacifico', cursive; color: white;">BYUI-SWE</h1>
-                    <img class="img-responsive float-right" src="./swe-image.jpg">
+                    <img class="img-responsive float-right width: 50%; height:50%;" src="./swe-image.jpg">
                 </div>
             </div>
             <br>
