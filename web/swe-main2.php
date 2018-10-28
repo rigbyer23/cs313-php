@@ -61,7 +61,7 @@ else if(isset($_GET['see_all']))
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     </head>
-         <body>
+        <body>
          <div class="container">
             <div class="row">
              
@@ -88,22 +88,89 @@ else if(isset($_GET['see_all']))
                     </div>
                 
                 <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-                <div class="card-body">
-                    <div class="form-check">
-                    <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
-                     All Members
-                     <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
-                     Advisory Board
-                     <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
-                     Computer Science
-                     <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
-                     Software Engineering
-                     <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
-                     Computer Information Technology
+                    <div class="card-body">
+                        <div class="form-check">
+                        <ul>
+                            <li><input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            All Members
+                            </li>
+                            <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            Advisory Board
+                            </li>
+                            <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            Computer Science
+                            </li>
+                            <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            Software Engineering
+                            </li>
+                            <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            Computer Information Technology
+                            </li>
+                        </ul>
+                        </div>
+                        
                     </div>
                 </div>
-                </div>
             </div>
+
+            <div id="accordion" role="tablist">
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                    <h5 class="mb-0">
+                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Speakers
+                        </a>
+                    </h5>
+                    </div>
+
+                     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-body">
+                            <div class="form-check">
+                            <ul>
+                                <li><input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                All Speakers
+                                </li>
+                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                Previous
+                                </li>
+                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                Potential
+                                </li>
+                             </ul>
+                            </div>
+                    </div>
+                </div>
+
+            <div id="accordion" role="tablist">
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                    <h5 class="mb-0">
+                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Calendar
+                        </a>
+                    </h5>
+                    </div>
+
+                     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-body">
+                            <div class="form-check">
+                            <ul>
+                                <li><input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                All Events
+                                </li>
+                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                Upcoming Events
+                                </li>
+                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                Past Events
+                                </li>
+                                 <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                Tasks
+                                </li>
+                             </ul>
+                            </div>
+                    </div>
+                </div>
 
                 <div class="col-lg-12">Members</div><br><br>
                 <div class="col-lg-12">Advisory Board</div><br><br>
