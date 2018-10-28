@@ -237,19 +237,20 @@ else if(isset($_GET['see_all']))
                             <input type="submit" value="Search">
                             <input type="submit" name="see_all_speakers" value="See All">
                         </form>
-                            <ul>
+                            <table class="table">
                             <?php 
                                 
                                     foreach ($speaker as $row){
                                     
-                                        echo $row['full_name']. '<br>'. $row['title'].'<br>'.$row['email'].'<br>'.$row['phone'];
-                                    }
+                                        echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';                               
+                                     }
                                     foreach ($all_speakers as $row){
                                     
-                                        echo  $row['full_name']. '<br>'. $row['title'].'<br>'.$row['email'].'<br>'.$row['phone'].'<hr><br>';
+                                        echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';
                                     }
                             ?>
-                            </ul>
+                              </table>
+                        
                     </div>
                 </div>
         </div>
