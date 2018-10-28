@@ -17,11 +17,11 @@ else if(isset($_GET['see_all']))
     $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-     if(isset($_GET['abm_last_name'])&& $_GET['abm_last_name']!== '')
+     if(isset($_GET['advb'])&& $_GET['advb']!== '')
  {
-    $last_name = $_GET['abm_last_name'];
+    $last_name = $_GET['advb'];
     $stmt = $db->prepare('SELECT position, first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id WHERE last_name = :abm_last_name');
-    $stmt->bindValue(':abm_last_name', $last_name, PDO::PARAM_STR);
+    $stmt->bindValue(':advb', $last_name, PDO::PARAM_STR);
     $stmt->execute();
     $ab_member = $stmt->fetchAll();
   }
@@ -67,7 +67,7 @@ else if(isset($_GET['see_all']))
              
                 <div class="col-lg-12 d-flex p-2" style="background-color: rgb(90, 82, 119);">
                       <div class="mr-auto p-2"><h1 style="font-family: 'Pacifico', cursive; color: white;">BYUI-SWE</h1></div>
-                    <div class="p-2"><img class="img-responsive" style="object-fit: cover; height:50%; width:75%;" src="./swe-image.jpg"></div>
+                    <div class="p-2"><img class="img-responsive" style="object-fit: cover; height:40%; width:100%;" src="./swe-image.jpg"></div>
                 </div>
             </div>
             <br>
@@ -92,16 +92,16 @@ else if(isset($_GET['see_all']))
                     <div class="card-body">
                         <div class="form-check">
                         <ul>
-                            <li><input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            <li><input class="form-check-input" value="" id="allMembers" type="checkbox">
                             All Members
                             </li>
-                            <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            <li> <input class="form-check-input" value="" id="advb" type="checkbox">
                             Advisory Board
                             </li>
-                            <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            <li> <input class="form-check-input" value="" id="cs" type="checkbox">
                             Computer Science
                             </li>
-                            <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            <li> <input class="form-check-input" value="" id="se" type="checkbox">
                             Software Engineering
                             </li>
                             <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">

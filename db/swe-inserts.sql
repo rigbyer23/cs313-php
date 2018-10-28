@@ -29,6 +29,7 @@ VALUES('Mother Teresa', 'Albanian Nun', 'globalpeace@gmail.com', '876-555-1997')
         ,('Anne Frank', 'Dutch Jewish Author', 'journalistjew@gmail.com', '865-555-1945');
 
 
+INSERT INTO documents
 
 SELECT first_name, last_name, email, position, username, position
 FROM member m JOIN ab_member am ON m.id = am.member_id; 
