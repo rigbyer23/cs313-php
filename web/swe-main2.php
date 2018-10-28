@@ -65,17 +65,50 @@ else if(isset($_GET['see_all']))
          <div class="container">
             <div class="row">
              
-                <div class="col-lg-12" style="background-color: rgb(131, 90, 141);">
+                <div class="col-lg-12" style="background-color: rgb(90, 82, 119);">
                     <h1 style="font-family: 'Pacifico', cursive; color: white;">BYUI-SWE</h1>
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
 
             <div class="row">
-               <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">
-                <div class="col-lg-12">Members</div>
-                <div class="col-lg-12">Advisory Board</div>
-                <div class="col-lg-12">Calendar</div>
-                <div class="col-lg-12">Tasks</div>
+               <div class="h-75 d-inline-block" style="width: 300px; background-color: rgba(168,168,168)">
+
+               <div id="accordion" role="tablist">
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingOne">
+                    <h5 class="mb-0">
+                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Members
+                        </a>
+                    </h5>
+                    </div>
+                
+                <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body">
+                    <div class="form-check">
+                    <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                     All Members
+                     <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                     Advisory Board
+                     <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                     Computer Science
+                     <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                     Software Engineering
+                     <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                     Computer Information Technology
+                    </div>
+                </div>
+                </div>
+            </div>
+
+                <div class="col-lg-12">Members</div><br><br>
+                <div class="col-lg-12">Advisory Board</div><br><br>
+                <div class="col-lg-12">Calendar</div><br><br>
+                <div class="col-lg-12">Tasks</div><br><br>
                </div>
                 
                 </div>
