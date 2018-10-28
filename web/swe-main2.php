@@ -2,6 +2,7 @@
 //connect to db
 require("./team-activities/dbconnect.php");
 $db = get_db();
+//Search members
  if(isset($_GET['last_name']) && $_GET['last_name']!== '')
  {
     $last_name = $_GET['last_name'];
@@ -17,6 +18,7 @@ else if(isset($_GET['see_all']))
     $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+//Search Ab members
      if(isset($_GET['advb'])&& $_GET['advb']!== '')
  {
     $last_name = $_GET['advb'];
@@ -33,6 +35,7 @@ else if(isset($_GET['see_all']))
     $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+//Search speakers
      if(isset($_GET['speaker'])&& $_GET['speaker']!== '')
     {
         $full_name = $_GET['speaker'];
@@ -67,7 +70,7 @@ else if(isset($_GET['see_all']))
              
                 <div class="col-lg-12 d-flex p-2" style="background-color: rgb(90, 82, 119);">
                       <div class="mr-auto p-2"><h1 style="font-family: 'Pacifico', cursive; color: white;">BYUI-SWE</h1></div>
-                    <div class="p-2"><img class="img-responsive" style="object-fit: cover; height:40%; width:100%;" src="./swe-image.jpg"></div>
+                    <div class="p-2"><img class="img-responsive" style="object-fit: cover; height:40%; width:100%;" src="./swe-image-new.jpg"></div>
                 </div>
             </div>
             <br>
