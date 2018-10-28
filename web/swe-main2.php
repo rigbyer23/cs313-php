@@ -171,11 +171,6 @@ else if(isset($_GET['see_all']))
                             </div>
                     </div>
                 </div>
-
-                <div class="col-lg-12">Members</div><br><br>
-                <div class="col-lg-12">Advisory Board</div><br><br>
-                <div class="col-lg-12">Calendar</div><br><br>
-                <div class="col-lg-12">Tasks</div><br><br>
                </div>
                 
                 </div>
