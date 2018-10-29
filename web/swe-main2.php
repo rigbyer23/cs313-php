@@ -92,11 +92,8 @@ $db = get_db();
             </div>
             <br>
             <br>
-            <br>
-            <br>
-
             <div class="row d-flex">
-                <div class="col-lg-4 p-2 h-95 d-inline-block d-inline-flex p-2" style="width: 300px; background-color: rgba(168,168,168)">
+                <div class="col-lg-3 p-2 h-95 d-inline-block d-inline-flex p-2" style="width: 300px; background-color: rgba(168,168,168)">
                 <!-- //accordian -->
                     <div id="accordion" role="tablist">
                     <div class="card">
@@ -207,7 +204,7 @@ $db = get_db();
     </div>
 </div>
             
-            <div class="col-lg-7 d-inline-flex p-2">
+            <div class="col-lg-9 d-inline-flex p-2">
                 <table class="table">
                     <?php
 
