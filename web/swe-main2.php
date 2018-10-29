@@ -181,7 +181,7 @@ else if(isset($_GET['see_all']))
             </div>
 
             <div class="col lg 9">
-                <form action="swe-main.php" method="GET">
+                <form action="swe-main2.php" method="GET">
                 Members (Enter last name) <input type="text" name="last_name"><br/>
                 <input type="submit" value="Search">
                 <input type="submit" name="see_all" value="See All">
@@ -208,7 +208,7 @@ else if(isset($_GET['see_all']))
 
             <div class="row">
                 <div class ="col-lg-4">
-                <form action="swe-main.php" method="GET">
+                <form action="swe-main2.php" method="GET">
                 Advisory Board Members (Enter last name) <input type="text" name="abm_last_name"><br/>
                 <input type="submit" value="Search">
                 <input type="submit" name="see_all_abm" value="See All">
