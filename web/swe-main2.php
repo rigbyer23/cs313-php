@@ -16,20 +16,25 @@ $db = get_db();
         $stmt->execute();
         $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
         break;
+     }
+}
+//search speakers
+ if(isset($_GET['speakers']))
+ {
+     switch($_GET['speakers']){
+        case 'allMembers':
+           $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id');
+           $stmt->execute();
+           $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
+           break;
+        case 'advb':
+        $stmt = $db->prepare('SELECT position,first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
+        $stmt->execute();
+        $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        break;
+     }
+}
 
-     } 
-    $last_name = $_GET['last_name'];
-    $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id WHERE last_name = :last_name');
-    $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
-    $stmt->execute();
-    $member = $stmt->fetchAll();
-}
-else if(isset($_GET['see_all']))
-{
-    $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id');
-    $stmt->execute();
-    $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
 
 //Search Ab members
      if(isset($_GET['advb'])&& $_GET['advb']!== '')
@@ -146,18 +151,21 @@ else if(isset($_GET['see_all']))
 
                      <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                         <div class="card-body">
+                         <form action ="swe-main2.php" method="GET">
                             <div class="form-check">
                             <ul>
-                                <li><input class="form-check-input" value="" id="defaultCheck1" type="radio">
+                                <li><input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
                                 All Speakers
                                 </li>
-                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
+                                <li> <input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
                                 Previous
                                 </li>
-                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
+                                <li> <input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
                                 Potential
                                 </li>
                              </ul>
+                             <input type="submit" value="Search">
+                             </form>
                           </div>
                     </div>
                 </div>
@@ -214,25 +222,8 @@ else if(isset($_GET['see_all']))
                             
                                 echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td> '.$row['email']. '</td><td>' .$row['phone']. '</td><td>'. $row['name'].'</td></tr>';
                             }
-                        ?> 
-            </table>
-            </div>
-
-            
-            
-           
-
-            <div class="row">
-                <div class ="col-lg-4">
-                <form action="swe-main2.php" method="GET">
-                Advisory Board Members (Enter last name) <input type="text" name="abm_last_name"><br/>
-                <input type="submit" value="Search">
-                <input type="submit" name="see_all_abm" value="See All">
-                </form>
-                <table class="table">
-                    <?php 
-                        
-                            foreach ($ab_member as $row){
+                            //ab member
+                               foreach ($ab_member as $row){
                             
                                 echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
                             }
@@ -241,35 +232,19 @@ else if(isset($_GET['see_all']))
                             
                                 echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
                             }
-                    ?>
-                </table>
-                </div>
+                            //speaker
+                            
+                            foreach ($speaker as $row){
+                            
+                                echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';                               
+                                }
+                            foreach ($all_speakers as $row){
+                            
+                                echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';
+                            }
+                        ?> 
+                 </table>
             </div>
-
-               
-                <div class="row">
-                    <div class ="col-lg-4">
-                        <form action="swe-main2.php" method="GET">
-                            Upcoming Speakers (Enter full name)<input type="text" name="speaker"><br/>
-                            <input type="submit" value="Search">
-                            <input type="submit" name="see_all_speakers" value="See All">
-                        </form>
-                            <table class="table">
-                            <?php 
-                                
-                                    foreach ($speaker as $row){
-                                    
-                                        echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';                               
-                                     }
-                                    foreach ($all_speakers as $row){
-                                    
-                                        echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';
-                                    }
-                            ?>
-                              </table>
-                        
-                    </div>
-                </div>
         </div>
 
 </html>
