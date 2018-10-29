@@ -65,7 +65,7 @@ else if(isset($_GET['see_all']))
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
     <body>
-        <div class="container d-flex">
+        <div class="container">
             <div class="row">
              
                 <div class="col-lg-12 d-flex p-2" style="background-color: rgb(90, 82, 119);">
