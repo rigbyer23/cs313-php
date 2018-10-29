@@ -65,7 +65,7 @@ else if(isset($_GET['see_all']))
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
     <body>
-        <div class="container">
+        <div class="container d-flex">
             <div class="row">
              
                 <div class="col-lg-12 d-flex p-2" style="background-color: rgb(90, 82, 119);">
@@ -179,36 +179,30 @@ else if(isset($_GET['see_all']))
                </div> 
             </div>
             </div>
-            
+
             <div class="col lg 9">
-             <div class="row">
-            <div class="col-lg-4">
                 <form action="swe-main.php" method="GET">
                 Members (Enter last name) <input type="text" name="last_name"><br/>
                 <input type="submit" value="Search">
                 <input type="submit" name="see_all" value="See All">
                 </form>
+                <table class="table">
+                    <?php
 
-                <ul>
-                <?php
+                            foreach ($member as $row){
+                            
+                                echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['email']. '</td><td>' .$row['phone'].'</td><td>'.$row['name'].'</td></tr>';
+                            }
 
-                        foreach ($member as $row){
-                           
-                            echo $row['first_name'].' '.$row['last_name'].'<br>'.$row['email']. '<br>' .$row['phone'].'<br>'.$row['name'];
-                        }
-
-                         foreach ($all as $row){
-                           
-                            echo $row['first_name'].' '.$row['last_name'].'<br> '.$row['email']. '<br> '.$row['phone']. '<br>'. $row['name'].'<hr><br>';
-                        }
-                    ?>
-                </ul>
+                            foreach ($all as $row){
+                            
+                                echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td> '.$row['email']. '</td><td>' .$row['phone']. '</td><td>'. $row['name'].'</td></tr>';
+                            }
+                        ?> 
+            </table>
             </div>
-            </div>
+
             
-            </div>
-
-            </div>
             
            
 
@@ -219,20 +213,20 @@ else if(isset($_GET['see_all']))
                 <input type="submit" value="Search">
                 <input type="submit" name="see_all_abm" value="See All">
                 </form>
-                <ul>
-                <?php 
-                    
-                        foreach ($ab_member as $row){
-                           
-                            echo $row['position']. '<br>'. $row['first_name'].' '.$row['last_name'].'<br>'.$row['username']. '<br>'.$row['exp_date'] ;
-                        }
+                <table class="table">
+                    <?php 
+                        
+                            foreach ($ab_member as $row){
+                            
+                                echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
+                            }
 
-                         foreach ($all_ab as $row){
-                           
-                            echo $row['position']. '<br>'. $row['first_name'].' '.$row['last_name'].'<br>'.$row['username']. '<br>'.$row['exp_date'] .'<hr><br>';
-                        }
-                ?>
-                </ul>
+                            foreach ($all_ab as $row){
+                            
+                                echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
+                            }
+                    ?>
+                </table>
                 </div>
             </div>
 
