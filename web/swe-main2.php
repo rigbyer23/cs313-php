@@ -3,8 +3,21 @@
 require("./team-activities/dbconnect.php");
 $db = get_db();
 //Search members
- if(isset($_GET['last_name']) && $_GET['last_name']!== '')
+ if(isset($_GET['members']))
  {
+     switch($_GET['members']){
+        case 'allMembers':
+           $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id');
+           $stmt->execute();
+           $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
+           break;
+        case 'advb':
+        $stmt = $db->prepare('SELECT position,first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
+        $stmt->execute();
+        $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        break;
+
+     } 
     $last_name = $_GET['last_name'];
     $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id WHERE last_name = :last_name');
     $stmt->bindValue(':last_name', $last_name, PDO::PARAM_STR);
@@ -30,7 +43,7 @@ else if(isset($_GET['see_all']))
 
     else if(isset($_GET['see_all_abm']))
 {
-    $stmt = $db->prepare('SELECT position, first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
+    $stmt = $db->prepare('SELECT position,first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
     $stmt->execute();
     $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
