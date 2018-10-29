@@ -97,19 +97,19 @@ else if(isset($_GET['see_all']))
                     <form action ="swe-main2.php" method="GET">
                         <div class="form-check">
                         <ul>
-                            <li><input class="form-check-input" value="" name="allMembers" type="radio">
+                            <li><input class="form-check-input" name="members" value="allMembers" type="radio">
                             All Members
                             </li>
-                            <li> <input class="form-check-input" value="" name="advb" type="radio">
+                            <li> <input class="form-check-input" name="members" value="advb" type="radio">
                             Advisory Board
                             </li>
-                            <li> <input class="form-check-input" value="" name="cs" type="radio">
+                            <li> <input class="form-check-input" name="members" value="cs" type="radio">
                             Computer Science
                             </li>
-                            <li> <input class="form-check-input" value="" name="se" type="radio">
+                            <li> <input class="form-check-input" name="members" value="se" type="radio">
                             Software Engineering
                             </li>
-                            <li> <input class="form-check-input" value="" name="defaultCheck1" type="radio">
+                            <li> <input class="form-check-input" name="members" value="defaultCheck1" type="radio">
                             Computer Information Technology
                             </li>
                         </ul>
