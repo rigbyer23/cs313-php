@@ -63,9 +63,9 @@ else if(isset($_GET['see_all']))
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    </head>
-        <body>
-         <div class="container">
+</head>
+    <body>
+        <div class="container">
             <div class="row">
              
                 <div class="col-lg-12 d-flex p-2" style="background-color: rgb(90, 82, 119);">
@@ -79,6 +79,7 @@ else if(isset($_GET['see_all']))
             <br>
 
             <div class="row">
+                <div class="col-lg-3">
                <div class="h-75 d-inline-block" style="width: 300px; background-color: rgba(168,168,168)">
 
                <div id="accordion" role="tablist">
@@ -141,7 +142,7 @@ else if(isset($_GET['see_all']))
                                 Potential
                                 </li>
                              </ul>
-                            </div>
+                          </div>
                     </div>
                 </div>
 
@@ -173,14 +174,14 @@ else if(isset($_GET['see_all']))
                                 </li>
                              </ul>
                             </div>
+                         </div>
                     </div>
-                </div>
-               </div>
-                
-                </div>
+               </div> 
+            </div>
             </div>
             
-            <div class="row">
+            <div class="col lg 9">
+             <div class="row">
             <div class="col-lg-4">
                 <form action="swe-main.php" method="GET">
                 Members (Enter last name) <input type="text" name="last_name"><br/>
@@ -204,6 +205,12 @@ else if(isset($_GET['see_all']))
                 </ul>
             </div>
             </div>
+            
+            </div>
+
+            </div>
+            
+           
 
             <div class="row">
                 <div class ="col-lg-4">
