@@ -203,13 +203,6 @@ $db = get_db();
                </div> 
             </div>
             </div>
-
-            <div class="col lg 9">
-                <form action="swe-main2.php" method="GET">
-                Members (Enter last name) <input type="text" name="last_name"><br/>
-                <input type="submit" value="Search">
-                <input type="submit" name="see_all" value="See All">
-                </form>
                 <table class="table">
                     <?php
 
