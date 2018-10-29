@@ -85,7 +85,6 @@ $db = get_db();
     <body>
         <div class="container">
             <div class="row">
-             
                 <div class="col-lg-12 d-flex p-2" style="background-color: rgb(90, 82, 119);">
                       <div class="mr-auto p-2"><h1 style="font-family: 'Pacifico', cursive; color: white;">BYUI-SWE</h1></div>
                     <div class="p-2"><img class="img-responsive" style="object-fit: cover; height:40%; width:100%;" src="./swe-image.jpg"></div>
@@ -97,44 +96,42 @@ $db = get_db();
             <br>
 
             <div class="row d-flex justify-content-around">
-                <div class="col-lg-4 p-2">
-               <div class="h-75 d-inline-block" style="width: 300px; background-color: rgba(168,168,168)">
-
-               <div id="accordion" role="tablist">
-                <div class="card">
+                <div class="col-lg-4 p-2 h-75 d-inline-block" style="width: 300px; background-color: rgba(168,168,168)">
+                <!-- //accordian -->
+                    <div id="accordion" role="tablist">
+                    <div class="card">
                     <div class="card-header" role="tab" id="headingOne">
                     <h5 class="mb-0">
                         <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Members
                         </a>
-                    </h5>
-                    </div>
+                     </h5>
+                </div>
                 
                 <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                     <div class="card-body">
-                    <form action ="swe-main2.php" method="GET">
-                        <div class="form-check">
-                        <ul>
-                            <li><input class="form-check-input" name="members" value="allMembers" type="radio">
-                            All Members
-                            </li>
-                            <li> <input class="form-check-input" name="members" value="advb" type="radio">
-                            Advisory Board
-                            </li>
-                            <li> <input class="form-check-input" name="members" value="cs" type="radio">
-                            Computer Science
-                            </li>
-                            <li> <input class="form-check-input" name="members" value="se" type="radio">
-                            Software Engineering
-                            </li>
-                            <li> <input class="form-check-input" name="members" value="defaultCheck1" type="radio">
-                            Computer Information Technology
-                            </li>
-                        </ul>
-                        <input type="submit" value="Search">
-                        </div>
+                        <form action ="swe-main2.php" method="GET">
+                            <div class="form-check">
+                                <ul>
+                                    <li><input class="form-check-input" name="members" value="allMembers" type="radio">
+                                    All Members
+                                    </li>
+                                    <li> <input class="form-check-input" name="members" value="advb" type="radio">
+                                    Advisory Board
+                                    </li>
+                                    <li> <input class="form-check-input" name="members" value="cs" type="radio">
+                                    Computer Science
+                                    </li>
+                                    <li> <input class="form-check-input" name="members" value="se" type="radio">
+                                    Software Engineering
+                                    </li>
+                                    <li> <input class="form-check-input" name="members" value="defaultCheck1" type="radio">
+                                    Computer Information Technology
+                                    </li>
+                                </ul>
+                                <input type="submit" value="Search">
+                            </div>
                         </form>
-                        
                     </div>
                 </div>
             </div>
@@ -142,31 +139,32 @@ $db = get_db();
             <div id="accordion" role="tablist">
                 <div class="card">
                     <div class="card-header" role="tab" id="headingTwo">
-                    <h5 class="mb-0">
+                     <h5 class="mb-0">
                         <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Speakers
                         </a>
-                    </h5>
+                     </h5>
                     </div>
 
                      <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                         <div class="card-body">
                          <form action ="swe-main2.php" method="GET">
                             <div class="form-check">
-                            <ul>
-                                <li><input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
-                                All Speakers
-                                </li>
-                                <li> <input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
-                                Previous
-                                </li>
-                                <li> <input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
-                                Potential
-                                </li>
-                             </ul>
-                             <input type="submit" value="Search">
-                             </form>
-                          </div>
+                                <ul>
+                                    <li><input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
+                                    All Speakers
+                                    </li>
+                                    <li> <input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
+                                    Previous
+                                    </li>
+                                    <li> <input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
+                                    Potential
+                                    </li>
+                                </ul>
+                                <input type="submit" value="Search">
+                            </div>
+                         </form>
+                        </div>
                     </div>
                 </div>
 
@@ -182,28 +180,32 @@ $db = get_db();
 
                      <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                         <div class="card-body">
-                            <div class="form-check">
-                            <ul>
-                                <li><input class="form-check-input" value="" id="defaultCheck1" type="radio">
-                                All Events
-                                </li>
-                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
-                                Upcoming Events
-                                </li>
-                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
-                                Past Events
-                                </li>
-                                 <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
-                                Tasks
-                                </li>
-                             </ul> 
-                            </div>
-                         </div>
+                            <form action ="swe-main2.php" method="GET">
+                                <div class="form-check">
+                                    <ul>
+                                        <li><input class="form-check-input" value="" id="defaultCheck1" type="radio">
+                                        All Events
+                                        </li>
+                                        <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
+                                        Upcoming Events
+                                        </li>
+                                        <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
+                                        Past Events
+                                        </li>
+                                        <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
+                                        Tasks
+                                        </li>
+                                    </ul> 
+                                    <input type="submit" value="Search">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-               </div> 
+                </div>
             </div>
-            </div>
-
+        </div>
+    </div>
+            
             <div class="col-lg-7 p-2">
                 <table class="table">
                     <?php
@@ -239,9 +241,7 @@ $db = get_db();
                             }
                         ?> 
                  </table>
-                 </div>
-            </div>
-        </div>
+        </div>        
 
 </html>
 
