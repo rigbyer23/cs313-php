@@ -94,25 +94,28 @@ else if(isset($_GET['see_all']))
                 
                 <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                     <div class="card-body">
+                    <form action ="swe-main2.php" method="GET">
                         <div class="form-check">
                         <ul>
-                            <li><input class="form-check-input" value="" id="allMembers" type="checkbox">
+                            <li><input class="form-check-input" value="" name="allMembers" type="radio">
                             All Members
                             </li>
-                            <li> <input class="form-check-input" value="" id="advb" type="checkbox">
+                            <li> <input class="form-check-input" value="" name="advb" type="radio">
                             Advisory Board
                             </li>
-                            <li> <input class="form-check-input" value="" id="cs" type="checkbox">
+                            <li> <input class="form-check-input" value="" name="cs" type="radio">
                             Computer Science
                             </li>
-                            <li> <input class="form-check-input" value="" id="se" type="checkbox">
+                            <li> <input class="form-check-input" value="" name="se" type="radio">
                             Software Engineering
                             </li>
-                            <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                            <li> <input class="form-check-input" value="" name="defaultCheck1" type="radio">
                             Computer Information Technology
                             </li>
                         </ul>
+                        <input type="submit" value="Search">
                         </div>
+                        </form>
                         
                     </div>
                 </div>
@@ -132,13 +135,13 @@ else if(isset($_GET['see_all']))
                         <div class="card-body">
                             <div class="form-check">
                             <ul>
-                                <li><input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                <li><input class="form-check-input" value="" id="defaultCheck1" type="radio">
                                 All Speakers
                                 </li>
-                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
                                 Previous
                                 </li>
-                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
                                 Potential
                                 </li>
                              </ul>
@@ -160,16 +163,16 @@ else if(isset($_GET['see_all']))
                         <div class="card-body">
                             <div class="form-check">
                             <ul>
-                                <li><input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                <li><input class="form-check-input" value="" id="defaultCheck1" type="radio">
                                 All Events
                                 </li>
-                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
                                 Upcoming Events
                                 </li>
-                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
                                 Past Events
                                 </li>
-                                 <li> <input class="form-check-input" value="" id="defaultCheck1" type="checkbox">
+                                 <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
                                 Tasks
                                 </li>
                              </ul>
