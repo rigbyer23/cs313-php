@@ -96,8 +96,8 @@ $db = get_db();
             <br>
             <br>
 
-            <div class="row">
-                <div class="col-lg-3">
+            <div class="row d-flex justify-content-around">
+                <div class="col-lg-4 p-2">
                <div class="h-75 d-inline-block" style="width: 300px; background-color: rgba(168,168,168)">
 
                <div id="accordion" role="tablist">
@@ -196,13 +196,15 @@ $db = get_db();
                                  <li> <input class="form-check-input" value="" id="defaultCheck1" type="radio">
                                 Tasks
                                 </li>
-                             </ul>
+                             </ul> 
                             </div>
                          </div>
                     </div>
                </div> 
             </div>
             </div>
+
+            <div class="col-lg-7 p-2">
                 <table class="table">
                     <?php
 
@@ -237,6 +239,7 @@ $db = get_db();
                             }
                         ?> 
                  </table>
+                 </div>
             </div>
         </div>
 
