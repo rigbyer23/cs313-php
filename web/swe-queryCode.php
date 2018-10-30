@@ -6,7 +6,7 @@ if(isset($_GET['members']))
  {
      switch($_GET['members']){
         case 'allMembers':
-           $stmt = $db->prepare('SELECT first_name, last_name, email, phone, abbr FROM member m JOIN major ma ON m.major_id = ma.id');
+           $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id');
            $stmt->execute();
            $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
            break;
