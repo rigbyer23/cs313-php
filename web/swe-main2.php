@@ -1,4 +1,6 @@
 <?php
+$all;
+$all_ab;
 require("./swe-queryCode.php");
 $gd = getData();
 
