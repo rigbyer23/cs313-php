@@ -211,9 +211,7 @@ $db = get_db();
 
                             foreach ($member as $row){
                             
-                                echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['email']. '</td><td>' .$row['phone'].'</td><td>'.$row['name'].'</td></tr>';
-                                
-                                echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr>';
+                                echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['email']. '</td><td>' .$row['phone'].'</td><td>'.$row['name'].'</td></tr><tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr>';
                             }
 
                             foreach ($all as $row){
