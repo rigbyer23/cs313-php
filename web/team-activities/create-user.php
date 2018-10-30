@@ -11,6 +11,6 @@ $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
     $someQuery->execute();
 
-    header("./signin.php");
+    header("location: ./signin.php");
 
 ?>
