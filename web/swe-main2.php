@@ -168,11 +168,9 @@ if(isset($_POST['addMember']))
                             }
                             if(isset($_GET['members'])){
                                  echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCols"></td><td><input type="text" name="phoneCols"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
+                            }
                         ?> 
                  </table>
             </form>
         </div>        
-
 </html>
-
-    
