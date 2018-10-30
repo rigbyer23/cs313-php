@@ -59,7 +59,7 @@ if(isset($_GET['members']))
 
 //Search speakers
 
-    else if(isset($_GET['all_speakers']))
+    else if(isset($_GET['allSpeakers']))
     {
         $stmt = $db->prepare('SELECT * FROM speaker');
         $stmt->execute();

@@ -147,7 +147,7 @@ if(isset($_POST['addMember']))
 </div>
             
             <div class="col-lg-9 d-inline-flex p-2">
-            <form action="swe-main2.php" method="post">
+            <form action="swe-insertCode.php" method="post">
                 <table class="table">
                     <?php
                             foreach ($all as $row){
