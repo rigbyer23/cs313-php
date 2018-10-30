@@ -1,9 +1,10 @@
 <?php
-require("./team-activities/dbconnect.php");
-$db = get_db(); 
 //Search members
 function getData(){
+    require("./team-activities/dbconnect.php");
+    $db = get_db();
     $gd = NULL;
+   
 if(isset($_GET['members']))
  {
      switch($_GET['members']){
