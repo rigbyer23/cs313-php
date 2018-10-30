@@ -208,35 +208,21 @@ $db = get_db();
             <form action="swe-main2.php" method="post">
                 <table class="table">
                     <?php
-
-                            foreach ($member as $row){
-                            
-                                echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['email']. '</td><td>' .$row['phone'].'</td><td>'.$row['name'].'</td></tr>';
-                              
-                            }
-
                             foreach ($all as $row){
                             
                                 echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td> '.$row['email']. '</td><td>' .$row['phone']. '</td><td>'. $row['name'].'</td></tr>';
-
-                                  echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr>';
                             }
+                             if(isset($_GET['members'])){
+                                 echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr>';
+                             }
                             //ab member
-                               foreach ($ab_member as $row){
-                            
-                                echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
-                            }
-
+                           
                             foreach ($all_ab as $row){
                             
                                 echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
                             }
                             //speaker
-                            
-                            foreach ($speaker as $row){
-                            
-                                echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';                               
-                                }
+                           
                             foreach ($all_speakers as $row){
                             
                                 echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';
