@@ -11,10 +11,15 @@ $query->execute();
 
 $realPass = $query->fetch(PDO::FETCH_ASSOC);
 
-var_dump($realPass);
 
 if (password_verify($password, $realPass['password'])){
+
+    header('location: ./homepage.php');
     
+}
+
+else{
+    header('location: ./signin.php');
 }
 
 
