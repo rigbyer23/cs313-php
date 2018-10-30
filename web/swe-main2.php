@@ -1,8 +1,4 @@
 <?php
-//connect to db
-require("./team-activities/dbconnect.php");
-$db = get_db();
-
 require("./swe-queryCode.php");
 $gd = getData();
 
