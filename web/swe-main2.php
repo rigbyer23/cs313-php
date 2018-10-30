@@ -133,7 +133,7 @@ $db = get_db();
                 </div>
             </div>
 
-            <div id="accordion" role="tablist">
+            <div id="accordion" role="tablist" style="width: 100%;">
                 <div class="card">
                     <div class="card-header" role="tab" id="headingTwo">
                      <h5 class="mb-0">
@@ -148,13 +148,13 @@ $db = get_db();
                          <form action ="swe-main2.php" method="GET">
                             <div class="form-check">
                                 <ul>
-                                    <li><input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
+                                    <li><input class="form-check-input" name="speakers" value="allSpeakers" type="radio">
                                     All Speakers
                                     </li>
-                                    <li> <input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
+                                    <li> <input class="form-check-input" name="speakers" value="previous" type="radio">
                                     Previous
                                     </li>
-                                    <li> <input class="form-check-input" name="speakers" value="defaultCheck1" type="radio">
+                                    <li> <input class="form-check-input" name="speakers" value="potential" type="radio">
                                     Potential
                                     </li>
                                 </ul>
@@ -205,12 +205,15 @@ $db = get_db();
 </div>
             
             <div class="col-lg-9 d-inline-flex p-2">
+            <form action="swe-main2.php" method="post">
                 <table class="table">
                     <?php
 
                             foreach ($member as $row){
                             
                                 echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['email']. '</td><td>' .$row['phone'].'</td><td>'.$row['name'].'</td></tr>';
+                                
+                                echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr>';
                             }
 
                             foreach ($all as $row){
@@ -239,6 +242,7 @@ $db = get_db();
                             }
                         ?> 
                  </table>
+            </form>
         </div>        
 
 </html>
