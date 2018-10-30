@@ -1,4 +1,6 @@
 <?php
+require("./team-activities/dbconnect.php");
+$db = get_db();
 //Search members
 function getData(){
     $gd = NULL;
