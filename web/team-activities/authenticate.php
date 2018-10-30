@@ -4,7 +4,7 @@
 $password = $_POST['password'];
 $username = $_POST['username'];
 
-$query = $db->prepare('SELECT password FROM user WHERE username = :username;');
+$query = $db->prepare('SELECT password FROM teamUser WHERE username = :username;');
 
 $query->bindValue(':username', $username, PDO::PARAM_STR);
 $query->execute();
