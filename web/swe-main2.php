@@ -166,7 +166,7 @@ if(isset($_POST['addMember']))
                             
                                 echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';
                             }
-                            if(isset($_GET['members'])){
+                            if(isset($_GET['speakers'])){
                                  echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCols"></td><td><input type="text" name="phoneCols"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
                             }
                         ?> 
