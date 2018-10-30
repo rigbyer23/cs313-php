@@ -1,4 +1,8 @@
- <?php $fname = $_POST['firstNcol'];
+ <?php
+ 
+    function insertData(){
+        $idta = NULL;
+    $fname = $_POST['firstNcol'];
     $lname = $_POST['secNcol'];
     $email = $_POST['emailCol'];
     $phone = $_POST['phoneCol'];
@@ -14,5 +18,8 @@
     $someQuery->bindValue(":major", $major);
 
     $someQuery->execute();
+    
+    return $idta;
+    }
 
     ?>
