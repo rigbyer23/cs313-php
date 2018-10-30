@@ -1,9 +1,9 @@
 <?php
 //Search members
-$all;
-$all_ab;
+
 function getData(){
     require("./team-activities/dbconnect.php");
+    global $all, $all_ab, $all_speakers;
     $db = get_db();
     $gd = NULL;
    
