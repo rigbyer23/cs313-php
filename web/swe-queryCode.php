@@ -1,5 +1,7 @@
 <?php
 //Search members
+$all;
+$all_ab;
 function getData(){
     require("./team-activities/dbconnect.php");
     $db = get_db();
