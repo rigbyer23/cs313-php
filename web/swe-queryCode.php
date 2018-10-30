@@ -11,7 +11,7 @@ if(isset($_GET['members']))
  {
      switch($_GET['members']){
         case 'allMembers':
-           $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id');
+           $stmt = $db->prepare('SELECT first_name, last_name, email, phone, abbr FROM member m JOIN major ma ON m.major_id = ma.id');
            $stmt->execute();
            $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
            break;
@@ -26,15 +26,15 @@ if(isset($_GET['members']))
  if(isset($_GET['speakers']))
  {
      switch($_GET['speakers']){
-        case 'allMembers':
-           $stmt = $db->prepare('SELECT first_name, last_name, email, phone, name FROM member m JOIN major ma ON m.major_id = ma.id');
+        case 'allSpeakers':
+           $stmt = $db->prepare('SELECT full_name, title, email, phone FROM speaker');
            $stmt->execute();
            $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
            break;
         case 'advb':
         $stmt = $db->prepare('SELECT position,first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
         $stmt->execute();
-        $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $all_speakers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         break;
      }
 }

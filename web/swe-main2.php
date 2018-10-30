@@ -4,11 +4,13 @@ $all_ab;
 $all_speakers;
 require("./swe-queryCode.php");
 $gd = getData();
+require("./swe-insertCode.php");
 
 //insert member
 if(isset($_POST['addMember']))
 {
-
+    $idta = insertData();
+    window.alert("You have added a new member!");
 }
 ?>
 
@@ -35,7 +37,7 @@ if(isset($_POST['addMember']))
             <div class="row d-flex">
                 <div class="col-lg-3 p-2 h-95 d-inline-block d-inline-flex p-2" style="width: 300px; background-color: rgba(168,168,168)">
                 <!-- //accordian -->
-                    <div id="accordion" role="tablist">
+                    <div id="accordion" role="tablist" style="width: 100%;">
                     <div class="card">
                     <div class="card-header" role="tab" id="headingOne">
                     <h5 class="mb-0">
@@ -57,13 +59,13 @@ if(isset($_POST['addMember']))
                                     Advisory Board
                                     </li>
                                     <li> <input class="form-check-input" name="members" value="cs" type="radio">
-                                    Computer Science
+                                    Computer Science (CS)
                                     </li>
                                     <li> <input class="form-check-input" name="members" value="se" type="radio">
-                                    Software Engineering
+                                    Software Engineering(SE)
                                     </li>
                                     <li> <input class="form-check-input" name="members" value="defaultCheck1" type="radio">
-                                    Computer Information Technology
+                                    Computer Information Technology(CIT)
                                     </li>
                                 </ul>
                                 <input type="submit" value="Search">
@@ -152,22 +154,20 @@ if(isset($_POST['addMember']))
                             
                                 echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td> '.$row['email']. '</td><td>' .$row['phone']. '</td><td>'. $row['name'].'</td></tr>';
                             }
+                             foreach ($all_ab as $row){
+                            
+                                echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
+                            }
                              if(isset($_GET['members'])){
                                  echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr><input type="submit" value="addMember">';
 
                              }
-                            //ab member
-                           
-                            foreach ($all_ab as $row){
-                            
-                                echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
-                            }
-                            //speaker
-                           
                             foreach ($all_speakers as $row){
                             
                                 echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';
                             }
+                            if(isset($_GET['members'])){
+                                 echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCols"></td><td><input type="text" name="phoneCols"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
                         ?> 
                  </table>
             </form>
