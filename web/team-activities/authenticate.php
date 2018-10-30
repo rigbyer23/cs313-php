@@ -1,6 +1,6 @@
 <?php
  require("./dbconnect.php");
- $db = getDb();
+ $db = get_db();
 $password = $_POST['password'];
 $username = $_POST['username'];
 

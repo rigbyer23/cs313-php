@@ -1,7 +1,7 @@
 
 <?php
  require("./dbconnect.php");
- $db = getDb();
+ $db = get_db();
 $password = htmlspecialchars($_POST['password']);
 $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
