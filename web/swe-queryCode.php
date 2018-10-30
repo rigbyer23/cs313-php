@@ -58,16 +58,8 @@ if(isset($_GET['members']))
 }
 
 //Search speakers
-     if(isset($_GET['speaker'])&& $_GET['speaker']!== '')
-    {
-        $full_name = $_GET['speaker'];
-        $stmt = $db->prepare('SELECT full_name, title, email, phone FROM speaker WHERE full_name = :speaker');
-        $stmt->bindValue(':speaker', $full_name, PDO::PARAM_STR);
-        $stmt->execute();
-        $speaker = $stmt->fetchAll();
-    }
 
-    else if(isset($_GET['see_all_speakers']))
+    else if(isset($_GET['all_speakers']))
     {
         $stmt = $db->prepare('SELECT * FROM speaker');
         $stmt->execute();

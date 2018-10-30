@@ -4,8 +4,8 @@ $all_ab;
 $all_speakers;
 require("./swe-queryCode.php");
 $gd = getData();
-require("./swe-insertCode.php");
 
+require("./swe-insertCode.php");
 //insert member
 if(isset($_POST['addMember']))
 {

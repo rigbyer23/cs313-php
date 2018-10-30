@@ -25,14 +25,14 @@
     $spPhone = $_POST['phoneCol'];
 
 
-    $someQuery = $db->prepare('INSERT INTO speakerfull_name, title, email, phone) VALUES
+    $someQuery = $db->prepare('INSERT INTO speaker (full_name, title, email, phone) VALUES
         (:fullName, title, spEmail, spPhone)');
 
     $someQuery->bindValue(":fullName", $fullName);
     $someQuery->bindValue(":title", $title);
     $someQuery->bindValue(":spEmail", $spEmail);
     $someQuery->bindValue(":spPhone", $spPhone);
-    
+
     $someQuery->execute();
     
     return $idta;
