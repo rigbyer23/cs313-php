@@ -150,14 +150,14 @@ if(isset($_POST['addMember']))
             <form action="./swe-insertCode.php" method="post">
                 <table class="table">
                     <?php
-                            // foreach ($all as $row){
+                            foreach ($all as $row){
                             
-                            //     echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td> '.$row['email']. '</td><td>' .$row['phone']. '</td><td>'. $row['name'].'</td></tr>';
-                            // }
-                            //  foreach ($all_ab as $row){
+                                echo '<tr><td>'.$row['first_name'].'</td><td> '.$row['last_name'].'</td><td> '.$row['email']. '</td><td>' .$row['phone']. '</td><td>'. $row['name'].'</td></tr>';
+                            }
+                             foreach ($all_ab as $row){
                             
-                            //     echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
-                            // }
+                                echo '<tr><td>'.$row['position']. '</td><td>'. $row['first_name'].'</td><td> '.$row['last_name'].'</td><td>'.$row['username']. '</td><td>'.$row['exp_date']. '</td></tr>' ;
+                            }
                              if(isset($_GET['members'])){
                                  echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr><input type="submit" value="addMember">';
 
