@@ -17,7 +17,7 @@
     echo $_SESSION['username'];
     }
     else{
-        header('location: ./signin.php');
+        header('location: ./create-user.php');
     }
 
     
