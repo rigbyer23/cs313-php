@@ -12,9 +12,9 @@
 </head>
 <body>
     <?php
-    if(isset($_SESSION['$user'])){
+    if(isset($_SESSION['username'])){
     echo 'Welcome ';
-    echo $_SESSION['$user'];
+    echo $_SESSION['username'];
     }
     else{
         header('location: ./signin.php');
