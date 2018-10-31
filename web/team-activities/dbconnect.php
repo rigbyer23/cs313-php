@@ -3,7 +3,13 @@ function get_db(){
   $db = NULL;
 try
 {
+
   $dbUrl = getenv('DATABASE_URL');
+
+  // if (empty($dbUrl)){
+
+  //   $user = ''
+  // }
 
   $dbOpts = parse_url($dbUrl);
 
