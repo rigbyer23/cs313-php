@@ -170,14 +170,14 @@ if(isset($_POST['addMember']))
             <form action="./swe-insertSpeaker.php" >
              <table class="table">
              <?php
-             foreach ($all_speakers as $row){
+            //  foreach ($all_speakers as $row){
                             
-                                echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';
-                            }
-                            if(isset($_GET['speakers'])){
-                                 echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCols"></td><td><input type="text" name="phoneCols"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
-                            }       
-             ?>
+            //                     echo  '<tr><td>'.$row['full_name']. '</td><td>'. $row['title'].'</td><td>'.$row['email'].'</td><td>'.$row['phone'].'</td></tr>';
+            //                 }
+            //                 if(isset($_GET['speakers'])){
+            //                      echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCols"></td><td><input type="text" name="phoneCols"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
+            //                 }       
+            //  ?>
              </table>                
             </form>
         </div>        
