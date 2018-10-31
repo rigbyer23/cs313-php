@@ -1,11 +1,18 @@
+DROP TABLE event;
 DROP TABLE calendar_event;
+DROP TABLE speaker;
 DROP TABLE task;
+DROP TABLE document;
 DROP TABLE ab_member;
 DROP TABLE member;
-DROP TABLE member;
-DROP TABLE document;
-DROP TABLE speaker;
+DROP TABLE major;
 
+
+CREATE TABLE major(
+    id SERIAL PRIMARY KEY NOT NULL
+    , name TEXT NOT NULL
+    , abbr VARCHAR(50)
+);
 
 
 CREATE TABLE member(
@@ -17,11 +24,6 @@ CREATE TABLE member(
     , major_id INT REFERENCES major(id)
 );
 
-CREATE TABLE major(
-    id SERIAL PRIMARY KEY NOT NULL
-    , name TEXT NOT NULL
-    , abbr VARCHAR(50)
-);
 
 CREATE TABLE ab_member(
     id SERIAL PRIMARY KEY 
@@ -87,3 +89,14 @@ VALUES ('Jane', 'Doe', 'ilovetarzan@gmail.com','964 555-1985', 1)
         ,('Dororthy', 'Vaughn', 'idomath@gmail.com', '946-555-1953', 4)
         ,('Mary', 'Jackson', 'firstcoder@gmail.com', '946-555-1946', 1)
         ,('Katherine', 'Johnson', 'womenengineer@gmail.com', '946-555-1943', 3);
+
+INSERT INTO ab_member (username, password, member_id, position, exp_date)
+ VALUES ('hermione12', 'iloveronw2', (SELECT id FROM member WHERE email = 'book.nerd@gmail.com'), 'President', 2020)
+        ,('bbcblogger', 'pinkwrap', (SELECT id FROM member WHERE email = 'magicisreal@gmail.com'), 'Vice President', 2019)
+        ,('flygirl60', 'icandowhatmendo', (SELECT id FROM member WHERE email = 'flygirl@gmail.com'), 'Secretary', 2021)
+        ,('underground65', 'mossonthenorth', (SELECT id FROM member WHERE email = 'freedomismine@gmail.com'), 'Treasurer', 2023);
+
+INSERT INTO speaker (full_name, title, email, phone)
+VALUES('Mother Teresa', 'Albanian Nun', 'globalpeace@gmail.com', '876-555-1997')
+        ,('Rosa Parks', 'Civil Rights Activist', 'myseat@gmail.com', '876-555-2005')
+        ,('Anne Frank', 'Dutch Jewish Author', 'journalistjew@gmail.com', '865-555-1945');

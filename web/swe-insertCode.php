@@ -18,8 +18,8 @@
     $someQuery->bindValue(":major", $major);
 
     $someQuery->execute();
-      
+
     return $idta;
     }
-
+    header("location: ./swe-main2.php");
     ?>
