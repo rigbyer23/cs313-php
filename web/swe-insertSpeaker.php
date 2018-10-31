@@ -1,4 +1,8 @@
   <?php
+
+  function insertSpeaker(){
+    $sp =NULL;
+
    $fullName = $_POST['fullNcol'];
     $title = $_POST['titleCol'];
     $spEmail = $_POST['emailCol'];
@@ -14,5 +18,8 @@
     $someQuery->bindValue(":spPhone", $spPhone);
 
     $someQuery->execute();
+
+    return $sp;
+  }
 
     ?>
