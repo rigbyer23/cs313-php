@@ -1,6 +1,6 @@
 
 <?php
-session_start();
+
  require("./dbconnect.php");
  $db = get_db();
 $password = htmlspecialchars($_POST['password']);
@@ -15,8 +15,6 @@ $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
     $someQuery->execute();
 
-
-    $_SESSION["user"] = $username;
    
     header("location: ./signin.php");
 

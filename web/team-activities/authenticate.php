@@ -1,4 +1,5 @@
 <?php
+session_start();
  require("./dbconnect.php");
  $db = get_db();
 $password = $_POST['password'];
@@ -11,7 +12,7 @@ $query->execute();
 
 $realPass = $query->fetch(PDO::FETCH_ASSOC);
 
-
+ $_SESSION["user"] = $username;
 if (password_verify($password, $realPass['password'])){
 
     header('location: ./homepage.php');
