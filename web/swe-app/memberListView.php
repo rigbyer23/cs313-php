@@ -3,8 +3,10 @@ $all;
 $all_ab;
 $all_speakers;
 require("./membersModol.php");
+if (isset($_GET['membersRadio'])){
 $type = $_GET['membersRadio'];
 $members = getMembers($type);
+}
 
 require("./swe-insertMember.php");
 //insert member
