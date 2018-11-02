@@ -1,25 +1,24 @@
 <?php
-function getData(){
-    require("./team-activities/dbconnect.php");
-    global $all, $all_ab, $all_speakers;
+
+require("./team-activities/dbconnect.php");
     $db = get_db();
-}
+    $members = NULL;
 //One function to rule them all
 function getMembers($type){
-    $members = NULL;
-    if($type == 'allMembers'){
-        $members = getAllMembers();
-    }
-    else if($type = 'boardMembers'){
-        $members = getBoardMembers();
-    }
-    else if($type="allSpeakers") {
-        $members = getSpeakers();
-    }
-    else {
-        $members = insertMember();
-    }
-    return $members;   
+    
+        if($type == 'allMembers'){
+            $members = getAllMembers();
+        }
+        else if($type = 'boardMembers'){
+            $members = getBoardMembers();
+        }
+        else if($type="allSpeakers") {
+            $members = getSpeakers();
+        }
+        else {
+            $members = insertMember();
+        }
+        return $members;   
 }
 
 
@@ -32,7 +31,7 @@ function getAllMembers(){
     }
 
 function getBoardMembers(){
-       $stmt = $db->prepare('SELECT position,first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
+        $stmt = $db->prepare('SELECT position,first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
         $stmt->execute();
         $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
