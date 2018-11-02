@@ -7,6 +7,10 @@ if (isset($_GET['membersRadio'])){
 $type = $_GET['membersRadio'];
 $members = getMembers($type);
 }
+if (isset($_GET['speakers'])){
+$type = $_GET['speakers'];
+$members = getMembers($type);
+}
 
 // require("./insertMember.php");
 // //insert member
@@ -163,7 +167,7 @@ $members = getMembers($type);
                                 echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['exp_date']. '</td></tr>' ;
                                 }
                                 
-                                else {
+                                if(isset($_GET['speakers'])) {
                                      echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td></tr>';
                                 }
                             }
