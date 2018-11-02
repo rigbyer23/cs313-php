@@ -7,8 +7,6 @@
     $phone = $_POST['phoneCol'];
     $major = $_POST['majorCol'];
 
-    require('./membersModol.php');
-
    insertMember($fname, $lname, $email, $phone, $major);
 
     
