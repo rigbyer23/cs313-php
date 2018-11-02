@@ -1,7 +1,5 @@
 <?php
-$all;
-$all_ab;
-$all_speakers;
+
 require("./membersModol.php");
 if (isset($_GET['membersRadio'])){
 $type = $_GET['membersRadio'];
@@ -12,13 +10,22 @@ $type = $_GET['speakers'];
 $members = getMembers($type);
 }
 
-// require("./insertMember.php");
+
 // //insert member
-// if(isset($_POST['addMember']))
-// {
-//     $idta = insertData();
-//     window.alert("You have added a new member!");
-// }
+if(isset($_POST['addMember'])){
+    $kind = $_POST['addMember'];
+    $person = insertPeople($kind);    
+}
+
+if(isset($_POST['addBoard'])){
+    $kind = $_POST['addBoard'];
+    $person = insertPeople($kind);
+}
+
+if(isset($_POST['addSpeaker'])){
+    $kind = $_POST['addSpeaker'];
+    $person = insertPeople($kind);
+}
 ?>
 
 <html>
@@ -173,10 +180,21 @@ $members = getMembers($type);
                             }
                              
                             
-                             if(isset($_GET['members'])){
+                             if(isset($_POST['addMember'])){
                                  echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr><input type="submit" value="addMember">';
+                             }
+
+                               
+                             if(isset($_POST['boardMembers'])){
+                                 echo '<tr><td><input type="text" name="position"></td><td><input type="text" name="fName"></td><td><input type="text" name="lastName"></td><td><input type="text" name="email"></td><td><input type="text" name="phone"></td><td><input type="text" name="exp_date"></td></tr><input type="submit" value="addBoard">';
 
                              }
+
+                             
+
+                               if (isset($_POST['speakers'])){
+                                 echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
+                            }  
                             
                         ?> 
                  </table>
@@ -186,9 +204,7 @@ $members = getMembers($type);
              <table class="table">
              <?php
         
-                            if(isset($_GET['speakers'])){
-                                 echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCols"></td><td><input type="text" name="phoneCols"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
-                            }       
+                               
              ?>
              </table>                
             </form>

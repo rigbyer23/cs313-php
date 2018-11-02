@@ -2,9 +2,6 @@
 
 require("../team-activities/dbconnect.php");
    
-    // var_dump($db);
-
-
 //One function to rule them all
 function getMembers($type){
     // var_dump($type);
@@ -18,10 +15,6 @@ function getMembers($type){
             return getSpeakers();
         }   
     }
-        
-
-
-
 
 function getAllMembers(){
      $db = get_db();
@@ -29,8 +22,7 @@ function getAllMembers(){
        $stmt = $db->prepare('SELECT first_name, last_name, email, phone, abbr FROM member m JOIN major ma ON m.major_id = ma.id');
         $stmt->execute();
         $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $all;
-        
+        return $all;    
     }
 
 function getBoardMembers(){
@@ -49,20 +41,92 @@ function getSpeakers(){
     return $speakers;
 }
 
-// function insertMember(){
+//rule them all
+//One function to rule them all
+function insertPeople($kind){
+    // var_dump($type);
+        if($kind == 'firstNcol'){
+            return insertMember();
+        }
+        else if($type == 'position'){
+           return insertBoardM();
+        }
+        else {
+            return insertSpeakers();
+        }   
+    }
+ //repeat what I did before
 
-//      $someQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone, major_id) VALUES
-//         (:fname, :lname, :email, :major)');
+function insertMember(){
+      $db = get_db();
+      
+    $fname = htmlspecialchars($_POST['firstNcol']);
+    $lname = htmlspecialchars($_POST['secNcol']);
+    $email = htmlspecialchars($_POST['emailCol']);
+    $phone = htmlspecialchars($_POST['phoneCol']);
+    $major = htmlspecialchars($_POST['majorCol']);
 
-//     $someQuery->bindValue(":fname", $fname);
-//     $someQuery->bindValue(":lname", $lname);
-//     $someQuery->bindValue(":email", $email);
-//     $someQuery->bindValue(":phone", $phone);
-//     $someQuery->bindValue(":major", $major);
 
-//     $someQuery->execute();
+     $someQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone, major_id) VALUES
+        (:fname, :lname, :email, :major)');
 
-// }
+    $someQuery->bindValue(":fname", $fname);
+    $someQuery->bindValue(":lname", $lname);
+    $someQuery->bindValue(":email", $email);
+    $someQuery->bindValue(":phone", $phone);
+    $someQuery->bindValue(":major", $major);
 
+    $someQuery->execute();
+    $member = $someQuery->fetchAll();
+    return $member;
+}
 
     
+function insertBoardM(){
+      $db = get_db();
+
+    $position = htmlspecialchars($_POST['position']);
+    $fname = htmlspecialchars($_POST['fName']);
+    $lname = htmlspecialchars($_POST['lastName']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $grad = htmlspecialchars($_POST['exp_date']);
+
+
+     $someQuery = $db->prepare('INSERT INTO member(position, first_name, last_name, email, phone, exp_date) VALUES
+        (:fname, :lname, :email, :expDate)');
+
+    $someQuery->bindValue(":phone", $position);
+    $someQuery->bindValue(":fname", $fname);
+    $someQuery->bindValue(":lname", $lname);
+    $someQuery->bindValue(":email", $email);
+    $someQuery->bindValue(":phone", $phone);
+    $someQuery->bindValue(":expDate", $grad);
+
+    $someQuery->execute();
+    header("location: ./memberListView.php");
+
+}
+
+function insertSpeaker(){
+      $db = get_db();
+    
+    $fullName = htmlspecialchars($_POST['fullNcol']);
+    $title = htmlspecialchars($_POST['titleCol']);
+    $email = htmlspecialchars($_POST['emailCol']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phoneCol']);
+   
+
+     $someQuery = $db->prepare('INSERT INTO member(full_name, title, email, phone) VALUES
+        (:fullname, :title, :email, :phone');
+
+    $someQuery->bindValue(":fullname", $fullName);
+    $someQuery->bindValue(":title", $title);
+    $someQuery->bindValue(":email", $email);
+    $someQuery->bindValue(":phone", $phone);
+
+    $someQuery->execute();
+    window.alert("You have added a new member!");
+
+}
