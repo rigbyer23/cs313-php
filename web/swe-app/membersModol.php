@@ -5,7 +5,7 @@ require("../team-activities/dbconnect.php");
     $members = NULL;
 //One function to rule them all
 function getMembers($type){
-    var_dump($type);
+    // var_dump($type);
         if($type == 'allMembers'){
             $members = getAllMembers();
         }
