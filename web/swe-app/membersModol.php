@@ -9,10 +9,10 @@ function getMembers($type){
         if($type == 'allMembers'){
             $members = getAllMembers();
         }
-        else if($type = 'boardMembers'){
+        else if($type == 'boardMembers'){
             $members = getBoardMembers();
         }
-        else if($type="allSpeakers") {
+        else if($type=="allSpeakers") {
             $members = getSpeakers();
         }
         else {
