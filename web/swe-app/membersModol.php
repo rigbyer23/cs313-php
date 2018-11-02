@@ -1,6 +1,6 @@
 <?php
 
-require("./team-activities/dbconnect.php");
+require("../team-activities/dbconnect.php");
     $db = get_db();
     $members = NULL;
 //One function to rule them all
