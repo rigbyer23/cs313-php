@@ -166,12 +166,12 @@ if(isset($_POST['addSpeaker'])){
                     <?php
                             foreach ($members as $member){
                                 if($type == 'allMembers'){
-                                echo '<tr><td>'.$member['first_name'].'</td><td> '.$member['last_name'].'</td><td> '.$member['email']. '</td><td>' .$member['phone']. '</td><td>'. $member['name'].'</td></tr>';
+                                echo '<tr><td>'.$member['first_name'].'</td><td> '.$member['last_name'].'</td><td> '.$member['email']. '</td><td>' .$member['phone']. '</td><td>'. $member['abbr'].'</td></tr>';
                                 }
 
                                 else if ($type == 'boardMembers'){
                                     
-                                echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['exp_date']. '</td></tr>' ;
+                                echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['phone']. '</td><td>'.$member['exp_date']. '</td></tr>' ;
                                 }
                                 
                                 if(isset($_GET['speakers'])) {
@@ -180,19 +180,19 @@ if(isset($_POST['addSpeaker'])){
                             }
                              
                             
-                             if(isset($_POST['addMember'])){
+                                if($type == 'allMembers'){
                                  echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr><input type="submit" value="addMember">';
                              }
 
                                
-                             if(isset($_POST['boardMembers'])){
+                             else if ($type == 'boardMembers'){
                                  echo '<tr><td><input type="text" name="position"></td><td><input type="text" name="fName"></td><td><input type="text" name="lastName"></td><td><input type="text" name="email"></td><td><input type="text" name="phone"></td><td><input type="text" name="exp_date"></td></tr><input type="submit" value="addBoard">';
 
                              }
 
                              
 
-                               if (isset($_POST['speakers'])){
+                               if (isset($_GET['speakers'])){
                                  echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
                             }  
                             

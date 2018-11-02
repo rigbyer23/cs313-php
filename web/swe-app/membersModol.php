@@ -27,7 +27,7 @@ function getAllMembers(){
 
 function getBoardMembers(){
      $db = get_db();
-        $stmt = $db->prepare('SELECT position, first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
+        $stmt = $db->prepare('SELECT position, first_name, last_name, username, phone, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
         $stmt->execute();
         $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $all_ab;
