@@ -15,7 +15,7 @@ function getMembers($type){
            return getBoardMembers();
         }
         else {
-            return  getSpeakers();
+            return getSpeakers();
         }   
     }
         
@@ -42,9 +42,11 @@ function getBoardMembers(){
 }
 
 function getSpeakers(){
+    $db = get_db();
         $stmt = $db->prepare('SELECT full_name, title, email, phone FROM speaker');
         $stmt->execute();
-        $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $speakers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $speakers;
 }
 
 // function insertMember(){
