@@ -5,7 +5,7 @@ require("../team-activities/dbconnect.php");
     $members = NULL;
 //One function to rule them all
 function getMembers($type){
-    
+    var_dump($type);
         if($type == 'allMembers'){
             $members = getAllMembers();
         }
@@ -33,13 +33,13 @@ function getAllMembers(){
 function getBoardMembers(){
         $stmt = $db->prepare('SELECT position,first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
         $stmt->execute();
-        $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getSpeakers(){
         $stmt = $db->prepare('SELECT full_name, title, email, phone FROM speaker');
         $stmt->execute();
-        $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function insertMember(){
