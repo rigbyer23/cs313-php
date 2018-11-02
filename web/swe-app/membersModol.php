@@ -92,11 +92,13 @@ function insertBoardM(){
     $phone = htmlspecialchars($_POST['phone']);
     $grad = htmlspecialchars($_POST['exp_date']);
 
+    echo 'Getting ready to insert' .$fname;
+
 
      $someQuery = $db->prepare('INSERT INTO member(position, first_name, last_name, email, phone, exp_date) VALUES
-        (:fname, :lname, :email, :expDate)');
+        (:position,:fname, :lname, :email, :phone, :expDate)');
 
-    $someQuery->bindValue(":phone", $position);
+    $someQuery->bindValue(":position", $position);
     $someQuery->bindValue(":fname", $fname);
     $someQuery->bindValue(":lname", $lname);
     $someQuery->bindValue(":email", $email);
@@ -104,7 +106,9 @@ function insertBoardM(){
     $someQuery->bindValue(":expDate", $grad);
 
     $someQuery->execute();
-    header("location: ./memberListView.php");
+
+    echo "finishing insertBoardMember function";f
+    // header("location: ./memberListView.php");
 
 }
 
