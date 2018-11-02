@@ -25,6 +25,7 @@ function getMembers($type){
 
 
 function getAllMembers(){
+    var_dump($db);
        $stmt = $db->prepare('SELECT first_name, last_name, email, phone, abbr FROM member m JOIN major ma ON m.major_id = ma.id');
         $stmt->execute();
         $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
