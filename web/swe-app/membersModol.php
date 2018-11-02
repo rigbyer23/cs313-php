@@ -3,22 +3,21 @@
 require("../team-activities/dbconnect.php");
    
     // var_dump($db);
-    $members = NULL;
+
 
 //One function to rule them all
 function getMembers($type){
     // var_dump($type);
         if($type == 'allMembers'){
-            $members = getAllMembers();
+            return getAllMembers();
         }
         else if($type == 'boardMembers'){
-            $members = getBoardMembers();
+           return getBoardMembers();
         }
         else {
-            $members = getSpeakers();
-        }
-            return $members;   
-        }
+            return  getSpeakers();
+        }   
+    }
         
 
 
@@ -36,7 +35,7 @@ function getAllMembers(){
 
 function getBoardMembers(){
      $db = get_db();
-        $stmt = $db->prepare('SELECT position,first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
+        $stmt = $db->prepare('SELECT position, first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
         $stmt->execute();
         $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $all_ab;

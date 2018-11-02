@@ -157,7 +157,7 @@ $members = getMembers($type);
                             
                                 echo '<tr><td>'.$member['first_name'].'</td><td> '.$member['last_name'].'</td><td> '.$member['email']. '</td><td>' .$member['phone']. '</td><td>'. $member['name'].'</td></tr>';
                             }
-                             foreach ($all_ab as $member){
+                             foreach ($members as $member){
                             
                                 echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['exp_date']. '</td></tr>' ;
                             }
