@@ -12,14 +12,13 @@ function getMembers($type){
         else if($type == 'boardMembers'){
             $members = getBoardMembers();
         }
-        else if($type=="allSpeakers") {
+        else {
             $members = getSpeakers();
         }
-        else {
-            $members = insertMember();
+            return $members;   
         }
-        return $members;   
-}
+        
+
 
 
 
@@ -42,20 +41,20 @@ function getSpeakers(){
         $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function insertMember(){
+// function insertMember(){
 
-     $someQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone, major_id) VALUES
-        (:fname, :lname, :email, :major)');
+//      $someQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone, major_id) VALUES
+//         (:fname, :lname, :email, :major)');
 
-    $someQuery->bindValue(":fname", $fname);
-    $someQuery->bindValue(":lname", $lname);
-    $someQuery->bindValue(":email", $email);
-    $someQuery->bindValue(":phone", $phone);
-    $someQuery->bindValue(":major", $major);
+//     $someQuery->bindValue(":fname", $fname);
+//     $someQuery->bindValue(":lname", $lname);
+//     $someQuery->bindValue(":email", $email);
+//     $someQuery->bindValue(":phone", $phone);
+//     $someQuery->bindValue(":major", $major);
 
-    $someQuery->execute();
+//     $someQuery->execute();
 
-}
+// }
 
 
     
