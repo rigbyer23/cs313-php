@@ -52,7 +52,7 @@ $members = getMembers($type);
                 
                 <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                     <div class="card-body">
-                        <form action ="swe-main2.php" method="GET">
+                        <form action ="memberListView.php" method="GET">
                             <div class="form-check">
                                 <ul>
                                     <li><input class="form-check-input" name="membersRadio" value="allMembers" type="radio">
@@ -90,7 +90,7 @@ $members = getMembers($type);
 
                      <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                         <div class="card-body">
-                         <form action ="swe-main2.php" method="GET">
+                         <form action ="memberListView.php" method="GET">
                             <div class="form-check">
                                 <ul>
                                     <li><input class="form-check-input" name="speakers" value="allSpeakers" type="radio">
@@ -122,7 +122,7 @@ $members = getMembers($type);
 
                      <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                         <div class="card-body">
-                            <form action ="swe-main2.php" method="GET">
+                            <form action ="memberListView.php" method="GET">
                                 <div class="form-check">
                                     <ul>
                                         <li><input class="form-check-input" value="" id="defaultCheck1" type="radio">
@@ -150,7 +150,7 @@ $members = getMembers($type);
 </div>
             
             <div class="col-lg-9 d-inline-flex p-2">
-            <form action="./swe-insertCode.php" method="post">
+            <form action="./memberListView.php" method="post">
                 <table class="table">
                     <?php
                             foreach ($members as $member){
@@ -170,7 +170,7 @@ $members = getMembers($type);
                  </table>
             </form>
 
-            <form action="./swe-insertSpeaker.php" >
+            <form action="./memberListView.php" >
              <table class="table">
              <?php
              foreach ($members as $member){
