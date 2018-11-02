@@ -8,7 +8,7 @@ $type = $_GET['membersRadio'];
 $members = getMembers($type);
 }
 
-require("./swe-insertMember.php");
+require("./insertMember.php");
 //insert member
 if(isset($_POST['addMember']))
 {
