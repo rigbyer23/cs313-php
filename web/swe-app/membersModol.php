@@ -107,7 +107,7 @@ function insertBoardM(){
 
     $someQuery->execute();
 
-    echo "finishing insertBoardMember function";f
+    echo "finishing insertBoardMember function";
     // header("location: ./memberListView.php");
 
 }
