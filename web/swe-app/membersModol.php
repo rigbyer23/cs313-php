@@ -2,7 +2,7 @@
 
 require("../team-activities/dbconnect.php");
     $db = get_db();
-    var_dump($db);
+    // var_dump($db);
     $members = NULL;
 
 //One function to rule them all
