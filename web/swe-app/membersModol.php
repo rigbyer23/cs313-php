@@ -30,13 +30,16 @@ function getAllMembers(){
        $stmt = $db->prepare('SELECT first_name, last_name, email, phone, abbr FROM member m JOIN major ma ON m.major_id = ma.id');
         $stmt->execute();
         $all = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $all;
         
     }
 
 function getBoardMembers(){
+     $db = get_db();
         $stmt = $db->prepare('SELECT position,first_name, last_name, username, exp_date FROM member m JOIN ab_member am ON m.id = am.member_id');
         $stmt->execute();
-        $members = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $all_ab = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $all_ab;
 }
 
 function getSpeakers(){
