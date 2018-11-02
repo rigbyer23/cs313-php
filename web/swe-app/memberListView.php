@@ -8,13 +8,13 @@ $type = $_GET['membersRadio'];
 $members = getMembers($type);
 }
 
-require("./insertMember.php");
-//insert member
-if(isset($_POST['addMember']))
-{
-    $idta = insertData();
-    window.alert("You have added a new member!");
-}
+// require("./insertMember.php");
+// //insert member
+// if(isset($_POST['addMember']))
+// {
+//     $idta = insertData();
+//     window.alert("You have added a new member!");
+// }
 ?>
 
 <html>
