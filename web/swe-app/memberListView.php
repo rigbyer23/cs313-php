@@ -154,13 +154,21 @@ $members = getMembers($type);
                 <table class="table">
                     <?php
                             foreach ($members as $member){
-                            
+                                if($type == 'allMembers'){
                                 echo '<tr><td>'.$member['first_name'].'</td><td> '.$member['last_name'].'</td><td> '.$member['email']. '</td><td>' .$member['phone']. '</td><td>'. $member['name'].'</td></tr>';
-                            }
-                             foreach ($members as $member){
-                            
+                                }
+
+                                else if ($type == 'boardMembers'){
+                                    
                                 echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['exp_date']. '</td></tr>' ;
+                                }
+                                
+                                else {
+                                     echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td></tr>';
+                                }
                             }
+                             
+                            
                              if(isset($_GET['members'])){
                                  echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr><input type="submit" value="addMember">';
 
@@ -173,10 +181,7 @@ $members = getMembers($type);
             <form action="./memberListView.php" >
              <table class="table">
              <?php
-             foreach ($members as $member){
-                            
-                                echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td></tr>';
-                            }
+        
                             if(isset($_GET['speakers'])){
                                  echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCols"></td><td><input type="text" name="phoneCols"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
                             }       
