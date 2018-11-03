@@ -8,7 +8,8 @@ if(isset($_POST['addMember'])){
     $phone = htmlspecialchars($_POST['phoneCol']);
     $major = htmlspecialchars($_POST['majorCol']);
 
-    insertMember($fname, $lname, $email, $phone, $major);
+    $person = insertMember($fname, $lname, $email, $phone, $major);
+    var_dump($person);
    
 }
 
@@ -21,5 +22,5 @@ if(isset($_POST['addSpeaker'])){
     $kind = $_POST['addSpeaker'];
     $person = insertPeople($kind);
 }
- header('location: ./memberListView.php?membersRadio=allMembers');
+//  header('location: ./memberListView.php?membersRadio=allMembers');
 ?>
