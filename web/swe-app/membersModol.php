@@ -43,23 +43,22 @@ function getSpeakers(){
 
 //rule them all
 //One function to rule them all
-function insertPeople($kind){
-    // var_dump($type);
-        if($kind == 'firstNcol'){
-            return insertMember();
-        }
-        else if($kind == 'position'){
-           return insertBoardM();
-        }
-        else {
-            return insertSpeakers();
-        }   
-    }
+// function insertPeople($kind){
+//     // var_dump($type);
+//         if($kind == 'firstNcol'){
+//             return insertMember();
+//         }
+//         else if($kind == 'position'){
+//            return insertBoardM();
+//         }
+//         else {
+//             return insertSpeakers();
+//         }   
+//     }
  //repeat what I did before
 
 function insertMember($fname, $lname, $email, $phone, $major){
       $db = get_db();
-      
      $someQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone, major_id) VALUES
         (:fname, :lname, :email, :major)');
 

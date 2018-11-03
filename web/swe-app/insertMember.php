@@ -1,6 +1,5 @@
 <?php
 require("./membersModol.php");
-var_dump($_POST['firstNcol secNcol emailCol']);
 if(isset($_POST['addMember'])){
    
     $fname = htmlspecialchars($_POST['firstNcol']);
@@ -9,8 +8,8 @@ if(isset($_POST['addMember'])){
     $phone = htmlspecialchars($_POST['phoneCol']);
     $major = htmlspecialchars($_POST['majorCol']);
 
-    $person = insertMember($fname, $lname, $email, $phone, $major);
-    var_dump($person); 
+    insertMember($fname, $lname, $email, $phone, $major);
+   
 }
 
 if(isset($_POST['addBoard'])){
@@ -22,5 +21,5 @@ if(isset($_POST['addSpeaker'])){
     $kind = $_POST['addSpeaker'];
     $person = insertPeople($kind);
 }
-// header('location: ./memberListView.php');
+ header('location: ./memberListView.php?membersRadio=allMembers');
 ?>
