@@ -2,9 +2,14 @@
 require("./membersModol.php");
 var_dump($_POST['firstNcol secNcol emailCol']);
 if(isset($_POST['addMember'])){
-    $kind = $_POST['firstNcol secNcol emailCol'];
-    var_dump($kind);
-    $person = insertPeople($kind);
+   
+    $fname = htmlspecialchars($_POST['firstNcol']);
+    $lname = htmlspecialchars($_POST['secNcol']);
+    $email = htmlspecialchars($_POST['emailCol']);
+    $phone = htmlspecialchars($_POST['phoneCol']);
+    $major = htmlspecialchars($_POST['majorCol']);
+
+    $person = insertMember($fname, $lname, $email, $phone, $major);
     var_dump($person); 
 }
 

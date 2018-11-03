@@ -57,16 +57,9 @@ function insertPeople($kind){
     }
  //repeat what I did before
 
-function insertMember(){
+function insertMember($fname, $lname, $email, $phone, $major){
       $db = get_db();
       
-    $fname = htmlspecialchars($_POST['firstNcol']);
-    $lname = htmlspecialchars($_POST['secNcol']);
-    $email = htmlspecialchars($_POST['emailCol']);
-    $phone = htmlspecialchars($_POST['phoneCol']);
-    $major = htmlspecialchars($_POST['majorCol']);
-
-
      $someQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone, major_id) VALUES
         (:fname, :lname, :email, :major)');
 
