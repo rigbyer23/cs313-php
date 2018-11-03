@@ -146,7 +146,7 @@ var_dump($_POST['addMember']);
 </div>
             
             <div class="col-lg-9 d-inline-flex p-2" style="display:flex;">
-            <form action="./memberListView.php" method="post">
+            <form action="./memberListView.php" method="post" style ="flex-direction:column;">
                 <table class="table">
                     <?php
                             foreach ($members as $member){
@@ -167,7 +167,7 @@ var_dump($_POST['addMember']);
                             </table>
                             </form>
 
-                <form action="./insertMember.php" method ="post"> 
+                <form action="./insertMember.php" method ="post" style ="flex-direction:column;"> 
                      <table class="table">
                             <?php
                                 if($type == 'allMembers'){
