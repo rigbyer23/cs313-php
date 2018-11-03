@@ -9,7 +9,6 @@ $type = $_GET['speakers'];
 $members = getMembers($type);
 }
 
-var_dump($_POST['addMember']);
 //insert member
 ?>
 
