@@ -167,7 +167,7 @@ var_dump($_POST['addMember']);
                             </table>
                             </form>
 
-                <form action="./insertMember.php" method ="post"> 
+                <form style="flex-direction: collumn;" action="./insertMember.php" method ="post"> 
                      <table class="table">
                             <?php
                                 if($type == 'allMembers'){
