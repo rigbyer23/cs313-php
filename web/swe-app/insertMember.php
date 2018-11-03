@@ -8,7 +8,27 @@ require("./membersModol.php");
     $major = intval($_POST['majorCol']);
 
     $person = insertMember($fname, $lname, $email, $phone, $major);
-    var_dump($person);
+   
+
+    //insert AB member
+     $position = htmlspecialchars($_POST['position']);
+    $fname = htmlspecialchars($_POST['fName']);
+    $lname = htmlspecialchars($_POST['lastName']);
+    $bEmail = htmlspecialchars($_POST['email']);
+    $bPhone = htmlspecialchars($_POST['phone']);
+    $grad = htmlspecialchars($_POST['exp_date']);
+
+    $bmember = insertBoardM($position, $fname, $lname, $bEmail, $bPhone, $grad);
+
+    //insert speaker
+
+    $fullName = htmlspecialchars($_POST['fullNcol']);
+    $title = htmlspecialchars($_POST['titleCol']);
+    $spEmail = htmlspecialchars($_POST['emailCol']);
+    $sphone = htmlspecialchars($_POST['phoneCol']);
+
+    $speaker = insertSpeaker($fullName,$title,$spEmail,$phone);
+
    
 
 
@@ -21,5 +41,5 @@ require("./membersModol.php");
 //     $kind = $_POST['addSpeaker'];
 //     $person = insertPeople($kind);
 // }
-//  header('location: ./memberListView.php?membersRadio=allMembers');
+header('location: ./memberListView.php?membersRadio=allMembers');
 ?>

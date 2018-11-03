@@ -73,17 +73,8 @@ function insertMember($fname, $lname, $email, $phone, $major){
 }
 
     
-function insertBoardM(){
+function insertBoardM($position, $fname, $lname, $email, $phone, $grad){
       $db = get_db();
-
-    $position = htmlspecialchars($_POST['position']);
-    $fname = htmlspecialchars($_POST['fName']);
-    $lname = htmlspecialchars($_POST['lastName']);
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phone']);
-    $grad = htmlspecialchars($_POST['exp_date']);
-
-    echo 'Getting ready to insert' .$fname;
 
      $someQuery = $db->prepare('INSERT INTO member(position, first_name, last_name, email, phone, exp_date) VALUES
         (:position,:fname, :lname, :email, :phone, :expDate)');
@@ -96,21 +87,11 @@ function insertBoardM(){
     $someQuery->bindValue(":expDate", $grad);
 
     $someQuery->execute();
-
-    echo "finishing insertBoardMember function";
-    // header("location: ./memberListView.php");
+    $member = $someQuery->fetchAll();
 }
 
-function insertSpeaker(){
+function insertSpeaker($fullName,$title,$email,$sphone){
       $db = get_db();
-    
-    $fullName = htmlspecialchars($_POST['fullNcol']);
-    $title = htmlspecialchars($_POST['titleCol']);
-    $email = htmlspecialchars($_POST['emailCol']);
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phoneCol']);
-   
-
      $someQuery = $db->prepare('INSERT INTO member(full_name, title, email, phone) VALUES
         (:fullname, :title, :email, :phone');
 
@@ -120,6 +101,4 @@ function insertSpeaker(){
     $someQuery->bindValue(":phone", $phone);
 
     $someQuery->execute();
-    window.alert("You have added a new member!");
-
 }
