@@ -1,9 +1,11 @@
 <?php
 require("./membersModol.php");
-
+var_dump($_POST['addMember']);
 if(isset($_POST['addMember'])){
     $kind = $_POST['addMember'];
-    $person = insertPeople($kind); 
+    var_dump($kind);
+    $person = insertPeople($kind);
+    var_dump($person); 
 }
 
 if(isset($_POST['addBoard'])){
