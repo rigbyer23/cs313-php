@@ -171,19 +171,19 @@ var_dump($_POST['addMember']);
                      <table class="table">
                             <?php
                                 if($type == 'allMembers'){
-                                 echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr><tr><td><input type="submit" value="addMember"></td></tr>';
+                                 echo '<tr><td><input style="width:127px;" type="text" name="firstNcol"></td><td><input style="width:127px;" type="text" name="secNcol"></td><td><input style="width:127px;" type="text" name="emailCol"></td><td><input style="width:127px;" type="text" name="phoneCol"></td><td><input style="width:127px;" type="text" name="majorCol"></td></tr><tr><td><input style="width:127px;" type="submit" value="addMember"></td></tr>';
                              }
 
                                
                              else if ($type == 'boardMembers'){
-                                 echo '<tr><td><input type="text" name="position"></td><td><input type="text" name="fName"></td><td><input type="text" name="lastName"></td><td><input type="text" name="email"></td><td><input type="text" name="phone"></td><td><input type="text" name="exp_date"></td></tr><tr><td><input type="submit" value="addBoard"></td></tr>';
+                                 echo '<tr><td><input style="width:127px;" type="text" name="position"></td><td><input style="width:127px;" type="text" name="fName"></td><td><input style="width:127px;" type="text" name="lastName"></td><td><input style="width:127px;" type="text" name="email"></td><td><input style="width:127px;" type="text" name="phone"></td><td><input style="width:127px;" type="text" name="exp_date"></td></tr><tr><td><input style="width:127px;" type="submit" value="addBoard"></td></tr>';
 
                              }
 
                              
 
                                if (isset($_GET['speakers'])){
-                                 echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td></tr><tr><td><input type="submit" value="addSpeaker"></td></tr>';
+                                 echo '<tr><td><input style="width:127px;" type="text" name="fullNcol"></td><td><input style="width:127px;" type="text" name="titleCol"></td><td><input style="width:127px;" type="text" name="emailCol"></td><td><input style="width:127px;" type="text" name="phoneCol"></td></tr><tr><td><input style="width:127px;" type="submit" value="addSpeaker"></td></tr>';
                             }      
                         ?> 
                  </table>
