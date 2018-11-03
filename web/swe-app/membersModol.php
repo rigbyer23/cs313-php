@@ -78,7 +78,6 @@ function insertMember(){
 
     $someQuery->execute();
     $member = $someQuery->fetchAll();
-    return $member;
 }
 
     
@@ -94,7 +93,6 @@ function insertBoardM(){
 
     echo 'Getting ready to insert' .$fname;
 
-
      $someQuery = $db->prepare('INSERT INTO member(position, first_name, last_name, email, phone, exp_date) VALUES
         (:position,:fname, :lname, :email, :phone, :expDate)');
 
@@ -109,7 +107,6 @@ function insertBoardM(){
 
     echo "finishing insertBoardMember function";
     // header("location: ./memberListView.php");
-
 }
 
 function insertSpeaker(){

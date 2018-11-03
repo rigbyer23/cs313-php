@@ -1,5 +1,4 @@
 <?php
-
 require("./membersModol.php");
 if (isset($_GET['membersRadio'])){
 $type = $_GET['membersRadio'];
@@ -10,22 +9,8 @@ $type = $_GET['speakers'];
 $members = getMembers($type);
 }
 
-
-// //insert member
-if(isset($_POST['addMember'])){
-    $kind = $_POST['addMember'];
-    $person = insertPeople($kind);    
-}
-
-if(isset($_POST['addBoard'])){
-    $kind = $_POST['addBoard'];
-    $person = insertPeople($kind);
-}
-
-if(isset($_POST['addSpeaker'])){
-    $kind = $_POST['addSpeaker'];
-    $person = insertPeople($kind);
-}
+var_dump($_POST['addMember']);
+//insert member
 ?>
 
 <html>
@@ -177,9 +162,14 @@ if(isset($_POST['addSpeaker'])){
                                 if(isset($_GET['speakers'])) {
                                      echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td></tr>';
                                 }
-                            }
-                             
-                            
+                            }    
+                            ?>
+                            </table>
+                            </form>
+
+                <form action="./insertMember.php" method ="post"> 
+                     <table class="table">
+                            <?php
                                 if($type == 'allMembers'){
                                  echo '<tr><td><input type="text" name="firstNcol"></td><td><input type="text" name="secNcol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" name="majorCol"></td></tr><input type="submit" value="addMember">';
                              }
@@ -194,8 +184,7 @@ if(isset($_POST['addSpeaker'])){
 
                                if (isset($_GET['speakers'])){
                                  echo '<tr><td><input type="text" name="fullNcol"></td><td><input type="text" name="titleCol"></td><td><input type="text" name="emailCol"></td><td><input type="text" name="phoneCol"></td><td><input type="text" </tr><input type="submit" value="addSpeaker">';
-                            }  
-                            
+                            }      
                         ?> 
                  </table>
             </form>
