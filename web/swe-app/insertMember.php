@@ -17,5 +17,5 @@ if(isset($_POST['addSpeaker'])){
     $kind = $_POST['addSpeaker'];
     $person = insertPeople($kind);
 }
-header('location: ./memberListView.php');
+// header('location: ./memberListView.php');
 ?>

@@ -186,15 +186,6 @@ $members = getMembers($type);
                             }      
                         ?> 
                  </table>
-            </form>
-
-            <form action="./memberListView.php" >
-             <table class="table">
-             <?php
-        
-                               
-             ?>
-             </table>                
-            </form>
+            </form> 
         </div>        
 </html>
