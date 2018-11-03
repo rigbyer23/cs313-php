@@ -1,8 +1,9 @@
 <?php
 require("./membersModol.php");
 if(isset($_POST['addMember'])){
-   
+ 
     $fname = htmlspecialchars($_POST['firstNcol']);
+      var_dump($lname);
     $lname = htmlspecialchars($_POST['secNcol']);
     $email = htmlspecialchars($_POST['emailCol']);
     $phone = htmlspecialchars($_POST['phoneCol']);
