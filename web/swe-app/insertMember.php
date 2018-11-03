@@ -3,7 +3,7 @@ require("./membersModol.php");
 
 if(isset($_POST['addMember'])){
     $kind = $_POST['addMember'];
-    $person = insertPeople($kind);    
+    $person = insertPeople($kind); 
 }
 
 if(isset($_POST['addBoard'])){
@@ -15,5 +15,5 @@ if(isset($_POST['addSpeaker'])){
     $kind = $_POST['addSpeaker'];
     $person = insertPeople($kind);
 }
-
+header('location: ./memberListView.php');
 ?>
