@@ -1,6 +1,6 @@
 <?php
 require("./membersModol.php");
-var_dump($_POST['addMember']);
+var_dump($_POST['firstNcol']);
 if(isset($_POST['addMember'])){
     $kind = $_POST['addMember'];
     var_dump($kind);

@@ -48,7 +48,7 @@ function insertPeople($kind){
         if($kind == 'firstNcol'){
             return insertMember();
         }
-        else if($type == 'position'){
+        else if($kind == 'position'){
            return insertBoardM();
         }
         else {
