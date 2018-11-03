@@ -60,7 +60,7 @@ function getSpeakers(){
 function insertMember($fname, $lname, $email, $phone, $major){
       $db = get_db();
      $someQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone, major_id) VALUES
-        (:fname, :lname, :email, :major)');
+        (:fname, :lname, :email, :phone, :major)');
 
     $someQuery->bindValue(":fname", $fname);
     $someQuery->bindValue(":lname", $lname);
