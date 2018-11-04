@@ -34,7 +34,7 @@ else {
     $spEmail = htmlspecialchars($_POST['emailCol']);
     $sphone = htmlspecialchars($_POST['phoneCol']);
 
-    $speaker = insertSpeaker($fullName,$title,$spEmail,$phone);  
+    $speaker = insertSpeaker($fullName,$title,$spEmail,$sphone);  
 }
 
 // if(isset($_POST['addBoard'])){
