@@ -98,7 +98,7 @@ function insertSpeaker($fullName,$title,$email,$sphone){
     $someQuery->bindValue(":fullname", $fullName);
     $someQuery->bindValue(":title", $title);
     $someQuery->bindValue(":email", $email);
-    $someQuery->bindValue(":phone", $phone);
+    $someQuery->bindValue(":phone", $sphone);
 
     $someQuery->execute();
 }
