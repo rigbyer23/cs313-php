@@ -90,14 +90,14 @@ function insertBoardM($position, $fname, $lname, $email, $phone, $grad){
     $member = $someQuery->fetchAll();
 }
 
-function insertSpeaker($fullName,$title,$email,$sphone){
+function insertSpeaker($fullName,$title,$spEmail,$sphone){
       $db = get_db();
      $someQuery = $db->prepare('INSERT INTO member(full_name, title, email, phone) VALUES
         (:fullname, :title, :email, :phone');
 
     $someQuery->bindValue(":fullname", $fullName);
     $someQuery->bindValue(":title", $title);
-    $someQuery->bindValue(":email", $email);
+    $someQuery->bindValue(":email", $spEmail);
     $someQuery->bindValue(":phone", $sphone);
 
     $someQuery->execute();
