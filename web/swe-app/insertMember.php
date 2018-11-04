@@ -1,5 +1,8 @@
 <?php
 require("./membersModol.php");
+//need case statement for each button or separate forms for each
+if(isset($_POST['submit']) && $_POST['addMember']){
+
 
     $fname = htmlspecialchars($_POST['firstNcol']); 
     $lname = htmlspecialchars($_POST['secNcol']);
@@ -9,7 +12,9 @@ require("./membersModol.php");
 
     $person = insertMember($fname, $lname, $email, $phone, $major);
    
+}
 
+else if(isset($_POST['submit']) && $_POST['addBoard']){
     //insert AB member
      $position = htmlspecialchars($_POST['position']);
     $fname = htmlspecialchars($_POST['fName']);
@@ -20,17 +25,17 @@ require("./membersModol.php");
 
     $bmember = insertBoardM($position, $fname, $lname, $bEmail, $bPhone, $grad);
 
-    //insert speaker
+}
 
+else { 
+    //insert speaker
     $fullName = htmlspecialchars($_POST['fullNcol']);
     $title = htmlspecialchars($_POST['titleCol']);
     $spEmail = htmlspecialchars($_POST['emailCol']);
     $sphone = htmlspecialchars($_POST['phoneCol']);
 
-    $speaker = insertSpeaker($fullName,$title,$spEmail,$phone);
-
-   
-
+    $speaker = insertSpeaker($fullName,$title,$spEmail,$phone);  
+}
 
 // if(isset($_POST['addBoard'])){
 //     $kind = $_POST['addBoard'];
