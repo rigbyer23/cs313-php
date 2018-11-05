@@ -166,7 +166,7 @@ $members = getMembers($type);
                             </table>
                             </form>
 
-                <form class="p-2" action="./insertMember.php" method ="get" style ="flex-direction:column;"> 
+                <form class="p-2" action="./insertMember.php" method ="post" style ="flex-direction:column;"> 
                      <table class="table">
                             <?php
                                 if($type == 'allMembers'){
