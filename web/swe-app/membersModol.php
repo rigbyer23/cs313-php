@@ -95,10 +95,11 @@ function insertSpeaker($fullName,$title,$spEmail,$sphone){
      $someQuery = $db->prepare('INSERT INTO member(full_name, title, email, phone) VALUES
         (:fullname, :title, :email, :phone');
 
-    $someQuery->bindValue(":full_name", $fullName);
+    $someQuery->bindValue(":fullname", $fullName);
     $someQuery->bindValue(":title", $title);
     $someQuery->bindValue(":email", $spEmail);
     $someQuery->bindValue(":phone", $sphone);
 
     $someQuery->execute();
+    $member = $someQuery->fetchAll();
 }
