@@ -1,6 +1,6 @@
 <?php
 session_start();
- require("./dbconnect.php");
+require("../team-activities/dbconnect.php");
  $db = get_db();
 $password = $_POST['password'];
 $username = $_POST['username'];
