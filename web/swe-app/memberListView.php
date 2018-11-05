@@ -150,16 +150,16 @@ $members = getMembers($type);
                     <?php
                             foreach ($members as $member){
                                 if($type == 'allMembers'){
-                                echo '<tr><td>'.$member['first_name'].'</td><td> '.$member['last_name'].'</td><td> '.$member['email']. '</td><td>' .$member['phone']. '</td><td>'. $member['abbr'].'</td></tr>';
+                                echo '<tr><td>'.$member['first_name'].'</td><td> '.$member['last_name'].'</td><td> '.$member['email']. '</td><td>' .$member['phone']. '</td><td>'. $member['abbr'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteMember" value="Remove"></td></tr>';
                                 }
 
                                 else if ($type == 'boardMembers'){
                                     
-                                echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['phone']. '</td><td>'.$member['exp_date']. '</td></tr>' ;
+                                echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['phone']. '</td><td>'.$member['exp_date'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteMember" value="Remove"></td></tr>' ;
                                 }
                                 
                                 if(isset($_GET['speakers'])) {
-                                     echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td></tr>';
+                                     echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteMember" value="Remove"></td></tr>';
                                 }
                             }    
                             ?>
