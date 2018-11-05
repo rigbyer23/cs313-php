@@ -145,7 +145,7 @@ $members = getMembers($type);
 </div>
             
             <div class="col-lg-9 d-inline-flex p-2 flex-column">
-            <form class="p-2" action="./memberListView.php" method="post">
+            <form class="p-2" action="./deleteMember.php" method="post">
                 <table class="table">
                     <?php
                             foreach ($members as $member){
