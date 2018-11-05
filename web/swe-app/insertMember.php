@@ -16,18 +16,18 @@ if($_POST['addButton'] == "addMember"){
    
 }
 
-else if($_POST['addButton'] == "addBoard"){
-    //insert AB member
-     $position = htmlspecialchars($_POST['position']);
-    $fname = htmlspecialchars($_POST['fName']);
-    $lname = htmlspecialchars($_POST['lastName']);
-    $bEmail = htmlspecialchars($_POST['email']);
-    $bPhone = htmlspecialchars($_POST['phone']);
-    $grad = htmlspecialchars($_POST['exp_date']);
+// else if($_POST['addButton'] == "addBoard"){
+//     //insert AB member
+//      $position = htmlspecialchars($_POST['position']);
+//     $fname = htmlspecialchars($_POST['fName']);
+//     $lname = htmlspecialchars($_POST['lastName']);
+//     $bEmail = htmlspecialchars($_POST['email']);
+//     $bPhone = htmlspecialchars($_POST['phone']);
+//     $grad = htmlspecialchars($_POST['exp_date']);
 
-    $bmember = insertBoardM($position, $fname, $lname, $bEmail, $bPhone, $grad);
+//     $bmember = insertBoardM($position, $fname, $lname, $bEmail, $bPhone, $grad);
 
-}
+// }
 
 else { 
     //insert speaker
@@ -36,7 +36,8 @@ else {
     $spEmail = htmlspecialchars($_POST['emailCol']);
     $sphone = htmlspecialchars($_POST['phoneCol']);
 
-    $speaker = insertSpeaker($fullName,$title,$spEmail,$sphone);  
+    $speaker = insertSpeaker($fullName,$title,$spEmail,$sphone); 
+ 
     header('location: ./memberListView.php?speakers=allSpeakers');
 }
 
