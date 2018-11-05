@@ -96,17 +96,21 @@ function insertSpeaker($fullName,$title,$spEmail,$sphone){
         (:fullname, :title, :email, :phone');
 
     $someQuery->bindValue(":fullname", $fullName);
+    echo 'hello';
     $someQuery->bindValue(":title", $title);
     $someQuery->bindValue(":email", $spEmail);
+      echo 'hello after email';
     $someQuery->bindValue(":phone", $sphone);
 
 try{
+      echo 'hello in try';
  
     $someQuery->execute();
 
 }
 
 catch(Exception $E){
+      echo 'hello in catch';
     echo $E;
 }
     
