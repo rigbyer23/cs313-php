@@ -1,7 +1,7 @@
 <?php
 require("./membersModol.php");
 //need case statement for each button or separate forms for each
-if(isset($_POST['submit'])){
+if($_POST['addButton'] == "addMember"){
 
 
     $fname = htmlspecialchars($_POST['firstNcol']); 
@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
    
 }
 
-else if(isset($_POST['submit']) && $_POST['addBoard']){
+else if($_POST['submit'] == "addBoard"){
     //insert AB member
      $position = htmlspecialchars($_POST['position']);
     $fname = htmlspecialchars($_POST['fName']);
