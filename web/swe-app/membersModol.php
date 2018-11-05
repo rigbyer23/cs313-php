@@ -69,7 +69,7 @@ function insertMember($fname, $lname, $email, $phone, $major){
     $someQuery->bindValue(":major", $major);
 
     $someQuery->execute();
-    $member = $someQuery->fetchAll();
+
 }
 
     
@@ -87,7 +87,7 @@ function insertBoardM($position, $fname, $lname, $email, $phone, $grad){
     $someQuery->bindValue(":expDate", $grad);
 
     $someQuery->execute();
-    $member = $someQuery->fetchAll();
+
 }
 
 function insertSpeaker($fullName,$title,$spEmail,$sphone){
@@ -99,7 +99,13 @@ function insertSpeaker($fullName,$title,$spEmail,$sphone){
     $someQuery->bindValue(":title", $title);
     $someQuery->bindValue(":email", $spEmail);
     $someQuery->bindValue(":phone", $sphone);
-
+try{
     $someQuery->execute();
-    $member = $someQuery->fetchAll();
+
+}
+
+catch(Exception $E){
+    echo $E;
+}
+    
 }
