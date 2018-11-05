@@ -93,7 +93,7 @@ function insertBoardM($position, $fname, $lname, $email, $phone, $grad){
 function insertSpeaker($fullName,$title,$spEmail,$sphone){
       $db = get_db();
      $someQuery = $db->prepare('INSERT INTO speaker(full_name, title, email, phone) VALUES
-        (:fullname, :title, :email, :phone');
+        (:fullname, :title, :email, :phone)');
 
     $someQuery->bindValue(":fullname", $fullName);
     echo 'hello';
