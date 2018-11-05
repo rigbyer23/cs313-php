@@ -76,7 +76,7 @@ function insertMember($fname, $lname, $email, $phone, $major){
 function insertBoardM($position, $fname, $lname, $email, $phone, $grad){
       $db = get_db();
 
-     $someQuery = $db->prepare('INSERT INTO member(position, first_name, last_name, email, phone, exp_date) VALUES
+     $someQuery = $db->prepare('INSERT INTO ab_member(position, first_name, last_name, email, phone, exp_date) VALUES
         (:position,:fname, :lname, :email, :phone, :expDate)');
 
     $someQuery->bindValue(":position", $position);
@@ -92,7 +92,7 @@ function insertBoardM($position, $fname, $lname, $email, $phone, $grad){
 
 function insertSpeaker($fullName,$title,$spEmail,$sphone){
       $db = get_db();
-     $someQuery = $db->prepare('INSERT INTO member(full_name, title, email, phone) VALUES
+     $someQuery = $db->prepare('INSERT INTO speaker(full_name, title, email, phone) VALUES
         (:fullname, :title, :email, :phone');
 
     $someQuery->bindValue(":fullname", $fullName);
@@ -101,7 +101,7 @@ function insertSpeaker($fullName,$title,$spEmail,$sphone){
     $someQuery->bindValue(":phone", $sphone);
 
 try{
-    echo $someQuery;
+ 
     $someQuery->execute();
 
 }
