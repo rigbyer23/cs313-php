@@ -11,6 +11,8 @@ if($_POST['addButton'] == "addMember"){
     $major = intval($_POST['majorCol']);
 
     $person = insertMember($fname, $lname, $email, $phone, $major);
+
+    header('location: ./memberListView.php?membersRadio=allMembers');
    
 }
 
@@ -35,6 +37,7 @@ else {
     $sphone = htmlspecialchars($_POST['phoneCol']);
 
     $speaker = insertSpeaker($fullName,$title,$spEmail,$sphone);  
+    header('location: ./memberListView.php?speakers=allSpeakers');
 }
 
 // if(isset($_POST['addBoard'])){
@@ -46,5 +49,5 @@ else {
 //     $kind = $_POST['addSpeaker'];
 //     $person = insertPeople($kind);
 // }
-header('location: ./memberListView.php?membersRadio=allMembers');
+
 ?>
