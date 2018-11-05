@@ -1,7 +1,7 @@
 <?php
 require("./membersModol.php");
 //need case statement for each button or separate forms for each
-if(isset($_POST['submit']) && $_POST['addMember']){
+if(isset($_POST['submit'])){
 
 
     $fname = htmlspecialchars($_POST['firstNcol']); 
