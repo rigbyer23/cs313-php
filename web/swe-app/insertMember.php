@@ -16,7 +16,7 @@ if($_POST['addButton'] == "addMember"){
    
 }
 
-else if($_POST['submit'] == "addBoard"){
+else if($_POST['addButton'] == "addBoard"){
     //insert AB member
      $position = htmlspecialchars($_POST['position']);
     $fname = htmlspecialchars($_POST['fName']);
