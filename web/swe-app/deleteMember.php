@@ -25,6 +25,6 @@ if(isset($_GET['speakerId'])){
     $someQuery = $db->prepare('DELETE FROM speaker s WHERE s.id = :speakerId');
     $someQuery->bindValue(":speakerId", $id, PDO::PARAM_INT);
     $someQuery->execute();
-     header('location: ./memberListView.php?membersRadio=allSpeakers');
+     header('location: ./memberListView.php?speakers=allSpeakers');
 }
 ?>
