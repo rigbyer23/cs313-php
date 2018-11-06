@@ -26,6 +26,10 @@
                  <a href="./shopping-cart/browse.php">Shopping Cart</a>
                  </div>
 
+                  <div class="col-lg-3">
+                 <a href="./swe-app/swe-register.php">BYU-I Society of Women Engineers</a>
+                 </div>
+
             </div>  
         </div>
     </div>
