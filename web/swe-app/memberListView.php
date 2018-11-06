@@ -161,7 +161,7 @@ $members = getMembers($type);
                                 }
                                 
                                 else if ($type == 'boardMembers'){
-                                     $id = $member['id'];
+                                $id = $member['id'];
                                     var_dump($id);
                                 $position = $member["position"];
                                 $grad =$member["exp_date"];
@@ -171,8 +171,12 @@ $members = getMembers($type);
                                     
                               
                                 
-                                if(isset($_GET['speakers'])) {
-                                     echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteSpeaker" value="Remove"></td></tr>';
+                                else{
+                                    $id = $member['id'];
+                                    $fullName = $member['full_name'];
+                                    $title = $member['title'];
+                                    
+                                     echo  "<tr><td>$id</td><td>$ </td><td>$fullName</td><td>$title</td><td>$phone</td><td>$email</td></tr><a class ='btn btn-outline-danger'  href='./deleteMember.php?speakerId=$id'>Delete</a></td>";
                                 }
                             }    
                             ?>

@@ -20,10 +20,10 @@ if(isset($_GET['boardId'])){
      header('location: ./memberListView.php?membersRadio=boardMembers');
 }
     
-if(isset($_POST['deleteSpeaker'])){
-     var_dump($_POST['deleteSpeaker']);
-    $someQuery = $db->prepare('DELETE FROM member m WHERE m.id =' .$_POST['deleteSpeaker']);
-    echo $someQuery;
+if(isset($_GET['speakerId'])){
+    $id = $_GET['speakerId'];
+    $someQuery = $db->prepare('DELETE FROM speaker s WHERE s.id = :speakerId');
+    $someQuery->bindValue(":speakerId", $id, PDO::PARAM_INT);
     $someQuery->execute();
      header('location: ./memberListView.php?membersRadio=allSpeakers');
 }
