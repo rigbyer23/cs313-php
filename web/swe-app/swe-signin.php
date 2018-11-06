@@ -14,7 +14,7 @@
                     <div class="row">
                 <div class="col-lg-12 d-flex p-2" style="background-color: rgb(90, 82, 119);">
                       <div class="mr-auto p-2"><h1 style="font-family: 'Pacifico', cursive; color: white;">BYUI-SWE</h1></div>
-                    <div class="p-2"><img class="img-responsive" style="object-fit: cover; height:40%; width:100%;" src="./swe-image.jpg"></div>
+                    <div class="p-2" style ="height: 300px;"><img class="img-responsive" style="object-fit: cover; height:95%; width:100%;" src="./swe-image.jpg"></div>
                 </div>
             </div>
             <br>
@@ -24,9 +24,7 @@
                 
             <form action ="swe-auth.php" method ="post">
                  <div class="form-group">
-                    <label for="formGroupExampleInput">User Name</label>
                     Username<input type="text" name="username">
-                    <label for="formGroupExampleInput">Password</label>
                     Password<input type="password" name="password">
                     <input type="submit" value="Sign In">
                 </div>
