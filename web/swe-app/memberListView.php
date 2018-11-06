@@ -166,7 +166,7 @@ $members = getMembers($type);
                                 $position = $member["position"];
                                 $grad =$member["exp_date"];
                             
-                                echo "<tr><td>$id</td><td> $position </td><td>$firstName</td><td> $lastName</td><td>$phone</td><td>$grad</td><td><a class ='btn btn-outline-danger'  href='./deleteMember.php?boardId=$id'>Delete</a></td></tr>";
+                                echo "<tr><td>$id</td><td> $position </td><td>$firstName</td><td> $lastName</td><td>$phone</td><td>$email</td><td>$grad</td><td><a class ='btn btn-outline-danger'  href='./deleteMember.php?boardId=$id'>Delete</a></td></tr>";
                                 }
                                     
                               
@@ -191,10 +191,10 @@ $members = getMembers($type);
                              }
 
                                
-                             else if ($type == 'boardMembers'){
-                                 echo '<tr><td><input placeholder="Position" style="width:127px;" type="text" name="position"></td><td><input style="width:127px;" placeholder="First Name" type="text" name="fName"></td><td><input placeholder="Last Name" style="width:127px;" type="text" name="lastName"></td><td><input placeholder="Email" style="width:127px;" type="text" name="email"></td><td><input placeholder="Phone" style="width:127px;" type="text" name="phone"></td><td><input style="width:127px;" placeholder="Exp Grad Year" type="text" name="exp_date"></td></tr><tr><td><input style="width:127px;" type="submit" name="addButton" value="addBoard"></td></tr>';
+                            //  else if ($type == 'boardMembers'){
+                            //      echo '<tr><td><input placeholder="Position" style="width:127px;" type="text" name="position"></td><td><input style="width:127px;" placeholder="First Name" type="text" name="fName"></td><td><input placeholder="Last Name" style="width:127px;" type="text" name="lastName"></td><td><input placeholder="Email" style="width:127px;" type="text" name="email"></td><td><input placeholder="Phone" style="width:127px;" type="text" name="phone"></td><td><input style="width:127px;" placeholder="Exp Grad Year" type="text" name="exp_date"></td></tr><tr><td><input style="width:127px;" type="submit" name="addButton" value="addBoard"></td></tr>';
 
-                             }
+                            //  }
 
                              
 
