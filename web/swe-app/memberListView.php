@@ -150,9 +150,14 @@ $members = getMembers($type);
                     <?php
                             foreach ($members as $member){
                                 $id = $member['id'];
+                                $firstName = $member["first_name"];
+                                $lastName =$member["last_name"];
+                                $email = $member["email"];
+                                $phone =$member["phone"];
+                                $major =$member["abbr"];
                                 var_dump($id);
                                 if($type == 'allMembers'){
-                                echo '<tr><td>'.$member['id'].'</td><td>'.$member['first_name'].'</td><td> '.$member['last_name'].'</td><td> '.$member['email']. '</td><td>' .$member['phone']. '</td><td>'. $member['abbr'].'</td><td><input class ="btn-outline-danger" type="submit" value="Remove"><a href="./deleteMember.php?id="'.$id.'">Delete</a></td></tr>';
+                                echo "<tr><td>$id</td><td> $firstName </td><td>$lastName</td><td> $email</td><td>$phone</td><td>$major</td><td><input class ='btn-outline-danger' type='submit' value='Remove'><a href='./deleteMember.php?id=$id'>Delete</a></td></tr>";
                                 }
 
                                 else if ($type == 'boardMembers'){
