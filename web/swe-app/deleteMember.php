@@ -1,8 +1,8 @@
 <?php
 require("../team-activities/dbconnect.php");
 $db = get_db();
-
-
+var_dump($_GET['id']);
+// if (isset($_GET['id']))
 if(isset($_POST['id'])){
     var_dump($_POST);
     var_dump($_POST['id']); 
