@@ -14,6 +14,8 @@ $username = htmlspecialchars($_POST['username']);
 $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
     $otherQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone, major_id)VALUES(:first_name, :last_name, :email, :phone, :major_id)');
+    $memberID = mysql_insert_id();
+    var_dump($memberID);
     $someQuery = $db->prepare('INSERT INTO ab_member (username, password, position, exp_date) VALUES
         (:username, :password, :position, :exp_date)');
     
@@ -33,6 +35,6 @@ $hashpass = password_hash($password, PASSWORD_DEFAULT);
         
 
    
-    header("location: ./swe-signin.php");
+    // header("location: ./swe-signin.php");
 
 ?>
