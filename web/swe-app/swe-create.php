@@ -14,10 +14,10 @@ $username = htmlspecialchars($_POST['username']);
 $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
     $otherQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone, major_id)VALUES(:first_name, :last_name, :email, :phone, :major_id)');
-    $memberID = mysql_insert_id();
+    $memberID = $db->lastInsertId();
     var_dump($memberID);
-    $someQuery = $db->prepare('INSERT INTO ab_member (username, password, position, exp_date) VALUES
-        (:username, :password, :position, :exp_date)');
+    $someQuery = $db->prepare('INSERT INTO ab_member (username, password, '.$memberID.' position, exp_date) VALUES
+        (:username, :password, :memberID, :position, :exp_date)');
     
   
     $otherQuery->bindValue(":first_name", $firstName, PDO::PARAM_STR);
@@ -26,6 +26,7 @@ $hashpass = password_hash($password, PASSWORD_DEFAULT);
     $otherQuery->bindValue(":major_id", $major, PDO::PARAM_INT);
     $someQuery->bindValue(":password", $hashpass, PDO::PARAM_STR);
     $someQuery->bindValue(":position", $position, PDO::PARAM_STR);
+    $someQuery->bindValue(":memberID", $memberID, PDO::PARAM_STR);
     $someQuery->bindValue(":exp_date", $exp_date, PDO::PARAM_INT);
     $otherQuery->bindValue(":email", $email, PDO::PARAM_STR);
     $otherQuery->bindValue(":phone", $phone, PDO::PARAM_STR);
