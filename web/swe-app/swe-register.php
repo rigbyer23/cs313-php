@@ -29,7 +29,7 @@
                 Email:<input type="text" class="form-control" name="email">
                 Phone Number:<input type="text" class="form-control" name="phone">
                 Postion:<input type="text" class="form-control" name="position">
-                *Major Id:<input type="text" class="form-control" name="major">
+                *Major Id:<input type="text" class="form-control" name="major_id">
                 Expected graduation year:<input type="text" class="form-control" name="exp_date">
                 Username:<input type="text" class="form-control" name="username">
                 Password:<input type="password" class="form-control" name="password">
