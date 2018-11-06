@@ -8,7 +8,7 @@ if(isset($_POST['id'])){
     var_dump($_POST['id']); 
     $id = $_POST['id'];
     $someQuery = $db->prepare("DELETE FROM member m WHERE m.id = :id");
-    $someQuery->bindValue(":id", $id);
+    $someQuery->bindValue(":id", $id, PDO::PARAM_INT);
     $someQuery->execute();
      header('location: ./memberListView.php?membersRadio=allMembers');
 }
