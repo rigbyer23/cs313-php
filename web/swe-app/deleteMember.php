@@ -3,7 +3,7 @@ require("../team-activities/dbconnect.php");
 $db = get_db();
 if(isset($_POST['deleteMember'])){ 
     var_dump($_POST['deleteMember']);
-    $someQuery = $db->prepare('DELETE FROM member m WHERE m.id =' .$_POST['deleteMember']);
+    $someQuery = $db->prepare('DELETE FROM member m WHERE m.id =' .$member['id']);
     echo $someQuery;
     $someQuery->execute();
      header('location: ./memberListView.php?membersRadio=allMembers');
