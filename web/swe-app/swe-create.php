@@ -33,8 +33,9 @@ $hashpass = password_hash($password, PASSWORD_DEFAULT);
     $otherQuery->bindValue(":email", $email, PDO::PARAM_STR);
     $otherQuery->bindValue(":phone", $phone, PDO::PARAM_STR);
 
+    $otherQuery->execute(); 
     $someQuery->execute();
-    $otherQuery->execute();     
+        
 
    
     header("location: ./swe-signin.php");
