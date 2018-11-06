@@ -38,7 +38,7 @@ else {
 
     $speaker = insertSpeaker($fullName,$title,$spEmail,$sphone); 
  
-    // header('location: ./memberListView.php?speakers=allSpeakers');
+    header('location: ./memberListView.php?speakers=allSpeakers');
 }
 
 // if(isset($_POST['addBoard'])){
