@@ -157,7 +157,7 @@ $members = getMembers($type);
                                 $major =$member["abbr"];
                                 var_dump($id);
                                 if($type == 'allMembers'){
-                                echo "<tr><td>$id</td><td> $firstName </td><td>$lastName</td><td> $email</td><td>$phone</td><td>$major</td><td><input class ='btn-outline-danger' type='submit' value='Remove'><a href='./deleteMember.php?id=$id'>Delete</a></td></tr>";
+                                echo "<tr><td>$id</td><td> $firstName </td><td>$lastName</td><td> $email</td><td>$phone</td><td>$major</td><td><a href='./deleteMember.php? class ='btn-outline-danger' nameId=$id'>Delete</a></td></tr>";
                                 }
 
                                 else if ($type == 'boardMembers'){

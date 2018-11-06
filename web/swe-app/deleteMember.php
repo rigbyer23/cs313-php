@@ -3,8 +3,8 @@ require("../team-activities/dbconnect.php");
 $db = get_db();
 var_dump($_GET['id']);
 // if (isset($_GET['id']))
-if(isset($_GET['id'])){
-    $id = $_GET['id'];
+if(isset($_GET['nameId'])){
+    $id = $_GET['nameId'];
     $someQuery = $db->prepare("DELETE FROM member m WHERE m.id = :id");
     $someQuery->bindValue(":id", $id, PDO::PARAM_INT);
     $someQuery->execute();
