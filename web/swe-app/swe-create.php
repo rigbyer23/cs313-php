@@ -15,15 +15,7 @@ $hashpass = password_hash($password, PASSWORD_DEFAULT);
     $someQuery = $db->prepare('INSERT INTO ab_member (username, password, position, exp_date) VALUES
         (:username, :password, :position, :exp_date)');
     $otherQuery = $db->prepare('INSERT INTO member(first_name, last_name, email, phone,)VALUES(:first_name, :last_name, :email, :phone)');
-    var_dump($firstName);
-    var_dump($lastName);
-    var_dump($email);
-    var_dump($phone);
-    var_dump($position);
-    var_dump($exp_date);
-    var_dump($username);
-    var_dump($password);
-    var_dump($hashpass);
+  
     $otherQuery->bindValue(":first_name", $firstName, PDO::PARAM_STR);
     $otherQuery->bindValue(":last_name", $lastName, PDO::PARAM_STR);
     $someQuery->bindValue(":username", $username, PDO::PARAM_STR);
