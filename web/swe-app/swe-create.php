@@ -23,11 +23,11 @@ $hashpass = password_hash($password, PASSWORD_DEFAULT);
 
        $otherQuery->execute(); 
 
-    $memberID = $db->lastInsertId();
-    var_dump($memberID);
+    $memberID = $db->lastInsertId('member_id_seq');
+    
 
 
-    $someQuery = $db->prepare('INSERT INTO ab_member (username, password, '.$memberID.' position, exp_date) VALUES
+    $someQuery = $db->prepare('INSERT INTO ab_member (username, password, member_id, position, exp_date) VALUES
         (:username, :password, :memberID, :position, :exp_date)');
     
   
@@ -44,6 +44,6 @@ $hashpass = password_hash($password, PASSWORD_DEFAULT);
         
 
    
-    // header("location: ./swe-signin.php");
+    header("location: ./swe-signin.php");
 
 ?>
