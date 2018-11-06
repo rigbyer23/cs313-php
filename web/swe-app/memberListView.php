@@ -155,15 +155,22 @@ $members = getMembers($type);
                                 $email = $member["email"];
                                 $phone =$member["phone"];
                                 $major =$member["abbr"];
-                                var_dump($id);
+                            
                                 if($type == 'allMembers'){
-                                echo "<tr><td>$id</td><td> $firstName </td><td>$lastName</td><td> $email</td><td>$phone</td><td>$major</td><td><a class ='btn-outline-danger'  href='./deleteMember.php?nameId=$id'>Delete</a></td></tr>";
+                                echo "<tr><td>$id</td><td> $firstName </td><td>$lastName</td><td> $email</td><td>$phone</td><td>$major</td><td><a class ='btn btn-outline-danger'  href='./deleteMember.php?nameId=$id'>Delete</a></td></tr>";
                                 }
 
                                 else if ($type == 'boardMembers'){
-                                    
-                                echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['phone']. '</td><td>'.$member['exp_date'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteBoardM" value="Remove"></td></tr>' ;
+                                $id = $member['id'];
+                                $position = $member["position"];
+                                $grad =$member["exp_date"];
+                               
+                    
+                                if($type == 'allMembers'){
+                                echo "<tr><td>$id</td><td> $position </td><td>$firstName</td><td> $lastName</td><td>$phone</td><td>$grad</td><td><a class ='btn btn-outline-danger'  href='./deleteMember.php?boardId=$id'>Delete</a></td></tr>";
                                 }
+                                    
+                              
                                 
                                 if(isset($_GET['speakers'])) {
                                      echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteSpeaker" value="Remove"></td></tr>';

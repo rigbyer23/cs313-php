@@ -12,10 +12,10 @@ if(isset($_GET['nameId'])){
     die();
 }
 
-if(isset($_POST['deleteBoardM'])){
-     var_dump($_POST['deleteBoardM']);
-    $someQuery = $db->prepare('DELETE FROM member m WHERE m.id =' .$_POST['deleteBoardM']);
-    echo $someQuery;
+if(isset($_GET['boardId'])){
+    $id = $_GET['boardId'];
+    $someQuery = $db->prepare('DELETE FROM ab_member b WHERE b.id = :boardId');
+    $someQuery->bindValue(":boardId", $id, PDO::PARAM_INT);
     $someQuery->execute();
      header('location: ./memberListView.php?membersRadio=boardMembers');
 }
