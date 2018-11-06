@@ -159,8 +159,9 @@ $members = getMembers($type);
                                 if($type == 'allMembers'){
                                 echo "<tr><td>$id</td><td> $firstName </td><td>$lastName</td><td> $email</td><td>$phone</td><td>$major</td><td><a class ='btn btn-outline-danger'  href='./deleteMember.php?nameId=$id'>Delete</a></td></tr>";
                                 }
-
+                                
                                 else if ($type == 'boardMembers'){
+                                     $id = $member['id'];
                                     var_dump($id);
                                 $position = $member["position"];
                                 $grad =$member["exp_date"];
