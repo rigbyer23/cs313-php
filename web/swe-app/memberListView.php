@@ -161,6 +161,7 @@ $members = getMembers($type);
                                 }
 
                                 else if ($type == 'boardMembers'){
+                                    var_dump($id);
                                 $position = $member["position"];
                                 $grad =$member["exp_date"];
                             
