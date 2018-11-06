@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("./membersModol.php");
 if (isset($_GET['membersRadio'])){
 $type = $_GET['membersRadio'];
@@ -31,6 +32,15 @@ $members = getMembers($type);
                 </div>
             </div>
             <br>
+               <?php
+                if(isset($_SESSION['username'])){
+                echo 'Welcome ';
+                echo $_SESSION['username'];
+                }
+                else{
+                    header('location: ./swe-register.php');
+                }
+                ?>
             <br>
             <div class="row d-flex">
                 <div class="col-lg-3 p-2 h-95 d-inline-block d-inline-flex p-2" style="width: 300px; background-color: rgba(168,168,168)">

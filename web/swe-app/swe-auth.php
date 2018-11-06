@@ -13,7 +13,7 @@ $query->execute();
 $realPass = $query->fetch(PDO::FETCH_ASSOC);
 
  $_SESSION["username"] = $username;
- var_dump($_SESSION["username"]);
+ 
 if (password_verify($password, $realPass['password'])){
     header('location: ./memberListView.php');  
 }
