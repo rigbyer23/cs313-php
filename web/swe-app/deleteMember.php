@@ -2,7 +2,7 @@
 require("../team-activities/dbconnect.php");
 $db = get_db();
 
-echo $_POST[$id];
+var_dump($_POST[$id]);
 if(isset($_POST[$id])){ 
     $someQuery = $db->prepare("DELETE FROM member m WHERE m.id ='$id'");
     $someQuery->execute();
