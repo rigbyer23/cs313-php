@@ -21,15 +21,17 @@
             <br>
             <br>
             <div class="row d-flex">
-                <div class="col-lg-3 p-2 h-95 d-inline-block d-inline-flex p-2" style="width: 300px; background-color: rgba(168,168,168)">
+                <div class="form-group">
                 <form action="swe-create.php" method="post">
                 <h3>Create your account</h3>
-                First Name:<input type="text" name="firstName">
-                Last Name:<input type="text" name="lastName">
-                Username:<input type="text" name="username">
-                Password:<input type="password" name="password">
-                Postion:<input type="text" name="username">
-                Expected graduation year:<input type="password" name="password">
+                First Name:<input type="text" class="form-control" name="firstName">
+                Last Name:<input type="text" class="form-control" name="lastName">
+                Email:<input type="text" class="form-control" name="email">
+                Phone Number:<input type="text" class="form-control" name="phone">
+                Postion:<input type="text" class="form-control" name="position">
+                Expected graduation year:<input type="text" class="form-control" name="exp_date">
+                Username:<input type="text" class="form-control" name="username">
+                Password:<input type="password" class="form-control" name="password">
                 <input type="submit" value="Create Account">
                 </form>
             
