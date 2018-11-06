@@ -10,9 +10,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
-    <body>
+  <body>
         <div class="container">
-                    <div class="row">
+            <div class="row">
                 <div class="col-lg-12 d-flex p-2" style="background-color: rgb(90, 82, 119);">
                       <div class="mr-auto p-2"><h1 style="font-family: 'Pacifico', cursive; color: white;">BYUI-SWE</h1></div>
                     <div class="p-2"><img class="img-responsive" style="object-fit: cover; height:40%; width:100%;" src="./swe-image.jpg"></div>
