@@ -2,8 +2,8 @@
 require("../team-activities/dbconnect.php");
 $db = get_db();
 
-var_dump($id);
-if(isset($_POST['Remove'])){ 
+var_dump($_POST);
+if(isset($_POST[$id])){ 
     $someQuery = $db->prepare("DELETE FROM member m WHERE m.id ='$id'");
     $someQuery->execute();
      header('location: ./memberListView.php?membersRadio=allMembers');
