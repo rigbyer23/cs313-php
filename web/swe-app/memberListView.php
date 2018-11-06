@@ -32,10 +32,10 @@ $members = getMembers($type);
                 </div>
             </div>
             <br>
-                <p style="font-weight:bold;">
+                <p style="font-weight:bold; font-size:14px;">
                <?php
                 if(isset($_SESSION['username'])){
-                echo 'Welcome';
+                echo 'Welcome ';
                 echo $_SESSION['username'];
                 }
                 else{
