@@ -1,8 +1,9 @@
 <?php
 require("../team-activities/dbconnect.php");
 $db = get_db();
-if(isset($_POST['deleteMember'])){ 
-    $someQuery = $db->prepare('DELETE FROM member m WHERE m.id =' .$_POST["id"]);
+
+if(isset($_POST[$id])){ 
+    $someQuery = $db->prepare('DELETE FROM member m WHERE m.id =' .$id);
     $someQuery->execute();
      header('location: ./memberListView.php?membersRadio=allMembers');
 }
