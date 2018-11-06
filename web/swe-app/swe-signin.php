@@ -24,11 +24,13 @@
                 
             <form action ="swe-auth.php" method ="post">
                  <div class="form-group">
-                 <h3>Sign In</h3>
-                   <br>
-                    Username<input type="text" name="username"><br>
-                    Password<input type="password" name="password"><br>
-                    <input type="submit" value="Sign In">
+                 <h3 style="color:white;">Sign In</h3>
+                   <br/>
+                    Username<input type="text" class="form-control" name="username">
+                    <br/>
+                    Password<input type="password" class="form-control" name="password">
+                    <br/>
+                    <input type="submit" class ="btn btn-light" value="Sign In">
                 </div>
             </form>
         </div>
