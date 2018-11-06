@@ -21,7 +21,7 @@ $hashpass = password_hash($password, PASSWORD_DEFAULT);
     $otherQuery->bindValue(":first_name", $firstName, PDO::PARAM_STR);
     $otherQuery->bindValue(":last_name", $lastName, PDO::PARAM_STR);
     $someQuery->bindValue(":username", $username, PDO::PARAM_STR);
-    $someQuery->bindValue(":major_id", $major, PDO::PARAM_INT);
+    $otherQuery->bindValue(":major_id", $major, PDO::PARAM_INT);
     $someQuery->bindValue(":password", $hashpass, PDO::PARAM_STR);
     $someQuery->bindValue(":position", $position, PDO::PARAM_STR);
     $someQuery->bindValue(":exp_date", $exp_date, PDO::PARAM_INT);
