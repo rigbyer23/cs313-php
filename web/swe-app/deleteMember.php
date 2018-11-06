@@ -6,7 +6,9 @@ $db = get_db();
 if(isset($_POST['id'])){
     var_dump($_POST);
     var_dump($_POST['id']); 
-    $someQuery = $db->prepare("DELETE FROM member m WHERE m.id ='$id'");
+    $id = $_POST['id'];
+    $someQuery = $db->prepare("DELETE FROM member m WHERE m.id = :id");
+    $someQuery->bindValue(":id", $id);
     $someQuery->execute();
      header('location: ./memberListView.php?membersRadio=allMembers');
 }
