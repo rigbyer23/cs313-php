@@ -152,7 +152,7 @@ $members = getMembers($type);
                                 $id = $member['id'];
                                 var_dump($id);
                                 if($type == 'allMembers'){
-                                echo '<tr><td>'.$member['id'].'</td><td>'.$member['first_name'].'</td><td> '.$member['last_name'].'</td><td> '.$member['email']. '</td><td>' .$member['phone']. '</td><td>'. $member['abbr'].'</td><td><input class ="btn-outline-danger" type="submit" name="'.$id.'" value="Remove"><input type="hidden" name ="id" value= "'.$id.'"></td></tr>';
+                                echo '<tr><td>'.$member['id'].'</td><td>'.$member['first_name'].'</td><td> '.$member['last_name'].'</td><td> '.$member['email']. '</td><td>' .$member['phone']. '</td><td>'. $member['abbr'].'</td><td><input class ="btn-outline-danger" type="submit" value="Remove"><input type="hidden" name ="id" value= "'.$id.'"></td></tr>';
                                 }
 
                                 else if ($type == 'boardMembers'){
