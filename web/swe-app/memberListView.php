@@ -176,7 +176,7 @@ $members = getMembers($type);
                                     $fullName = $member['full_name'];
                                     $title = $member['title'];
                                     
-                                     echo  "<tr><td>$id</td><td>$fullName</td><td>$title</td><td>$phone</td><td>$email</td><a class ='btn btn-outline-danger'  href='./deleteMember.php?speakerId=$id'>Delete</a></td></tr>";
+                                     echo  "<tr><td>$id</td><td>$fullName</td><td>$title</td><td>$phone</td><td>$email</td><td><a class ='btn btn-outline-danger'  href='./deleteMember.php?speakerId=$id'>Delete</a></td></tr>";
                                 }
                             }    
                             ?>
