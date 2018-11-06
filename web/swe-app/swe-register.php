@@ -29,11 +29,17 @@
                 Email:<input type="text" class="form-control" name="email">
                 Phone Number:<input type="text" class="form-control" name="phone">
                 Postion:<input type="text" class="form-control" name="position">
+                *Major Id:<input type="text" class="form-control" name="major">
                 Expected graduation year:<input type="text" class="form-control" name="exp_date">
                 Username:<input type="text" class="form-control" name="username">
                 Password:<input type="password" class="form-control" name="password">
                 <input type="submit" value="Create Account">
                 </form>
+
+                <p>* 1 - Computer Information Technology<br>
+                    2 - Web Design and Development<br>
+                     3 - Software Engineering<br>
+                    4 Computer Science</p>
             
         </div>
     </body>     
