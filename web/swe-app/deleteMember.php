@@ -17,8 +17,6 @@ if(isset($_POST['deleteBoardM'])){
      header('location: ./memberListView.php?membersRadio=boardMembers');
 }
     
-}
-
 if(isset($_POST['deleteSpeaker'])){
      var_dump($_POST['deleteSpeaker']);
     $someQuery = $db->prepare('DELETE FROM member m WHERE m.id =' .$_POST['deleteSpeaker']);
@@ -26,9 +24,4 @@ if(isset($_POST['deleteSpeaker'])){
     $someQuery->execute();
      header('location: ./memberListView.php?membersRadio=allSpeakers');
 }
-
-    
-}
-
-
 ?>
