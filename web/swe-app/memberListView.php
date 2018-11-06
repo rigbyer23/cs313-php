@@ -155,11 +155,11 @@ $members = getMembers($type);
 
                                 else if ($type == 'boardMembers'){
                                     
-                                echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['phone']. '</td><td>'.$member['exp_date'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteMember" value="Remove"></td></tr>' ;
+                                echo '<tr><td>'.$member['position']. '</td><td>'. $member['first_name'].'</td><td> '.$member['last_name'].'</td><td>'.$member['username']. '</td><td>'.$member['phone']. '</td><td>'.$member['exp_date'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteBoardM" value="Remove"></td></tr>' ;
                                 }
                                 
                                 if(isset($_GET['speakers'])) {
-                                     echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteMember" value="Remove"></td></tr>';
+                                     echo  '<tr><td>'.$member['full_name']. '</td><td>'. $member['title'].'</td><td>'.$member['email'].'</td><td>'.$member['phone'].'</td><td><input class ="btn-outline-danger" type="submit" name="deleteSpeaker" value="Remove"></td></tr>';
                                 }
                             }    
                             ?>
